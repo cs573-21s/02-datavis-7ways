@@ -11,15 +11,15 @@ Manufacturer = []
 # Manufacturer is a string so we need to convert
 def numericManufacturer(m):
     if m == 'bmw':
-        return 1.0
+        return "#2377B4"
     elif m == 'ford':
-        return 2.0
+        return "#FF7F0E"
     elif m == 'honda':
-        return 3.0
+        return "#2CA02C"
     elif m == 'mercedes':
-        return 4.0
+        return "#D62728"
     else:
-        return 5.0
+        return "#9467BD"
 
 # Load the data
 with open("../cars-sample.csv") as csv_file:
@@ -32,7 +32,6 @@ with open("../cars-sample.csv") as csv_file:
             BubbleWeight.append(float(row['Weight'])*0.03)
             Manufacturer.append(numericManufacturer(row['Manufacturer']))
 
-print(MPG)
 
 # plot the data
 # s=size of bubble

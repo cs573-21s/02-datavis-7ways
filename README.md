@@ -139,4 +139,11 @@ While it takes time to find the correct documentation, these functions made the 
 - **Solved AI Forever**: ...
 
 ### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+- **Ensured Colorblind Appropriate Colors**: Instead of using the default R categorical colors, I decided to use a predefined color pallette that would display categorical data in a distinct way. I chose the d3 catgory 10 color pallette, and then used the first 5 colors. I tested the results for someone with tritanopia, protanopia, and deuteranopia using the chrome plugin: "Colorblinding" found here: https://chrome.google.com/webstore/detail/colorblinding/dgbgleaofjainknadoffbjkclicbbgaa/related?hl=en. The categories are still distinct with this color scale, sadly the transparency makes it a little hard to see still.
+
+Colors: 
+rgb(31, 119, 180); #2377B4
+rgb(255, 127, 14); #FF7F0E
+rgb(44, 160, 44); #2CA02C
+rgb(214, 39, 40); #D62728
+rgb(148, 103, 189); #9467BD

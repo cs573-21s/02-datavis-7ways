@@ -33,14 +33,38 @@ with open("../cars-sample.csv") as csv_file:
             Manufacturer.append(numericManufacturer(row['Manufacturer']))
 
 
-# plot the data
-# s=size of bubble
-# c = color
-plt.scatter(Weight, MPG, s=BubbleWeight, c=Manufacturer, cmap="Blues", alpha=0.5)
+# scatter plot
+fig, ax = plt.subplots()
+scatter = ax.scatter(Weight, MPG, s=BubbleWeight, c=Manufacturer, alpha=0.5)
 
-plt.xlabel("Weight")
-plt.ylabel("MPG")
+import matplotlib.patches as mpatches
+
+classes = ['bmw','ford','honda','mercedes','toyota']
+class_colours = ['#2377B4','#FF7F0E','#2CA02C','#D62728','#9467BD']
+recs = []
+for i in range(0,len(class_colours)):
+    recs.append(mpatches.Rectangle((0,0),1,1,fc=class_colours[i]))
+colorLegend = ax.legend(recs,classes,loc='upper right')
+
+#colorLegend = ax.legend(scatter.legend_elements(),title="Manufacturers",loc="lower left")
+
+ax.add_artist(colorLegend)
+
+handles, labels = scatter.legend_elements(prop="sizes", alpha=0.5,num=4)
+handles.pop(3)
+labels = ['$\\mathdefault{2000}$', '$\\mathdefault{3000}$', '$\\mathdefault{4000}$']
+weightLegend = ax.legend(handles, labels, title="Weight",loc="lower left")
+
 
 plt.show()
 
+# plot the data
+# s=size of bubble
+# c = color
+#scatter = plt.scatter(Weight, MPG, s=BubbleWeight, c=Manufacturer, alpha=0.5)
+
+#plt.xlabel("Weight")
+#plt.ylabel("MPG")
+
+#plt.show()
 

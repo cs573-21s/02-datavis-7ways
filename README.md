@@ -19,7 +19,7 @@ While it takes time to find the correct documentation, these functions made the 
 
 (And so on...)
 
-#Excel
+# Excel
 
 To meet the requirement for color by manufacturer and size by weight I seperated the data in to series. I split the weight evenly in 500 lb increments so I needed 7 series just for Ford for example. I could not figure out how to get the tick marks to start somewhere other than the start of the range. So on the x-axis they start at 8 instead of 10.
 
@@ -31,4 +31,5 @@ Creating the chart in Excel was pretty easy though it did require some manipulat
 - **Solved AI Forever**: ...
 
 ### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+- **Color**: I played around with the colors of the marks and background a good amount to come up with a color scheme that I found visually appealing and where the marks stood out from each other and the background while meeting the requirements of 50% opacity. 
+- **Consistency**:

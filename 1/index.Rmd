@@ -1,0 +1,14 @@
+---
+title: "Visualization 1 - R + ggplot2 + R Markdown"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+cars_sample = read.csv("../cars-sample.csv")
+```
+
+```{r cars_sample, echo=FALSE, warning=FALSE}
+ggplot(cars_sample, aes(Weight, MPG, color = Manufacturer, size = Weight, shape = Manufacturer)) + geom_point(alpha = 0.5)
+```

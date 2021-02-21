@@ -1,3 +1,21 @@
+# Assignment 2 - Data Visualization, 7 Ways
+
+## Visualization 1 - R + ggplot2 + R Markdown
+
+## Visualization 2 - Javascript  + d3
+
+## Visualization 3 - Python + matplotlib
+
+## Visualization 4 - Excel
+
+## Visualization 5 - 
+
+## Visualization 6 - 
+
+## Visualization 7 - 
+
+**OLD THINGS**
+
 # 02-DataVis-7ways
 
 Assignment 2 - Data Visualization, 7 Ways  

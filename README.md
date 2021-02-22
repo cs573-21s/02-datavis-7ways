@@ -117,7 +117,7 @@ We will choose some at random to run and test.
 
 **NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
 
-# R + ggplot2 + R Markdown
+# R + ggplot2 + Jupyter Notebook
 
 R is a language primarily focused on statistical computing.
 ggplot2 is a popular library for charting in R.

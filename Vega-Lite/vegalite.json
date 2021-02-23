@@ -1,0 +1,29 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  
+    "width": 500,
+    "height": 400,
+  
+    "data": {
+      "url": "https://raw.githubusercontent.com/Junying-Li/02-datavis-7ways/main/cars-sample.csv"},
+  
+    "mark": "circle",
+  
+    "encoding": {
+      "y": {"field": "MPG",
+            "type": "quantitative", 
+            "scale": {"zero": false}},
+  
+      "x": {"field": "Weight", 
+            "type": "quantitative", 
+            "scale": {"zero": false}},
+  
+      "color": {"field": "Manufacturer", 
+                "type": "nominal" },
+  
+      "size": {"field": "Weight", 
+              "type": "quantitative"},
+  
+      "opacity": {"value": 0.5}
+    }
+  }

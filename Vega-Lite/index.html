@@ -25,8 +25,8 @@
       // Assign the specification to a local variable vlSpec.
       var vlSpec = {
         $schema: 'https://vega.github.io/schema/vega-lite/v4.json',
-        width: 400,
-        height: 300,
+        width: 600,
+        height: 500,
         data: {
           url: 'https://raw.githubusercontent.com/Junying-Li/02-datavis-7ways/main/cars-sample.csv'
         },
@@ -34,7 +34,7 @@
         encoding: {
           y: {field: 'MPG', type: 'quantitative', scale: {zero: false}},
           x: {field: 'Weight', type: 'quantitative', scale: {zero: false}},
-          color: { field: 'Manufacturer', type: 'nominal' },
+          color: { field: 'Manufacturer', type: 'nominal', scale: {range: ['#f3b6b7', '#b4b650', '#93d8bc', '#56B4E9', '#dfa9e0']}},
           size: {field: 'Weight', type: 'quantitative', scale: {zero: false}},
           opacity: {value: 0.5}
         }

@@ -10,7 +10,9 @@ I used RStudio and a tutorial video to replicate the chart for the assignment an
 
 ![ggplot2](img/ggplot2.png)
 
-# d3...
+# d3
+
+d3 was by far the most challenging and what I spent the most time on. 
 
 <a href = "https://www.essycode.com/posts/adding-gridlines-chart-d3/">https://www.essycode.com/posts/adding-gridlines-chart-d3/</a>
 

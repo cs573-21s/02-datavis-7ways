@@ -1,4 +1,4 @@
-# Assignment 2 - Data Visualization, 7 Ways
+# Assignment 2 - [Data Visualization, 7 Ways](https://cs573.ashwork.net/02-datavis-7ways)
 
 ## Visualization 1 - R + ggplot2 + R Markdown
 

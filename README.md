@@ -8,7 +8,7 @@ In Flourish, every step to create a vis can be completed in the visual interface
 
 However, I think it also have some restriction for professional user, because its templates are set in advance. If people can’t find template which is matched to vis they want create, Flourish will be not good working.
 
-!img[Flourish](img/Flourish.png)
+![Flourish](img/Flourish.png)
 
 
 

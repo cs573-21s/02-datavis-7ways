@@ -12,7 +12,7 @@ I used RStudio and a tutorial video to replicate the chart for the assignment an
 
 # d3...
 
-(And so on...)
+<a href = "https://www.essycode.com/posts/adding-gridlines-chart-d3/">https://www.essycode.com/posts/adding-gridlines-chart-d3/</a>
 
 # Excel
 

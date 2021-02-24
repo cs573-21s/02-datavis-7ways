@@ -17,7 +17,7 @@ I have visualized given data set in 10 ways. These features are totally preserve
 
 - Opacity of circles set to 0.5 or 50%.
 
-- grid.
+- Grid.
 
 Furthermore, most of replications have legends and background color.
 

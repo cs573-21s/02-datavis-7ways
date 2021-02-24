@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://d3js.org/d3.v4.js"></script>
+    </head>
+    <body>
+        <p>
+            Jasmine Duerk Assignment 2
+        </p>
+        <div id="graph"></div>
+    </body>
+</html>
+
+
+<script>
+    console.log(d3); // test if d3 is loaded
+
+    var margin = {top: 10, right: 30, bottom: 60, left: 60},
+        width = 460 - margin.left - margin.right,
+        height = 300 - margin.top - margin.bottom;
+
+    var svg = d3.select("#graph")
+    .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+        .attr("transform",
+            "translate(" + margin.left + "," + margin.top + ")");
+
+    const colorScale = d3.scaleOrdinal()
+    	.domain(['bmw', 'ford', 'honda', 'mercedes', 'toyota'])
+    	.range(['red', '#9ca34d', '#28c77f', '#04b7bd', '#df52ff'])
+
+    //Graph made in csv load because it is asynchronous
+    d3.csv("cars-sample1.csv", function(data) {
+
+        // Add X axis
+        var x = d3.scaleLinear()
+            .domain([1500, 5000])
+            .range([0, width]);
+        svg.append("g")
+            .attr("transform", "translate(0," + height + ")")
+            .call(d3.axisBottom(x));
+
+        //X axis label
+        svg.append("text")             
+            .attr("transform", "translate(" + (width/2) + " ," + (height + margin.top + 30) + ")")
+            .style("text-anchor", "middle")
+            .text("Weight");
+
+        // Add Y axis
+        var y = d3.scaleLinear()
+            .domain([10, 50])
+            .range([height, 0]);
+        svg.append("g")
+            .call(d3.axisLeft(y));
+
+        //Y axis label
+        svg.append("text")
+            .attr("transform", "rotate(-90)")
+            .attr("y", 0 - margin.left)
+            .attr("x",0 - (height / 2))
+            .attr("dy", "1em")
+            .style("text-anchor", "middle")
+            .text("MPG");   
+
+        // Points
+        svg.append('g')
+            .selectAll("dot")
+            .data(data)
+            .enter()
+            .append("circle")
+            .attr("cx", function (d) { return x(d.Weight); } )
+            .attr("cy", function (d) { return y(d.MPG); } )
+            .attr("r", function (d) { return (d.Weight * d.Weight * 0.0000005 ); } )
+            .attr('fill-opacity', 0.5)
+            .style("fill", d => colorScale(d.Manufacturer))
+        
+    });
+    
+
+</script>

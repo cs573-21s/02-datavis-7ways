@@ -1,9 +1,6 @@
-'''
-Reference: https://matplotlib.org/stable/gallery/shapes_and_collections/scatter.html
-'''
-
 import matplotlib.pyplot as plt
 import pandas as pd
+import mpld3
 
 # load data
 data = pd.read_csv('cars-sample.csv', header=None)
@@ -31,16 +28,12 @@ for i in Manufacturer:
     if i == 'toyota':
         colors.append('#e76bf3')
 
-# set axes & grid
-plt.rcParams['axes.facecolor'] = '#ececec'
-plt.rcParams['axes.edgecolor'] = 'white'
-plt.rcParams['axes.grid'] = True
-plt.rcParams['axes.axisbelow'] = True
-plt.rcParams['grid.color'] = "#fefefe"
-
-# scatter plot
-plt.title('A2 matplotlib')
-plt.scatter(x, y, s=linear_Weight, c=colors, alpha=0.5)
-plt.xlabel('Weight')
-plt.ylabel('MPG')
-plt.show()
+# plot
+fig, ax = plt.subplots()
+scatter = ax.scatter(x, y, s=linear_Weight, c=colors, alpha=0.5)
+ax.grid(color='white', alpha=0.1)
+ax.set_title('A2 matplotlib')
+ax.set_xlabel('Weight')
+ax.set_ylabel('MPG')
+ax.set_facecolor('#ebebeb')
+mpld3.show()

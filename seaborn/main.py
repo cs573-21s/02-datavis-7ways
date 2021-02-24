@@ -1,7 +1,6 @@
 import seaborn as sns
 import matplotlib.pyplot as plt
 import pandas as pd
-import mpld3
 
 
 # load data

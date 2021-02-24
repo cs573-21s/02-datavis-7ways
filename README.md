@@ -117,7 +117,7 @@ It's very easy to visualize data with Vega-Lite. We just need to put data into i
 ![vegalite](img/vegalite.png)
 
 # 4. Matplotlib + mpld3+ Python
-## 4.1 Plot by Matplotlib
+## 4.1 Plotted by Matplotlib
 
 Page link: https://junying-li.github.io/02-datavis-7ways/matplotlib/index.html
 
@@ -131,7 +131,7 @@ The pro of matplotlib is it has very powerful function of plotting and can be co
 
 ![matplotlib](img/matplotlib.png)
 
-## 4.2 Export by mpld3
+## 4.2 Exported by mpld3
 
 Page link: https://junying-li.github.io/02-datavis-7ways/Mpld3/index.html
 

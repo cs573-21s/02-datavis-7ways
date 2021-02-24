@@ -8,11 +8,17 @@ Visualized given data set in 10 ways.
 These features are totally preserved in my replication:
 
 Data positioning: it should be a downward-trending scatterplot as shown. Weight should be on the x-axis and MPG on the y-axis.
+
 Scales: Note the scales do not start at 0.
+
 Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
+
 Color mapping to Manufacturer.
+
 Size mapping to Weight.
+
 Opacity of circles set to 0.5 or 50%.
+
 Background color and grid.
 
 Furthermore, most of replications have legends.

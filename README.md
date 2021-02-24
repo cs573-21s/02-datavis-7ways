@@ -61,4 +61,5 @@ I found this very simple to use, mostly due to my experience with Sheets. That b
 - **Solved AI Forever**: ...
 
 ## Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+- **Graph Dark Mode**: Customized the font and colors for a more visually appealing design. Click the link for the graph with animation and all features. (Hover on points for more information about each one. Click on the dots in the legend to show/hide specific manufacturer points.)
+![flourish2](/img/flourishgraph2.png)

@@ -9,11 +9,14 @@
     <script src="https://d3js.org/d3.v6.min.js"></script>
   </head>
   <body>
+    <h1>
+      A2 - d3.js
+    </h1>
     <svg></svg>
     <script>
       const svg = d3.select('svg')
-      .attr('width', 800)
-      .attr('height', 700);
+      .attr('width', 750)
+      .attr('height', 650);
 
       var width = +svg.attr('width');
       var height = +svg.attr('height');
@@ -66,6 +69,7 @@
           .tickPadding(15);
         
         const yAxisG = g.append('g').call(yAxis);
+
         yAxisG.selectAll('.domain').remove();
         
         yAxisG.append('text')
@@ -99,12 +103,13 @@
 
       }
 
-    function checkNaN(d) {
-      if(isNaN(d.MPG) || isNaN(d.Weight)){
-            return false;
-          }
-          return true;
-    }
+      // data filter
+      function checkNaN(d) {
+        if(isNaN(d.MPG) || isNaN(d.Weight)){
+              return false;
+            }
+            return true;
+      }
 
     d3.csv('https://raw.githubusercontent.com/Junying-Li/02-datavis-7ways/main/cars-sample.csv').then(data => {
       data.forEach( d => {
@@ -113,7 +118,7 @@
       );
       // Remove columns with NaN value
       data = data.filter(checkNaN);
-      console.log(data);
+      //console.log(data);
       render(data);
     }); 
 

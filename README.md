@@ -173,11 +173,7 @@ We can simply use `output_file("name.html")` to export our graphics to html. Fur
 
 # 7. Tableau
 
-Page link: 
-
-Tableau Online (might need access): https://prod-useast-b.online.tableau.com/t/jli/views/A2tableau/A2-Tableau?:showAppBanner=false&:display_count=n&:showVizHome=n&:origin=viz_share_link
-
-Embeded page: https://junying-li.github.io/02-datavis-7ways/Tableau/index.html
+Page link: https://junying-li.github.io/02-datavis-7ways/Tableau/index.html
 
 Tableau is a powerful and fastest growing data visualization tool used in the Business Intelligence Industry. It helps in simplifying raw data in a very easily understandable format. Tableau helps create the data that can be understood by professionals at any level in an organization. It also allows non-technical users to create customized dashboards.
 

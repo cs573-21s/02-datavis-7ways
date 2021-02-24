@@ -46,23 +46,25 @@ The libraries, tools and languages I've used are as follows.
 
 Catalog
 ---
-[1. R + ggplot2 + R Markdown](#1.-R-+-ggplot2-+-R-Markdown)
+[1. R + ggplot2 + R Markdown](https://github.com/Junying-Li/02-datavis-7ways/blob/main/README.md#1-r--ggplot2--r-markdown)
 
-[2. d3 + Javascript](#2.-d3-+-Javascript)
+[2. d3 + Javascript](https://github.com/Junying-Li/02-datavis-7ways#2-d3--javascript)
 
-[3. Vega-lite + JavaScirpt + JSON](#3.-Vega-lite-+-JavaScirpt-+-JSON)
+[3. Vega-lite + JavaScirpt + JSON](https://github.com/Junying-Li/02-datavis-7ways#3-vega-lite--javascirpt--json)
 
-[4. Matplotlib + mpld3+ Python](#4.-Matplotlib-+-mpld3+-Python)
+[4. Matplotlib + mpld3+ Python](https://github.com/Junying-Li/02-datavis-7ways#4-matplotlib--mpld3-python)
 
-[5. Seaborn + Python](#5.-Seaborn-+-Python)
+[5. Seaborn + Python](https://github.com/Junying-Li/02-datavis-7ways#5-seaborn--python)
 
-[6. Bokeh + Python](#6.-Bokeh-+-Python)
+[6. Bokeh + Python](https://github.com/Junying-Li/02-datavis-7ways#6-bokeh--python)
 
-[8. Flourish](#8.-Flourish)
+[7. Tableau](https://github.com/Junying-Li/02-datavis-7ways#7-tableau)
 
-[9. PowerBI](#9.-PowerBI)
+[8. Flourish](https://github.com/Junying-Li/02-datavis-7ways#8-flourish)
 
-[10. Google sheet](#10.-Google-sheet)
+[9. PowerBI](https://github.com/Junying-Li/02-datavis-7ways#9-powerbi)
+
+[10. Google sheet](https://github.com/Junying-Li/02-datavis-7ways#10-google-sheet)
 
 # 1. R + ggplot2 + R Markdown
 
@@ -96,6 +98,8 @@ I also set up background color and grid to make it looks like the given picture 
 
 In d3, we need to handle with every elements by our own. It has the longest code in all of my 10 ways to visualize. But on the other hand, it's also more flexible. We can do much more things in different ways. 
 
+[Return to catalog](https://github.com/Junying-Li/02-datavis-7ways/blob/main/README.md#catalog)
+
 ![d3](img/d3.PNG)
 
 # 3. Vega-lite + JavaScirpt + JSON
@@ -107,6 +111,8 @@ Vega-Lite is a high-level grammar of interactive graphics. It provides a concise
 Vega-Lite has an online editor, which is very convenient to write JSON and also run it. We can also embed the JSON to html by using `vegaEmbed()`. I provided both JSON file and html file. 
 
 It's very easy to visualize data with Vega-Lite. We just need to put data into its JSON syntax, then we will get a nice visualization. In addition, it can filter invalid values and set legends as well as grid automatically, which saved a lot of time.
+
+[Return to catalog](https://github.com/Junying-Li/02-datavis-7ways/blob/main/README.md#catalog)
 
 ![vegalite](img/vegalite.png)
 
@@ -121,6 +127,8 @@ I use `pandas.read_csv()` to load data. Then made use of `notNull()` to filter d
 
 The pro of matplotlib is it has very powerful function of plotting and can be combined with data analysis. The con of matplotlib is that we can't export results to web page directly, so I think it's not very suitable for web based visualization development.
 
+[Return to catalog](https://github.com/Junying-Li/02-datavis-7ways/blob/main/README.md#catalog)
+
 ![matplotlib](img/matplotlib.png)
 
 ## 4.2 Export by mpld3
@@ -133,6 +141,8 @@ The mpld3 project brings together Matplotlib and D3js. It can export your matplo
 
 By using `mpld3.show()` can run a local server to show graphics on web page. I also use `mpld3.save_to_html()` to save graphics in html, which is [Mpld3/index.html](https://junying-li.github.io/02-datavis-7ways/Mpld3/index.html).
 
+[Return to catalog](https://github.com/Junying-Li/02-datavis-7ways/blob/main/README.md#catalog)
+
 ![mpld3](img/mpld3.PNG)
 
 # 5. Seaborn + Python
@@ -142,6 +152,8 @@ Page link: https://junying-li.github.io/02-datavis-7ways/seaborn/index.html
 Seaborn is a Python data visualization library based on matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics. I made use of `seaborn.scatterplot()` to plot graphics.
 
 Both as visualization librarys, seaborn is much easier to use than matplotlib. It can filter invalid data, draw legends, set grid as well as background automatically. It's even more comvenient than Vega-Lite. But we still need to import matplotlib while we use seaborn to plot, since we will use `plt.show()` to show result.
+
+[Return to catalog](https://github.com/Junying-Li/02-datavis-7ways/blob/main/README.md#catalog)
 
 ![seaborn](img/seaborn.png)
 
@@ -154,6 +166,8 @@ Bokeh is a Python library for creating interactive visualizations for modern web
 Bokeh is very convenient to use too, meanwhile, it's surprisingly easy to create html by it. Whatsmore, the graphic exported to html has a tool bar beside it. Tools include pan, box zoom, wheel zoom, save and reset.
 
 We can simply use `output_file("name.html")` to export our graphics to html. Furthermore, bokeh can draw legends automatically as long as we have defined `legend_group`. I made use of `factor_cmap()` to set color mapping to Manufacturer, `LinearInterpolator()` to set size linear mapping to Weight.
+
+[Return to catalog](https://github.com/Junying-Li/02-datavis-7ways/blob/main/README.md#catalog)
 
 ![bokeh](img/bokeh_plot.png)
 
@@ -169,6 +183,8 @@ Tableau is a powerful and fastest growing data visualization tool used in the Bu
 
 Tableau provides desktop application, online editor, and server, etc. It's basically perfect for the non-technical users who want to visualize data, besides they need to pay for access. 
 
+[Return to catalog](https://github.com/Junying-Li/02-datavis-7ways/blob/main/README.md#catalog)
+
 ![Tableau](img/tableau.PNG)
 
 # 8. Flourish
@@ -176,6 +192,8 @@ Tableau provides desktop application, online editor, and server, etc. It's basic
 Page link: https://junying-li.github.io/02-datavis-7ways/Flourish/index.html
 
 Flourish is an online data visualization tool. It's more easy to use than Tableau, and most importantly, it's free. For individuals, Flourish is good enough. But for companies and organizations, Tableau is better.
+
+[Return to catalog](https://github.com/Junying-Li/02-datavis-7ways/blob/main/README.md#catalog)
 
 ![flourish](img/Flourish.PNG)
 
@@ -185,6 +203,8 @@ Power BI is a business analytics service by Microsoft. It aims to provide intera
 
 PowerBI is free to use and does what it should as a data visualization tool. But publish work to internet needs Microsoft access. It seems that PowerBI was designed for companies and organizations, because individuals are not allowed to get access. 
 
+[Return to catalog](https://github.com/Junying-Li/02-datavis-7ways/blob/main/README.md#catalog)
+
 ![powerBI](img/PowerBI.PNG)
 
 # 10. Google sheet
@@ -193,8 +213,9 @@ Page link: https://junying-li.github.io/02-datavis-7ways/Google%20sheet/index.ht
 
 Google Sheets is a spreadsheet program included as part of the free, web-based Google Docs Editors suite offered by Google. It's like an online version of Excel, but much better than Excel in data visualization. 
 
-![googlesheet](img/googlesheet.png)
+[Return to catalog](https://github.com/Junying-Li/02-datavis-7ways/blob/main/README.md#catalog)
 
+![googlesheet](img/googlesheet.png)
 
 ## Technical Achievements
 - **Used 10 ways to visualize**: I used 10 ways to visualize given data set and each one meets the requirements. 3 languages (R, JavaScript, Python), 7 libraries (bokeh, ggplot2, matplotlib, mpld3, seaborn, vega-lite, d3) are used in my solutions. And I also made use of R markdown, JSON, and html. Besides, I chose 4 popular data visualization tools to draw graphics too. 

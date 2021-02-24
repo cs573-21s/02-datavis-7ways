@@ -10,8 +10,11 @@ Although it was challenging at first to determine how to properly use geom_point
 ![ggplot2](/r-ggplot/r%20ggplot%20graph.PNG)
 
 # d3
+d3 is a library for Javascript that helps to create dynamic visualizations.
 
-a
+The syntax was very different from what I'm used to, which made it difficult to code in at first. However, I can see how there is immense potential for customization with this library. I referenced this code example for help creating the scatter plot: https://www.d3-graph-gallery.com/graph/scatter_basic.html.
+
+![d3](/img/d3graph.PNG)
 
 # Python + Jupyter Notebook
 

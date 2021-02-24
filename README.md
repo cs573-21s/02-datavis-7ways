@@ -3,121 +3,66 @@
 Assignment 2 - Data Visualization, 7 Ways  
 ===
 
-Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 7 times. 
+Visualized given data set in 10 ways.  
 
-The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
+These features are totally preserved in my replication:
 
-I have provided a small dataset about cars, `cars-sample.csv`.
-Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
+Data positioning: it should be a downward-trending scatterplot as shown. Weight should be on the x-axis and MPG on the y-axis.
+Scales: Note the scales do not start at 0.
+Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
+Color mapping to Manufacturer.
+Size mapping to Weight.
+Opacity of circles set to 0.5 or 50%.
+Background color and grid.
 
-Your goal is to use 7 different tools to make the following chart:
+Furthermore, most of replications have legends.
 
-![ggplot2](img/ggplot2.png)
-
-These features should be preserved as much as possible in your replication:
-
-- Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
-- Scales: Note the scales do not start at 0.
-- Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
-- Color mapping to Manufacturer.
-- Size mapping to Weight.
-- Opacity of circles set to 0.5 or 50%.
-
-Other features are not required. This includes:
-
-- The background grid.
-- The legends.
-
-Note that some software packages will make it **impossible** to perfectly preserve the above requirements. 
-Be sure to note where these deviate.
-
-Improvements are also welcome as part of Technical and Design achievements.
+![img](img/ggplot2.png)
 
 Libraries, Tools, Languages
 ---
 
-You are required to use 7 different tools or libraries.
-Of the 7 tools, you must use at least 3 libraries (libraries require code of some kind).
-This could be `Python, R, Javascript`, or `Java, Javascript, Matlab` or any other combination.
-Dedicated tools (i.e. Excel) do not count towards the language requirement.
+The libraries, tools and languages I've used are as follows.
 
-Otherwise, you should seek tools and libraries to fill out your 7.
+7 libraries and 3 languages: 
 
-Below are a few ideas. Do not limit yourself to this list!
-Some may be difficult choices, like Matlab or SPSS, which require large installations, licenses, and occasionally difficult UIs.
+- ggplot2 + R + R Markdown
+- d3 + JavaScript
+- Vega-lite + JavaScirpt + JSON
+- Matplotlib + mpld3 + Python
+- Seaborn + Python
+- Bokeh + Python
 
-I have marked a few that are strongly suggested.
+4 tools:
 
-- R + ggplot2 `<- definitely worth trying`
-- Excel
-- d3 `<- since the rest of the class uses this, we're requiring it`
-- Matplotlib
-- three.js `<- well, it's a 3d library. not really recommended, but could be "interesting"`
-- p5js `<- good for playing around. not really a chart lib`
 - Tableau
-- Java 2d
-- GNUplot
-- Vega-lite <- `<- recently much better. look for the high level js implementations`
-- Flourish <- `<- popular last year`
+- Flourish
 - PowerBI
-- SPSS
+- Google sheet
 
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found, please identify the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing. 
-
-Tips
+Catalog
 ---
+[1. R + ggplot2 + R Markdown](#1.-R-+-ggplot2-+-R-Markdown)
 
-- If you're using d3, key to this assignment is knowing how to load data.
-You will likely use the [`d3.json` or `d3.csv` functions](https://github.com/mbostock/d3/wiki/Requests) to load the data you found.
-Beware that these functions are *asynchronous*, meaning it's possible to "build" an empty visualization before the data actually loads.
+[2. d3 + Javascript](#2.-d3-+-Javascript)
 
-- *For web languages like d3* Don't forget to run a local webserver when you're debugging.
-See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server) if you're stuck.
+[3. Vega-lite + JavaScirpt + JSON](#3.-Vega-lite-+-JavaScirpt-+-JSON)
 
+[4. Matplotlib + mpld3+ Python](#4.-Matplotlib-+-mpld3+-Python)
 
-Readme Requirements
----
+[5. Seaborn + Python](#5.-Seaborn-+-Python)
 
-A good readme with screenshots and structured documentation is required for this project. 
-It should be possible to scroll through your readme to get an overview of all the tools and visualizations you produced.
+[6. Bokeh + Python](#6.-Bokeh-+-Python)
 
-- Each visualization should start with a top-level heading (e.g. `# d3`)
-- Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
-- Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
+[8. Flourish](#8.-Flourish)
 
-Other Requirements
----
+[9. PowerBI](#9.-PowerBI)
 
-0. Your code should be forked from the GitHub repo.
-1. Place all code, Excel sheets, etcetera in a named folder. For example, `r-ggplot, matlab, mathematica, excel` and so on.
-2. Your writeup (readme.md in the repo) should also contain the following:
+[10. Google sheet](#10.-Google-sheet)
 
-- Description of the Technical achievements you attempted with this visualization.
-  - Some ideas include interaction, such as mousing over to see more detail about the point selected.
-- Description of the Design achievements you attempted with this visualization.
-  - Some ideas include consistent color choice, font choice, element size (e.g. the size of the circles).
+# 1. R + ggplot2 + R Markdown
 
-GitHub Details
----
-
-- Fork the GitHub Repository. You now have a copy associated with your username.
-- Make changes to fulfill the project requirements. 
-- To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
-
-Grading
----
-
-Grades on a 120 point scale. 
-24 points will be based on your Technical and Design achievements, as explained in your readme. 
-
-Make sure you include the files necessary to reproduce your plots.
-You should structure these in folders if helpful.
-We will choose some at random to run and test.
-
-**NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
-
-# R + ggplot2 + R Markdown
+Page link: https://junying-li.github.io/02-datavis-7ways/ggplot2/index.html
 
 R is a language primarily focused on statistical computing.
 ggplot2 is a popular library for charting in R.
@@ -127,16 +72,128 @@ To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, wi
 
 While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
 
-![ggplot2](img/ggplot2.png)
+![ggplot2](img/Rplot.png)
 
-# d3...
+# 2. d3 + Javascript
 
-(And so on...)
+Page link: https://junying-li.github.io/02-datavis-7ways/d3/index.html
+
+D3.js is a JavaScript library for manipulating documents based on data. 
+
+There are 2 problems in our data set. First one is some columns in 'MPG' are NaN values. Second one is the type of values in our data set is string, we need to convert them into integer before visualizing.
+
+To solve the first problem, I defined a filter function and made use of `data.filter()` to remove columns with NaN value. 
+
+For the second problem, I made use of `+` to convert string into integer. For instance, `d.Weight = +d.Weight;`.
+
+I also set up background color and grid to make it looks like the given picture more.
+
+In d3, we need to handle with every elements by our own. It has the longest code in all of my 10 ways to visualize. But on the other hand, it's also more flexible. We can do much more things in different ways. 
+
+![d3](img/d3.PNG)
+
+# 3. Vega-lite + JavaScirpt + JSON
+
+Page link: https://junying-li.github.io/02-datavis-7ways/Vega-Lite/index.html
+
+Vega-Lite is a high-level grammar of interactive graphics. It provides a concise, declarative JSON syntax to create an expressive range of visualizations for data analysis and presentation.
+
+Vega-Lite has an online editor, which is very convenient to write JSON and also run it. We can also embed the JSON to html by using `vegaEmbed()`. I provided both JSON file and html file. 
+
+It's very easy to visualize data with Vega-Lite. We just need to put data into its JSON syntax, then we will get a nice visualization. In addition, it can filter invalid values and set legends as well as grid automatically, which saved a lot of time.
+
+![vegalite](img/vegalite.png)
+
+# 4. Matplotlib + mpld3+ Python
+## 4.1 Plot by Matplotlib
+
+Page link: https://junying-li.github.io/02-datavis-7ways/matplotlib/index.html
+
+Matplotlib is a plotting library for the Python programming language and its numerical mathematics extension NumPy. It provides an object-oriented API for embedding plots into applications using general-purpose GUI toolkits like Tkinter, wxPython, Qt, or GTK+.
+
+I use `pandas.read_csv()` to load data. Then made use of `notNull()` to filter data and remove columns with NaN value. I also use `map()` to convert 'Weight' and 'MPG' data values from string to integer. When it comes to axes and grid, I made use of `plt.rcParams[]` to set. Finally, I use `plt.scatter()` to plot, and `plt.show()` to show result.
+
+The pro of matplotlib is it has very powerful function of plotting and can be combined with data analysis. The con of matplotlib is that we can't export results to web page directly, so I think it's not very suitable for web based visualization development.
+
+![matplotlib](img/matplotlib.png)
+
+## 4.2 Export by mpld3
+
+Page link: https://junying-li.github.io/02-datavis-7ways/Mpld3/index.html
+
+To solve the export problem mentioned above. I made use of another library, mpld3.
+
+The mpld3 project brings together Matplotlib and D3js. It can export your matplotlib graphics to HTML code which can be used within the browser, within standard web pages, blogs, or tools such as the IPython notebook. Graphics Exported by Mpld3 have tools below when mouse over it. Tools include box zoom, pan, and reset.
+
+By using `mpld3.show()` can run a local server to show graphics on web page. I also use `mpld3.save_to_html()` to save graphics in html, which is [Mpld3/index.html](https://junying-li.github.io/02-datavis-7ways/Mpld3/index.html).
+
+![mpld3](img/mpld3.PNG)
+
+# 5. Seaborn + Python
+
+Page link: https://junying-li.github.io/02-datavis-7ways/seaborn/index.html
+
+Seaborn is a Python data visualization library based on matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics. I made use of `seaborn.scatterplot()` to plot graphics.
+
+Both as visualization librarys, seaborn is much easier to use than matplotlib. It can filter invalid data, draw legends, set grid as well as background automatically. It's even more comvenient than Vega-Lite. But we still need to import matplotlib while we use seaborn to plot, since we will use `plt.show()` to show result.
+
+![seaborn](img/seaborn.png)
+
+# 6. Bokeh + Python
+
+Page link: https://junying-li.github.io/02-datavis-7ways/bokeh/index.html
+
+Bokeh is a Python library for creating interactive visualizations for modern web browsers. It helps you build beautiful graphics, ranging from simple plots to complex dashboards with streaming datasets. With Bokeh, you can create JavaScript-powered visualizations without writing any JavaScript yourself.
+
+Bokeh is very convenient to use too, meanwhile, it's surprisingly easy to create html by it. Whatsmore, the graphic exported to html has a tool bar beside it. Tools include pan, box zoom, wheel zoom, save and reset.
+
+We can simply use `output_file("name.html")` to export our graphics to html. Furthermore, bokeh can draw legends automatically as long as we have defined `legend_group`. I made use of `factor_cmap()` to set color mapping to Manufacturer, `LinearInterpolator()` to set size linear mapping to Weight.
+
+![bokeh](img/bokeh_plot.png)
+
+# 7. Tableau
+
+Page link: 
+
+Tableau Online (might need access): https://prod-useast-b.online.tableau.com/t/jli/views/A2tableau/A2-Tableau?:showAppBanner=false&:display_count=n&:showVizHome=n&:origin=viz_share_link
+
+Embeded page: https://junying-li.github.io/02-datavis-7ways/Tableau/index.html
+
+Tableau is a powerful and fastest growing data visualization tool used in the Business Intelligence Industry. It helps in simplifying raw data in a very easily understandable format. Tableau helps create the data that can be understood by professionals at any level in an organization. It also allows non-technical users to create customized dashboards.
+
+Tableau provides desktop application, online editor, and server, etc. It's basically perfect for the non-technical users who want to visualize data, besides they need to pay for access. 
+
+![Tableau](img/tableau.PNG)
+
+# 8. Flourish
+
+Page link: https://junying-li.github.io/02-datavis-7ways/Flourish/index.html
+
+Flourish is an online data visualization tool. It's more easy to use than Tableau, and most importantly, it's free. For individuals, Flourish is good enough. But for companies and organizations, Tableau is better.
+
+![flourish](img/Flourish.PNG)
+
+# 9. PowerBI
+
+Power BI is a business analytics service by Microsoft. It aims to provide interactive visualizations and business intelligence capabilities with an interface simple enough for end users to create their own reports and dashboards. 
+
+PowerBI is free to use and does what it should as a data visualization tool. But publish work to internet needs Microsoft access. It seems that PowerBI was designed for companies and organizations, because individuals are not allowed to get access. 
+
+![powerBI](img/PowerBI.PNG)
+
+# 10. Google sheet
+
+Page link: https://junying-li.github.io/02-datavis-7ways/Google%20sheet/index.html
+
+Google Sheets is a spreadsheet program included as part of the free, web-based Google Docs Editors suite offered by Google. It's like an online version of Excel, but much better than Excel in data visualization. 
+
+![googlesheet](img/googlesheet.png)
 
 
 ## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
+- **Used 10 ways to visualize**: I used 10 ways to visualize given data set and each one meets the requirements. 3 languages (R, JavaScript, Python), 7 libraries (bokeh, ggplot2, matplotlib, mpld3, seaborn, vega-lite, d3) are used in my solutions. And I also made use of R markdown, JSON, and html. Besides, I chose 4 popular data visualization tools to draw graphics too. 
+- **Filtered Data**: In d3,js and Python, I use different ways to filter data and remove clumns with NaN value.
 
-### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+## Design Achievements
+- **Color map**: I made color maps or palettes for each way in this assignment to make sure they look like the graphic given by the professor.
+- **Weight linear map**: In some ways of this assignment, the circles became too big after mapping to Weight. To make sure we have a better view, I set and adjusted parameters of linear mapping.

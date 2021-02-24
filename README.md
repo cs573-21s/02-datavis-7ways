@@ -57,9 +57,9 @@ I found this very simple to use, mostly due to my experience with Sheets. That b
 ![sheets](/google%20sheets/graph.PNG)
 
 ## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
+- **Animated d3 graph**: The points on the d3 graph animate into place. 
+![d3 animated](d3/d3anim.gif)
 
 ## Design Achievements
-- **Graph Dark Mode**: Customized the font and colors for a more visually appealing design. Click the link for the graph with animation and all features. (Hover on points for more information about each one. Click on the dots in the legend to show/hide specific manufacturer points.)
+- **Graph Dark Mode**: Customized the font and colors for a more visually appealing design. Click the link for the graph with animation and all features. https://public.flourish.studio/visualisation/5355238/ (Hover on points for more information about each one. Click on the dots in the legend to show/hide specific manufacturer points.)
 ![flourish2](/img/flourishgraph2.png)

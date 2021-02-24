@@ -76,6 +76,8 @@ To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, wi
 
 While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
 
+[Return to catalog](https://github.com/Junying-Li/02-datavis-7ways/blob/main/README.md#catalog)
+
 ![ggplot2](img/Rplot.png)
 
 # 2. d3 + Javascript

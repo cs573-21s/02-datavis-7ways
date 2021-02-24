@@ -19,7 +19,7 @@ I have visualized given data set in 10 ways. These features are totally preserve
 
 - Grid.
 
-Furthermore, most of replications have legends and background color.
+Furthermore, legends and background color are preserved in most replications.
 
 ![img](img/ggplot2.png)
 

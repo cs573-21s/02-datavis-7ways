@@ -5,7 +5,7 @@
     </head>
     <body>
         <p>
-            Jasmine Duerk Assignment 2
+            Jasmine Duerk Assignment 2 
         </p>
         <div id="graph"></div>
     </body>
@@ -70,12 +70,20 @@
             .data(data)
             .enter()
             .append("circle")
+                .attr("cx", function (d) { return x(d.Weight); } )
+                .attr("cy", 300 - margin.top - margin.bottom )
+                .attr("r", function (d) { return (d.Weight * d.Weight * 0.0000005 ); } )
+                .attr('fill-opacity', 0.5)
+                .style("fill", d => colorScale(d.Manufacturer))
+
+        // Points animation
+        svg.selectAll("circle")
+            .transition()
+            .delay(function(d,i){return(i*3)})
+            .duration(2000)
+            .attr("opacity", "1")
             .attr("cx", function (d) { return x(d.Weight); } )
             .attr("cy", function (d) { return y(d.MPG); } )
-            .attr("r", function (d) { return (d.Weight * d.Weight * 0.0000005 ); } )
-            .attr('fill-opacity', 0.5)
-            .style("fill", d => colorScale(d.Manufacturer))
-        
     });
     
 

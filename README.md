@@ -33,9 +33,9 @@ The libraries, tools and languages I've used are as follows.
 - ggplot2 + R + R Markdown
 - d3 + JavaScript
 - Vega-lite + JavaScirpt + JSON
-- Matplotlib + mpld3 + Python
-- Seaborn + Python
-- Bokeh + Python
+- Matplotlib + mpld3 + pandas + Python
+- Seaborn + pandas + Python
+- Bokeh + pandas + Python
 
 4 tools:
 

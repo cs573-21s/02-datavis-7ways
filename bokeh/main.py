@@ -13,7 +13,7 @@ p = figure(plot_width=800, plot_height=700, title="A2 bokeh")
 
 df = pd.read_csv("cars-sample.csv")
 
-index_cmap = factor_cmap('Manufacturer', palette=['#f3b6b7', '#b4b650', '#93d8bc', '#56B4E9', '#dfa9e0'],
+index_cmap = factor_cmap('Manufacturer', palette=['#f8766d', '#a3a500', '#00bf7d', '#00b0f6', '#e76bf3'],
                          factors=sorted(df['Manufacturer'].unique()))
 size_mapper = LinearInterpolator(
     x=[df['Weight'].min(),df['Weight'].max()],

@@ -1,84 +1,93 @@
 Assignment 2 - Data Visualization, 7 Ways  
 ===
 
-# Example R + ggplot2 + R Markdown
-![ggplot2](img/MikeD3.png)
-What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
 
-
-
-# D3...
+# D3
 ![ggplot2](img/MikeD3.png)
 (And so on...)
 
+```
 Get Started
 - Cd Into the D3 folder
 - Open a terminal at that location
 - Run a local http server. ie: python -m SimpleHTTPServer
+```
 
 
 
-# Flourish ...
+# Flourish 
 ![ggplot2](img/MikeFlourish.png)
 
+```
 Get Started
 - Cd Into the Flourish folder
 - Either open the terminal and enter open . then double click index.html
 - Or open the terminal and enter open index.html in the command line.
+```
 
 
 
-# GGPlot2 ...
+# GGPlot2 
 ![ggplot2](img/MikeGGPlot2.png)
 
+```
 Get Started
 - Open R Studio
 - Open Plot.R
 - Run install.packages("ggplot2") to install ggplot2 and initalize it
 - Make sure you know the location to the cars-sample.csv
 - Hit Run
+```
 
 
 
-# Matlab ...
+# Matlab 
 ![ggplot2](img/MikeMatlab.png)
 
+```
 Get Started
 - Open Matlab
 - cd into the folder Matlab and make sure that contains Plot.m and cars-sample.csv.
 - Make it your working directly
 - Open Plot.m
 - Hit Run
+```
 
 
 
-# Matplotlib ...
+# Matplotlib 
 ![ggplot2](img/MikeMatplotlib.png)
 
+```
 Get Started
 - cd into Matplotlib folder.
 - pip install matplotlib, if you don't have it already
 - Open the terminal, run python Plot.py
+```
 
 
 
-# Vegalite ...
+# Vegalite 
 ![ggplot2](img/MikeVegaLite.png)
 
+```
 Get Started
 - Cd Into the VegaLite folder
 - Open a terminal at that location
 - Run a local http server. ie: python -m SimpleHTTPServer
+```
 
 
 
-# Plotly ...
+# Plotly 
 ![ggplot2](img/MikePlotly.png)
 
+```
 Get Started
 - cd into Plotly folder.
 - pip install plotly plotly-express pandas, if you don't have it already
 - Open the terminal, run python Plot.py
+```
 
 
 

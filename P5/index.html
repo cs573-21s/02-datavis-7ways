@@ -21,6 +21,7 @@
         }
 
         function setup() {
+            //declared a function to check the dataset in advance.
             function dataCheck(data) {
                 for (let i = 0; i < data.getRowCount(); i++) {
                     if ((isNaN(Number(data.get(i, 'MPG')))) || (isNaN(Number(data.get(i, 'Weight'))))) {

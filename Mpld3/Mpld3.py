@@ -36,6 +36,7 @@ data_without_title = data[0:][1:]
 Manufacturer = list(data.Manufacturer[1:])
 Weight = list(map(float, data.Weight[1:]))
 MPG = list(map(float, data.MPG[1:]))
+Car = list(data.Car[1:])
 
 x = Weight
 y = MPG
@@ -60,8 +61,8 @@ ax.grid(True, alpha=0.3)
 
 labels = []
 for i in range(len(data_without_title.index)):
-    label = data_without_title.iloc[[i], 1:].T
-    label.columns = [Manufacturer[i]]
+    label = data_without_title.iloc[[i], 2:].T
+    label.columns = [Car[i]]
     labels.append(str(label.to_html()))
 
 scatter = ax.scatter(x, y, s=linear_Weight, c=colors, alpha=0.5)

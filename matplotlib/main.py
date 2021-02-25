@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # load data
-data = pd.read_csv('cars-sample.csv', header=None)
+data = pd.read_csv('../cars-sample.csv', header=None)
 # remove NA value
 index=data[3].notnull()
 data=data[index]

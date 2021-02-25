@@ -1,14 +1,44 @@
-d3 (make it cool like all of one manufacturer blow up)
-R was super easy
 
-python??? office hours
+DONE: 
+-R was super easy (code and png)
+-flourish (PNG and link)
+-excel (file and screenshot)
+-python (code + png)
 
-tablaue
-excel
-matlab
-spss
-flourish
+IN PROGRESS:
+-D3 (edits to physical aspect and axis)
+	graph gallery starter code
+-matlab
 
-vega-lite
+TBD:
+-tablaue
+-spss
 
-java2D??
+
+EXTRA:
+-matlab gamm
+-vega-lite
+
+
+
+teal #4ebd94
+olive: #b5b639
+peach: #f6938c
+pink: #cb91c0
+blue: #45bced
+
+
+
+These features should be preserved as much as possible in your replication:
+
+Data positioning: it should be a downward-trending scatterplot as shown. Weight should be on the x-axis and MPG on the y-axis.
+Scales: Note the scales do not start at 0.
+Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
+Color mapping to Manufacturer.
+Size mapping to Weight.
+Opacity of circles set to 0.5 or 50%.
+
+Other features are not required. This includes:
+
+The background grid.
+The legends.

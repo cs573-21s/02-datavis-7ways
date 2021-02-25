@@ -16,17 +16,11 @@ colorDict = {
     "mercedes": "#88CDF1",
     "toyota": "#7DCBF3"
 }
-
 color_map = [colorDict[color.strip('"')] for color in dataColors]
 
-# Prepare a list of sizes that increases with values in val
 
 sizevalues = [3*s//100 for s in data['Weight']]
-
-# Draw a scatter plot of val points with sizes in sizevalues and
-# colors in plotcolor
 plt.scatter(data['Weight'], data['MPG'], s=sizevalues, c=color_map, alpha=0.5)
-
 
 ax = plt.gca()
 ax.set_facecolor('#ECECEC')
@@ -34,14 +28,11 @@ ax.set_facecolor('#ECECEC')
 plt.setp(ax.get_xticklabels()[::2], visible=False)
 plt.setp(ax.get_yticklabels()[::2], visible=False)
 
-# Draw grid lines with red color and dashed style
 plt.grid(color='white', linestyle='-', linewidth=0.7)
 plt.xlabel("Weight")
 plt.ylabel("MPG")
  
-# Set axis limits to show the markers completely
 plt.ylim(5, 47)
 plt.xlim(1500, 5000)
- 
 plt.show()
 

@@ -1,6 +1,7 @@
 Assignment 2 - Data Visualization, 7 Ways  
 ===
-# D3(GitHub page:https://zihao777.github.io/02-datavis-7ways/)
+# D3
+GitHub page:https://zihao777.github.io/02-datavis-7ways/
 JavaScript is the most popular programming language of web in the world. D3.js is a JavaScript library for manipulating documents based on data. Using d3.js allows people to design their own vis with a high degree of control.
 
 To visualize the cars dataset,I used `d3.csv()` to load csv file. I made use of API in `d3.scale` to create scales to map the “Weight” and “x”, MPG and “y”, “Weight” and circle size. Then, binded the data to the SVG, added circles to the SVG, and determined the manufacturer type of each data to fill with different colors. I made use of API in `d3-axis` to construct x axis and y axis. I made us of `d3.brush()` to realize the interaction of brush. 
@@ -39,6 +40,13 @@ To visualize cars dataset, I set the mapping in the `aes()`. I also made use of 
 I think the core idea of ggplot2 is to separate plots from data, and separate plots related to data from plots unrelated to data. Different layers are joined with `+`.
 
 ![ggplot2](img/ggplot2.png)
+
+# matplotlib
+Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python. 
+
+To visualize cars dataset, I made use of `ax.scatter()` to create scatter plot. Because I didn’t find API which similar with `scaleLinear()` in matplotlib documentation, so I define a function and map the weight to circles size.
+
+![matplotlib](img/matplotlib.png)
 
 # Flourish
 Flourish is a web-based visualization tool which announces itself can make beautiful and easy visualization and storytelling. Actually, it is indeed very easy to create a visualization by using Flourish. In its website, I only need to upload a csv file and set the properties I want to display, then vis was created.

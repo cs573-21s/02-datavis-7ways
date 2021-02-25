@@ -3,7 +3,7 @@
 Assignment 2 - Data Visualization, 7 Ways  
 ===
 
-I have visualized given data set in 10 ways. These features are totally preserved in my replication:
+I have visualized given data set in 11 ways. These features are totally preserved in my replication:
 
 - Data positioning: it should be a downward-trending scatterplot as shown. Weight should be on the x-axis and MPG on the y-axis.
 
@@ -33,9 +33,10 @@ The libraries, tools and languages I've used are as follows.
 - ggplot2 + R + R Markdown
 - d3 + JavaScript
 - Vega-lite + JavaScirpt + JSON
-- Matplotlib + mpld3 + pandas + Python
-- Seaborn + pandas + Python
-- Bokeh + pandas + Python
+- Matplotlib + Python
+- mpld3 + Python
+- Seaborn + Python
+- Bokeh + Python
 
 4 tools:
 
@@ -52,19 +53,21 @@ Catalog
 
 [3. Vega-lite + JavaScirpt + JSON](https://github.com/Junying-Li/02-datavis-7ways#3-vega-lite--javascirpt--json)
 
-[4. Matplotlib + mpld3+ Python](https://github.com/Junying-Li/02-datavis-7ways#4-matplotlib--mpld3-python)
+[4. Matplotlib + Python](https://github.com/Junying-Li/02-datavis-7ways#4-matplotlib--python)
 
-[5. Seaborn + Python](https://github.com/Junying-Li/02-datavis-7ways#5-seaborn--python)
+[5. mpld3 + Python](https://github.com/Junying-Li/02-datavis-7ways#5-mpld3--python)
 
-[6. Bokeh + Python](https://github.com/Junying-Li/02-datavis-7ways#6-bokeh--python)
+[6. Seaborn + Python](https://github.com/Junying-Li/02-datavis-7ways#6-seaborn--python)
 
-[7. Tableau](https://github.com/Junying-Li/02-datavis-7ways#7-tableau)
+[7. Bokeh + Python](https://github.com/Junying-Li/02-datavis-7ways#7-bokeh--python)
 
-[8. Flourish](https://github.com/Junying-Li/02-datavis-7ways#8-flourish)
+[8. Tableau](https://github.com/Junying-Li/02-datavis-7ways#8-tableau)
 
-[9. PowerBI](https://github.com/Junying-Li/02-datavis-7ways#9-powerbi)
+[9. Flourish](https://github.com/Junying-Li/02-datavis-7ways#9-flourish)
 
-[10. Google sheet](https://github.com/Junying-Li/02-datavis-7ways#10-google-sheet)
+[10. PowerBI](https://github.com/Junying-Li/02-datavis-7ways#10-powerbi)
+
+[11. Google sheet](https://github.com/Junying-Li/02-datavis-7ways#11-google-sheet)
 
 # 1. R + ggplot2 + R Markdown
 
@@ -116,8 +119,7 @@ It's very easy to visualize data with Vega-Lite. We just need to put data into i
 
 ![vegalite](img/vegalite.png)
 
-# 4. Matplotlib + mpld3+ Python
-## 4.1 Plotted by Matplotlib
+# 4. Matplotlib + Python
 
 Page link: https://junying-li.github.io/02-datavis-7ways/matplotlib/index.html
 
@@ -131,21 +133,23 @@ The pro of matplotlib is it has very powerful function of plotting and can be co
 
 ![matplotlib](img/matplotlib.png)
 
-## 4.2 Exported by mpld3
+# 5.  mpld3 + Python
 
 Page link: https://junying-li.github.io/02-datavis-7ways/Mpld3/index.html
 
-To solve the export problem mentioned above. I made use of another library, mpld3.
+To solve the export problem mentioned above. I made use of `mpld3` library.
 
 The mpld3 project brings together Matplotlib and D3js. It can export your matplotlib graphics to HTML code which can be used within the browser, within standard web pages, blogs, or tools such as the IPython notebook. Graphics Exported by Mpld3 have tools below when mouse over it. Tools include box zoom, pan, and reset.
 
-By using `mpld3.show()` can run a local server to show graphics on web page. I also use `mpld3.save_to_html()` to save graphics in html, which is [Mpld3/index.html](https://junying-li.github.io/02-datavis-7ways/Mpld3/index.html).
+By using `mpld3.show()` can run a local server to show graphics on web page. I also used `mpld3.save_to_html()` to save a html file, which is [Mpld3/index.html](https://github.com/Junying-Li/02-datavis-7ways/blob/main/Mpld3/index.html).
+
+I also constructed an html tooltip, which can show all features of a data point when mouseover it.
 
 [Return to catalog](https://github.com/Junying-Li/02-datavis-7ways/blob/main/README.md#catalog)
 
 ![mpld3](img/mpld3.PNG)
 
-# 5. Seaborn + Python
+# 6. Seaborn + Python
 
 Page link: https://junying-li.github.io/02-datavis-7ways/seaborn/index.html
 
@@ -157,7 +161,7 @@ Both as visualization librarys, seaborn is much easier to use than matplotlib. I
 
 ![seaborn](img/seaborn.png)
 
-# 6. Bokeh + Python
+# 7. Bokeh + Python
 
 Page link: https://junying-li.github.io/02-datavis-7ways/bokeh/index.html
 
@@ -171,7 +175,7 @@ We can simply use `output_file("name.html")` to export our graphics to html. Fur
 
 ![bokeh](img/bokeh_plot.png)
 
-# 7. Tableau
+# 8. Tableau
 
 Page link: https://junying-li.github.io/02-datavis-7ways/Tableau/index.html
 
@@ -183,7 +187,7 @@ Tableau provides desktop application, online editor, and server, etc. It's basic
 
 ![Tableau](img/tableau.PNG)
 
-# 8. Flourish
+# 9. Flourish
 
 Page link: https://junying-li.github.io/02-datavis-7ways/Flourish/index.html
 
@@ -193,7 +197,7 @@ Flourish is an online data visualization tool. It's more easy to use than Tablea
 
 ![flourish](img/Flourish.PNG)
 
-# 9. PowerBI
+# 10. PowerBI
 
 Power BI is a business analytics service by Microsoft. It aims to provide interactive visualizations and business intelligence capabilities with an interface simple enough for end users to create their own reports and dashboards. 
 
@@ -203,7 +207,7 @@ PowerBI is free to use and does what it should as a data visualization tool. But
 
 ![powerBI](img/PowerBI.PNG)
 
-# 10. Google sheet
+# 11. Google sheet
 
 Page link: https://junying-li.github.io/02-datavis-7ways/Google%20sheet/index.html
 
@@ -214,9 +218,29 @@ Google Sheets is a spreadsheet program included as part of the free, web-based G
 ![googlesheet](img/googlesheet.png)
 
 ## Technical Achievements
-- **Used 10 ways to visualize**: I used 10 ways to visualize given data set and each one meets the requirements. 3 languages (R, JavaScript, Python), 7 libraries (bokeh, ggplot2, matplotlib, mpld3, seaborn, vega-lite, d3) are used in my solutions. And I also made use of R markdown, JSON, and html. Besides, I chose 4 popular data visualization tools to draw graphics too. 
-- **Filtered Data**: In d3,js and Python, I use different ways to filter data and remove clumns with NaN value.
+- **Used 10 ways to visualize**: 
+
+I used 10 ways to visualize given data set and each one meets the requirements. 3 languages (R, JavaScript, Python), 7 libraries (bokeh, ggplot2, matplotlib, mpld3, seaborn, vega-lite, d3) are used in my solutions. And I also made use of R markdown, JSON, and html. Besides, I chose 4 popular data visualization tools to draw graphics too. 
+
+- **Constructed html tooltip**:
+
+To construct html tooltip, I made use of `mpld3.plugins.PointHTMLTooltip()`, which can define the html tooltip associated to the scatter plot. Then, connected tooltip to figure by using `plugins.connect()`. 
+
+When mouseover a circle, there will be a tooltip shows all features of this data point.
+
+Page link: https://junying-li.github.io/02-datavis-7ways/Mpld3/index.html
+
+![tooltip](img/mpld3_tooltip.PNG)
+
+- **Filtered Data**: 
+
+In d3, matplotlib, and mpld3, I made use of different ways to filter data and remove clumns with NaN value.
 
 ## Design Achievements
-- **Color map**: I made color maps or palettes for each way in this assignment to make sure they look like the graphic given by the professor.
-- **Weight linear map**: In some ways of this assignment, the circles became too big after mapping to Weight. To make sure we have a better view, I set and adjusted parameters of linear mapping.
+- **Color map**: 
+
+I made color maps or palettes for each way in this assignment to make sure they look like the graphic given by the professor.
+
+- **Weight linear map**: 
+
+In some ways of this assignment, the circles became too big after mapping to Weight. To make sure we have a better view, I set and adjusted parameters of linear mapping.

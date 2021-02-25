@@ -1,5 +1,13 @@
 Assignment 2 - Data Visualization, 7 Ways  
 ===
+# D3
+JavaScript is the most popular programming language of web in the world. D3.js is a JavaScript library for manipulating documents based on data. Using the API in d3.js allows people to design their own vis with a high degree of control.
+
+To visualize the cars dataset, I made use of API in d3.scale to create scales to map the “Weight” and “x”, MPG and “y”, “Weight” and circle size. Then, binded the data to the SVG, added circles to the SVG, and determined the manufacturer type of each data to fill with different colors. I made use of API in d3-axis to create x axis and y axis. I made us of d3.brush() to realize the interaction of brush. 
+
+I think D3 is a powerful library for creating vis. Designers can find useful tools to fulfill their specific design requirements. In implementing the brush interaction, although it took time to view the document and code, the final effect was very exciting for me.
+
+![D3](img/D3.gif)
 
 # Flourish
 Flourish is a web-based visualization tool which announces itself can make beautiful and easy visualization and storytelling. Actually, it is indeed very easy to create a visualization by using Flourish. In its website, I only need to upload a csv file and set the properties I want to display, then vis was created.

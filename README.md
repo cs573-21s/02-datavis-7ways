@@ -5,7 +5,7 @@ JavaScript is the most popular programming language of web in the world. D3.js i
 
 To visualize the cars dataset,I used `d3.csv()` to load csv file. I made use of API in `d3.scale` to create scales to map the “Weight” and “x”, MPG and “y”, “Weight” and circle size. Then, binded the data to the SVG, added circles to the SVG, and determined the manufacturer type of each data to fill with different colors. I made use of API in `d3-axis` to construct x axis and y axis. I made us of `d3.brush()` to realize the interaction of brush. 
 
-In this progress, I encountered a problem when trying to map "MPG" to "y" because two data in the "MPG" attribute have NA values. In order to solve this problem, I declared a function to check the dataset in advance. If the “MPG” value of a certain data in the data set is NA, I deleted it.  In implementing the brush interaction, although it took time to view the document and code, the final effect was very exciting for me. 
+In this progress, I encountered a problem when trying to map "MPG" to "y" because two data in the "MPG" attribute have NA values. In order to solve this problem, I declared a function to check the dataset in advance. If the “MPG” value of a certain data in the data set is NA, I deleted it.  In implementing the brush interaction, although I spent some time viewing the document and code, the final effect was very exciting for me. 
 
 I think D3 is a powerful library for creating vis. Designers can find useful tools to fulfill their specific design requirements.
 
@@ -16,9 +16,9 @@ P5.js is another JavaScript library. On its website, P5.js is described to creat
 
 To visualize the cars dataset, I used `loadTable()` to load csv file, used `map()` to map the “Weight” and “x”, MPG and “y”, “Weight” and circle size. I made use of `Eclipse()` to draw circles then fill each circle by determining the value of “Manufacturer”.
 
-In this progress, I couldn’t find API for constructing axis. Thus, I used `line()` to draw axis. In addition, in the beginning, I failed to map "MPG" to "y" because two data in the "MPG" attribute have NA values. To solve this problem, I declared a function to check the dataset in advance. As the type of data in P5.js is table, so I took some time to check the document and learned to manipulate table data.
+In this progress, I couldn’t find API for constructing axis. Thus, I used `line()` to draw axis. In addition, in the beginning, I failed to map "MPG" to "y" because two data in the "MPG" attribute have NA values. To solve this problem, I declared a function to check the dataset in advance. Since the data type returned by `loadTable()` is table object, I spend some time viewing the document and learned to manipulate data table object.
 
-P5.js is an interesting tool for data vis and It is easy to learn. Due to the characteristics of this library, I think it is more suitable to make some interesting animations. For example, I saw a very interesting snowflake animation on the official website. (https://p5js.org/examples/simulate-snowflakes.html)
+P5.js is an interesting tool for data vis and It is easy to learn. Due to the characteristics of this library, I think it is more suitable to make some interesting animations. For example, I saw a very interesting snowflake animation on the official website(https://p5js.org/examples/simulate-snowflakes.html).
 
 ![P5](img/P5.png)
 

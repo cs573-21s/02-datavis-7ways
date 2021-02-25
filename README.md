@@ -22,6 +22,15 @@ P5.js is an interesting tool for data vis and It is easy to learn. Due to the ch
 
 ![P5](img/P5.png)
 
+# Vega-Lite
+Vega-lite is a high-level grammar to create interactive graph. Its specifications describe visualizations as encoding mappings from data to properties of graphical marks.
+
+To visualize the cars dataset, I set properties for each data to set its coordinates, color and size in Json syntax.
+
+The encoding style of Vega-lite is different with other tools. To create a vis, you don't need to declare a function or many variables. You only need to set attributes for the data according to json syntax.
+
+![Vega-Lite](img/Vega.png)
+
 # Flourish
 Flourish is a web-based visualization tool which announces itself can make beautiful and easy visualization and storytelling. Actually, it is indeed very easy to create a visualization by using Flourish. In its website, I only need to upload a csv file and set the properties I want to display, then vis was created.
 

@@ -87,7 +87,7 @@
                 noticeBox.style.display = 'none'
             })
         });
-
+        //declared a function to check the dataset in advance.
         function dataCheck(data) {
             for (let i = 0; i < data.length; i++) {
                 if ((isNaN(Number(data[i]['MPG']))) || (isNaN(Number(data[i]['Weight'])))) {

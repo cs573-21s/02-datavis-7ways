@@ -2,9 +2,8 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import pandas as pd
 
-
 # load data
-data = pd.read_csv('cars-sample.csv')
+data = pd.read_csv('../cars-sample.csv')
 
 # set figure size
 sns.set(rc={'figure.figsize':(6,5)})

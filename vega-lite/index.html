@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Vega-Lite Bar Chart</title>
+    <meta charset="utf-8" />
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+    <style media="screen">
+        /* Add space between Vega-Embed links  */
+        /* .vega-actions a {
+            margin-right: 5px;
+        } */
+    </style>
+</head>
+
+<body>
+    <h1>Scatter plot with Vega-Lite Visualization</h1>
+    <!-- Container for the visualization -->
+    <div id="vis"></div>
+
+    <script>
+        // Assign the specification to a local variable vlSpec.
+        var vlSpec = {
+            $schema: 'https://vega.github.io/schema/vega-lite/v4.json',
+            'data': {
+                'url': 'cars-sample.csv'
+            },
+            'width': 400,
+            'height': 400,
+            'mark': {
+                'type': "circle",
+                'opacity': 0.5
+            },
+            'encoding': {
+                'x': {
+                    'field': 'Weight',
+                    'type': 'quantitative',
+                    'scale': { 'zero': false },
+                    "axis": {
+                        "values": [2000, 3000, 4000, 5000]
+                    }
+                },
+                'y': {
+                    'field': 'MPG',
+                    'type': 'quantitative',
+                    'scale': {
+                        'zero': false,
+                        'domainMin': 7
+                    },
+                    "axis": {
+                        "values": [10, 20, 30, 40]
+                    }
+                },
+                'color': {
+                    'field': 'Manufacturer',
+                    'type': 'nominal'
+                },
+                "size": {
+                    "field": "Weight",
+                    "type": "quantitative"
+                },
+            },
+        };
+
+        console.log(vlSpec.data);
+
+        // Embed the visualization in the container with id `vis`
+        vegaEmbed('#vis', vlSpec);
+    </script>
+</body>
+
+</html>

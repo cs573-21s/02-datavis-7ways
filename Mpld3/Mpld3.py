@@ -27,7 +27,7 @@ table, th, td
 """
 
 # load data
-df = pd.read_csv('../matplotlib/cars-sample.csv')
+df = pd.read_csv('../cars-sample.csv')
 # remove NA value
 index=df.MPG.notnull()
 data=df[index]

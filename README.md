@@ -32,7 +32,9 @@ I found Tableau fairly frustrating to use. I found the GUI to be confusing and u
 
 # Matplotlib
 
-It was challenging just to get the libraries installed correctly. I am not very proficient in Terminal and things kept going wrong. And I have never worked in Python either. Once I got things working I watched this 10 part series of tutorial videos to learn how to make charts in Matplotlib [Matplotlib Tutorials] (https://www.youtube.com/watch?v=UO98lJQ3QGI&list=PL-osiE80TeTvipOqomVEeZ1HRrcEvtZB)
+It was challenging just to get the libraries installed correctly. I am not very proficient in Terminal and things kept going wrong. And I have never worked in Python either. Once I got things working I watched this 10 part series of tutorial videos to learn how to make charts in Matplotlib [Matplotlib Tutorials](https://www.youtube.com/watch?v=UO98lJQ3QGI&list=PL-osiE80TeTvipOqomVEeZ1HRrcEvtZB)
+
+Once I got up and running I was pretty pleased with my results. It was easy to map the data to the size and color of the marks. Having a ggplot style template helped! I used the Matplotlib API to format the grid.
 
 
 ## Technical Achievements

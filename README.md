@@ -55,7 +55,7 @@ Catalog
 
 [4. Matplotlib + Python](https://github.com/Junying-Li/02-datavis-7ways#4-matplotlib--python)
 
-[5. mpld3 + Python](https://github.com/Junying-Li/02-datavis-7ways#5-mpld3--python)
+[5. mpld3 + Python](https://github.com/Junying-Li/02-datavis-7ways#5--mpld3--python)
 
 [6. Seaborn + Python](https://github.com/Junying-Li/02-datavis-7ways#6-seaborn--python)
 

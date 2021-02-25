@@ -1,16 +1,41 @@
+# Reference: https://mpld3.github.io/examples/html_tooltips.html
 import matplotlib.pyplot as plt
 import pandas as pd
 import mpld3
 
-# load data
-data = pd.read_csv('../matplotlib/cars-sample.csv', header=None)
-# remove NA value
-index=data[3].notnull()
-data=data[index]
+# Define CSS to control custom labels
+css = """
+table
+{
+  border-collapse: collapse;
+}
+th
+{
+  color: #ffffff;
+  background-color: #000000;
+}
+td
+{
+  background-color: #cccccc;
+}
+table, th, td
+{
+  font-family:Arial, Helvetica, sans-serif;
+  border: 1px solid black;
+  text-align: right;
+}
+"""
 
-Manufacturer = data[2][1:]
-Weight = list(map(float, data[7][1:]))
-MPG = list(map(float, data[3][1:]))
+# load data
+df = pd.read_csv('../matplotlib/cars-sample.csv')
+# remove NA value
+index=df.MPG.notnull()
+data=df[index]
+#
+data_without_title = data[0:][1:]
+Manufacturer = list(data.Manufacturer[1:])
+Weight = list(map(float, data.Weight[1:]))
+MPG = list(map(float, data.MPG[1:]))
 
 x = Weight
 y = MPG
@@ -19,22 +44,32 @@ colors = []
 for i in Manufacturer:
     if i == 'bmw':
         colors.append('#f8766d')
-    if i == 'ford':
+    elif i == 'ford':
         colors.append('#a3a500')
-    if i == 'honda':
+    elif i == 'honda':
         colors.append('#00bf7d')
-    if i == 'mercedes':
+    elif i == 'mercedes':
         colors.append('#00b0f6')
-    if i == 'toyota':
+    elif i == 'toyota':
         colors.append('#e76bf3')
+    else:
+        continue
 
-# plot
 fig, ax = plt.subplots()
+ax.grid(True, alpha=0.3)
+
+labels = []
+for i in range(len(data_without_title.index)):
+    label = data_without_title.iloc[[i], 1:].T
+    label.columns = [Manufacturer[i]]
+    labels.append(str(label.to_html()))
+
 scatter = ax.scatter(x, y, s=linear_Weight, c=colors, alpha=0.5)
-ax.grid(color='white', alpha=0.1)
 ax.set_title('A2 mpld3')
 ax.set_xlabel('Weight')
 ax.set_ylabel('MPG')
-ax.set_facecolor('#ebebeb')
-mpld3.save_html(fig, 'index.html')
-# mpld3.show()
+# Define tool tip
+tooltip = mpld3.plugins.PointHTMLTooltip(scatter, labels, css=css)
+mpld3.plugins.connect(fig, tooltip)
+# mpld3.save_html(fig, 'index.html')
+mpld3.show()

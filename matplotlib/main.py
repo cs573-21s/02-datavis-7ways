@@ -22,14 +22,16 @@ colors = []
 for i in Manufacturer:
     if i == 'bmw':
         colors.append('#f8766d')
-    if i == 'ford':
+    elif i == 'ford':
         colors.append('#a3a500')
-    if i == 'honda':
+    elif i == 'honda':
         colors.append('#00bf7d')
-    if i == 'mercedes':
+    elif i == 'mercedes':
         colors.append('#00b0f6')
-    if i == 'toyota':
+    elif i == 'toyota':
         colors.append('#e76bf3')
+    else:
+        continue
 
 # set axes & grid
 plt.rcParams['axes.facecolor'] = '#ececec'

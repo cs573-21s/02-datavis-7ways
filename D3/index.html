@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<style>
+  body {
+    font-family: Arial, "Helvetica Neue";
+    font-size: 0.8em;
+  }
+  .graph-container {
+    background-color: #ececec;
+  }
+  .axis-grid line {
+    stroke: white;
+  }
+
+  .axis-grid .domain {
+    stroke: white;
+  }
+
+  .domain {
+    display: none;
+  }
+</style>
+<body>
+  <div class="container"></div>
+
+  <!-- load the d3.js library -->
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script>
+    let colorData = {
+      bmw: "#F3B0AC",
+      ford: "#B7B74A",
+      honda: "#80D5B0",
+      mercedes: "#88CDF1",
+      toyota: "#7DCBF3",
+    };
+
+    // set the dimensions and margins of the graph
+    var margin = { top: 10, right: 30, bottom: 30, left: 60 },
+      width = 460 - margin.left - margin.right,
+      height = 350 - margin.top - margin.bottom;
+
+    var svg = d3
+      .select(".container")
+      .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom + 50)
+      .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    svg
+      .append("rect")
+      .attr("width", width)
+      .attr("height", height + margin.top + margin.bottom - 40)
+      .attr("fill", "#ECECEC");
+
+    let x = d3.scaleLinear().domain([1500, 5000]).range([0, width]);
+
+    svg
+      .append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x));
+
+    let y = d3.scaleLinear().domain([5, 47]).range([height, 0]);
+
+    svg.append("g").call(d3.axisLeft(y));
+
+    let z = d3.scaleSqrt().domain([1500, 5000]).range([2, 10]);
+
+    let ticks = d3.selectAll(".tick text");
+    ticks.each(function (_, i) {
+      if (i % 2 === 0) {
+        d3.select(this).remove();
+      }
+    });
+
+    const xAxisGrid = d3
+      .axisBottom(x)
+      .tickSize(-height)
+      .tickFormat("")
+      .ticks(10);
+    const yAxisGrid = d3.axisLeft(y).tickSize(-width).tickFormat("").ticks(10);
+
+    svg
+      .append("g")
+      .attr("class", "x axis-grid")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxisGrid);
+
+    svg.append("g").attr("class", "y axis-grid").call(yAxisGrid);
+
+    svg
+      .append("text")
+      .attr("class", "x label")
+      .attr("text-anchor", "end")
+      .attr("x", width / 2 + 35)
+      .attr("y", height + 35)
+      .text("Weight");
+
+    svg
+      .append("text")
+      .attr("class", "y label")
+      .attr("text-anchor", "end")
+      .attr("x", -(height / 2) + 25)
+      .attr("y", -40)
+      .attr("dy", ".75em")
+      .attr("transform", "rotate(-90)")
+      .text("MPG");
+
+    function checkFilters(data) {
+      return data.Weight > 0 && data.MPG > 0;
+    }
+
+    d3.csv("cars-sample.csv").then(function (data) {
+      let filteredData = data.filter(checkFilters);
+
+      filteredData.forEach(function (d) {
+        console.log(d);
+      });
+
+      svg
+        .selectAll("dot")
+        .data(filteredData)
+        .enter()
+        .append("circle")
+        .style("opacity", 0.5)
+        .style("fill", function (d) {
+          return colorData[d.Manufacturer];
+        })
+        .attr("cx", function (d) {
+          return x(d.Weight);
+        })
+        .attr("cy", function (d) {
+          return y(d.MPG);
+        })
+        .style("r", function (d) {
+          return z(d.Weight);
+        });
+    });
+  </script>
+</body>

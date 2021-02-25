@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>VegaLite</title>
+    <meta charset="utf-8" />
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+    <style>
+        .grid-bk {
+            position: absolute;
+            background-color: #ECECEC;
+            height: 350px;
+            width: 460px;
+            left: 48px;
+            top: 18px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="grid-bk"> </div>
+    <div class="container"></div>
+
+    <script>
+
+      let options = {
+        $schema: "https://vega.github.io/schema/vega-lite/v4.json",
+        data: {
+          url:
+            "cars-sample.csv",
+        },
+        width: 460,
+        height: 350,
+        mark: {
+            type: "circle",
+            opacity: 0.5
+        },
+        background: "transparent",
+        config: { 
+            "axis": { 
+                "grid": true, 
+                "gridColor": "#ffffff",
+                "domainColor": "#ffffff" 
+            }
+        }, 
+        encoding: {
+          x: {
+            field: "Weight",
+            type: "quantitative",
+            scale: { domain: [1500, 5000] },
+          },
+          y: {
+            field: "MPG",
+            type: "quantitative",
+            scale: { domain: [5, 47] },
+          },
+          size: { field: "Weight", type: "quantitative" },
+          color: {
+            field: "Manufacturer",
+            type: "nominal",
+            scale: {
+              range: ["#F3B0AC", "#B7B74A", "#80D5B0", "#88CDF1", "#7DCBF3"],
+            },
+          },
+        },
+      };
+
+      vegaEmbed(".container", options);
+    </script>
+  </body>
+</html>

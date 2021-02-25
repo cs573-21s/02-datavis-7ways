@@ -1,142 +1,138 @@
-# 02-DataVis-7ways
-
 Assignment 2 - Data Visualization, 7 Ways  
 ===
 
-Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 7 times. 
+# D3
+![ggplot2](img/MikeD3.png)
 
-The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
+D3 was probably the most intuitive tool for me in comparison to all the other tools when it came to creativity and having full control of what I was visualizing. This could be due to the fact that our first assignment was in D3 and I personally have a decent background using javascript. It was the very first tool I used, but it did also come with its problems.
 
-I have provided a small dataset about cars, `cars-sample.csv`.
-Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
+I did run into the asychronous bug at first. It was interesting because I knew what the problem was, but fixing the problem was not as easy as I thought it would have been.
 
-Your goal is to use 7 different tools to make the following chart:
+D3 in comparison to the rest was limited in terms of very specific scatterplot customizations. Like if I wanted to very quickly skip every other label this was a hazel. The good thing about D3 though is that every thing was attached to the html dom. I was able to manipulate that freely and pretty quickly. For me in the future if I had to visualize something that may be discrete or unknown data. I would for sure start with D3 because of its freedom to maniuplate almost everything you place on the dom.
 
-![ggplot2](img/ggplot2.png)
+#### Get Started
 
-These features should be preserved as much as possible in your replication:
-
-- Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
-- Scales: Note the scales do not start at 0.
-- Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
-- Color mapping to Manufacturer.
-- Size mapping to Weight.
-- Opacity of circles set to 0.5 or 50%.
-
-Other features are not required. This includes:
-
-- The background grid.
-- The legends.
-
-Note that some software packages will make it **impossible** to perfectly preserve the above requirements. 
-Be sure to note where these deviate.
-
-Improvements are also welcome as part of Technical and Design achievements.
-
-Libraries, Tools, Languages
----
-
-You are required to use 7 different tools or libraries.
-Of the 7 tools, you must use at least 3 libraries (libraries require code of some kind).
-This could be `Python, R, Javascript`, or `Java, Javascript, Matlab` or any other combination.
-Dedicated tools (i.e. Excel) do not count towards the language requirement.
-
-Otherwise, you should seek tools and libraries to fill out your 7.
-
-Below are a few ideas. Do not limit yourself to this list!
-Some may be difficult choices, like Matlab or SPSS, which require large installations, licenses, and occasionally difficult UIs.
-
-I have marked a few that are strongly suggested.
-
-- R + ggplot2 `<- definitely worth trying`
-- Excel
-- d3 `<- since the rest of the class uses this, we're requiring it`
-- Matplotlib
-- three.js `<- well, it's a 3d library. not really recommended, but could be "interesting"`
-- p5js `<- good for playing around. not really a chart lib`
-- Tableau
-- Java 2d
-- GNUplot
-- Vega-lite <- `<- recently much better. look for the high level js implementations`
-- Flourish <- `<- popular last year`
-- PowerBI
-- SPSS
-
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found, please identify the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing. 
-
-Tips
----
-
-- If you're using d3, key to this assignment is knowing how to load data.
-You will likely use the [`d3.json` or `d3.csv` functions](https://github.com/mbostock/d3/wiki/Requests) to load the data you found.
-Beware that these functions are *asynchronous*, meaning it's possible to "build" an empty visualization before the data actually loads.
-
-- *For web languages like d3* Don't forget to run a local webserver when you're debugging.
-See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server) if you're stuck.
+```
+- Cd Into the D3 folder
+- Open a terminal at that location
+- Run a local http server. ie: python -m SimpleHTTPServer
+```
 
 
-Readme Requirements
----
 
-A good readme with screenshots and structured documentation is required for this project. 
-It should be possible to scroll through your readme to get an overview of all the tools and visualizations you produced.
+# Flourish 
+![ggplot2](img/MikeFlourish.png)
 
-- Each visualization should start with a top-level heading (e.g. `# d3`)
-- Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
-- Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
 
-Other Requirements
----
+Flourish was for sure an interesting experience as well. I think as a developer it appeared limited to me, however, if I were to put a nondeveloper lens on than I think Flourish was great. If someone was specifically in need of using an online gui tool to create a simple scatterplot Flourish is very good at doing so.
 
-0. Your code should be forked from the GitHub repo.
-1. Place all code, Excel sheets, etcetera in a named folder. For example, `r-ggplot, matlab, mathematica, excel` and so on.
-2. Your writeup (readme.md in the repo) should also contain the following:
+I enjoyed their support that they gave when it came to embedding the visualizations in your html files which made it very easy to freely share. Flourish was the only non-coding library I used. I actually found myself having a harder time manipulating data visualizations that didn't allow you to code like Excel or Flourish. 
 
-- Description of the Technical achievements you attempted with this visualization.
-  - Some ideas include interaction, such as mousing over to see more detail about the point selected.
-- Description of the Design achievements you attempted with this visualization.
-  - Some ideas include consistent color choice, font choice, element size (e.g. the size of the circles).
+It did take me a little while to learn their user interface, but after I did it was fairly intuitive and efficient.
 
-GitHub Details
----
 
-- Fork the GitHub Repository. You now have a copy associated with your username.
-- Make changes to fulfill the project requirements. 
-- To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
+#### Get Started
 
-Grading
----
+```
+- Cd Into the Flourish folder
+- Either open the terminal and enter open . then double click index.html
+- Or open the terminal and enter open index.html in the command line.
+```
 
-Grades on a 120 point scale. 
-24 points will be based on your Technical and Design achievements, as explained in your readme. 
 
-Make sure you include the files necessary to reproduce your plots.
-You should structure these in folders if helpful.
-We will choose some at random to run and test.
+# GGPlot2 
+![ggplot2](img/MikeGGPlot2.png)
 
-**NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
+In my opinion, R Studio was probably the easiest to use out of all of the tools. I think this had a lot to do with the fact that the example itself utilized GGPlot. I think one important factor when using a tool that relies on coding is that parsing the csv and reading that csv is the most time consuming tasks. 
 
-# R + ggplot2 + R Markdown
+When it came to parsing the CSV, and reading the data I needed to read in the scatterplot, this was very simple in ggplot2. 
 
-R is a language primarily focused on statistical computing.
-ggplot2 is a popular library for charting in R.
-R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
 
-To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
+#### Get Started
 
-While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
+```
+- Open R Studio
+- Open Plot.R
+- Run install.packages("ggplot2") to install ggplot2 and initalize it
+- Make sure you know the location to the cars-sample.csv
+- Hit Run
+```
 
-![ggplot2](img/ggplot2.png)
 
-# d3...
+# Matlab 
+![ggplot2](img/MikeMatlab.png)
 
-(And so on...)
+
+Matlab was probably one of the hardest to visually represent the data in the same fashion that I did with the others. I think I was limited in terms of manipulating size of the markers, but when it came to visualizing the points and reading the data. That was pretty straight forward and it only took a few lines of code.
+
+I did have to do alot of reading on the documentations here to understand how color mapping worked. I'd honestly say this was the hardest part in matlab. Unlike most of the other programs that supported hex. Ofcourse, Matlab didn't so I spent alot of time trying to understand the usage of rgb in matlab and how we could map specific attributes to their specific colormapping.
+
+#### Get Started
+
+```
+- Open Matlab
+- cd into the folder Matlab and make sure that contains Plot.m and cars-sample.csv.
+- Make it your working directly
+- Open Plot.m
+- Hit Run
+```
+
+
+# Matplotlib 
+![ggplot2](img/MikeMatplotlib.png)
+
+I really did enjoy using Python again. Python has to be probably my favorite language. In this case with Matplotlib, though, it was probably the second hardest tool I used in this assignment. Instead of typically using the panda library to help you read csv files. I chose another path of using numpy. This definitely complicated things and made reading data from the CSV a lot harder than it should have been.
+
+There were many smooth features in Matplotlib though that I noticed a lot of the other tools lacked like skipping label intervals for instance. I think I used a hacky way of skipping intervals by using setp and changing visibility on ticklabels, but with a very few lines of code I was still able to get a pretty clean result.
+
+#### Get Started
+
+```
+- cd into Matplotlib folder.
+- pip install matplotlib, if you don't have it already
+- Open the terminal, run python Plot.py
+```
+
+
+# Vegalite 
+![ggplot2](img/MikeVegaLite.png)
+
+Vegalite was probably one of the easiest implementations to create outside of Flourish. I think me so happening to choose to do Vegalite right after doing my D3 implementation helped greatly. D3 to me was very smooth in terms of manipulating the dom and so forth but when I found out that Vegalite was utilizing canvas I was sold in terms of which one i'd probably use if I had to choose one for this assignment. 
+
+One hacky thing I did do with vegalite was use an html block to give the grid a backdrop. I didn't have to do this step in any other interrations, but I did notice that something as simple as changing the backdrop to only be bounded by the axies was a little harder than expected. They support people changing the background of the whole canvas, but in the case of this project I only needed what was inside the bounds.
+
+#### Get Started
+
+```
+- Cd Into the VegaLite folder
+- Open a terminal at that location
+- Run a local http server. ie: python -m SimpleHTTPServer
+```
+
+
+
+# Plotly 
+![ggplot2](img/MikePlotly.png)
+
+Plotly in terms of Python frameworks that I used, was probably the simplest of all. Unlike my numpy implementation that I used for Matplotlib, I chose to use panda in this case and make use of their native scatter function. I actually can say this was the smoothest go around of all of them. I used the least amount of code, while producing probably one of the best replications, all while having access to the power Python language.
+
+#### Get Started
+
+```
+- cd into Plotly folder.
+- pip install plotly plotly-express pandas, if you don't have it already
+- Open the terminal, run python Plot.py
+```
 
 
 ## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
+- I was able to implement numpy genfromtxt in order to render a graph in Matplotlib without the use of Panda
+- I was able to translate between datatypes in order to match csv values manually with a self created dictionary in python. Translation was done between NumpyArrays and standard Python Dictionaries
+- Dynamically used recursion to implement grid lines in certain tools that did not have easy support of creating a grid
 
 ### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+- Visually, I was able to rerender a grid background in every tool I used. This came in many forms. For D3 for instance I used the power of their custom objects to render the gray overlay. In the case of Vega Lite I utilized the html canvas to render the gray background
+- In order to show every other label on the axies, I manually manipulated the dom to remove ticks in order to more reflect the original plot
+- Utilized Cascading Styling Sheets (CSS) in some cases to override html elements in order to fully match the appearance to the original plot 
+
+

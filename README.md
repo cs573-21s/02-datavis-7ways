@@ -218,9 +218,9 @@ Google Sheets is a spreadsheet program included as part of the free, web-based G
 ![googlesheet](img/googlesheet.png)
 
 ## Technical Achievements
-- **Used 10 ways to visualize**: 
+- **Used 11 ways to visualize**: 
 
-I used 10 ways to visualize given data set and each one meets the requirements. 3 languages (R, JavaScript, Python), 7 libraries (bokeh, ggplot2, matplotlib, mpld3, seaborn, vega-lite, d3) are used in my solutions. And I also made use of R markdown, JSON, and html. Besides, I chose 4 popular data visualization tools to draw graphics too. 
+I used 11 ways to visualize given data set and each one meets the requirements. 3 languages (R, JavaScript, Python), 7 libraries (bokeh, ggplot2, matplotlib, mpld3, seaborn, vega-lite, d3) are used in my solutions. And I also made use of R markdown, JSON, and html. Besides, I chose 4 popular data visualization tools to draw graphics too. 
 
 - **Constructed html tooltip**:
 

@@ -11,7 +11,7 @@ output_file("index.html")
 
 p = figure(plot_width=800, plot_height=700, title="A2 bokeh")
 
-df = pd.read_csv("cars-sample.csv")
+df = pd.read_csv("../cars-sample.csv")
 
 index_cmap = factor_cmap('Manufacturer', palette=['#f8766d', '#a3a500', '#00bf7d', '#00b0f6', '#e76bf3'],
                          factors=sorted(df['Manufacturer'].unique()))

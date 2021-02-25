@@ -1,1 +1,1 @@
-This file includes index.html showing vis built by Flourish.
+This folder stores file used for vis built with Flourish.

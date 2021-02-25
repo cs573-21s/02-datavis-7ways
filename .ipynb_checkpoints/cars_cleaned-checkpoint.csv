@@ -1,4 +1,4 @@
-,Car,Manufacturer,MPG,Cylinders,Displacement,Horsepower,Weight,WeightCategory,Acceleration,ModelYear,ModelYearAbbr,Origin
+,Car,Manufacturer,MPG,Cylinders,Displacement,Horsepower,Weight,Weight Category,Acceleration,Model Year,Model Year Abbr,Origin
 5,Torino,Ford,17,8,302,140,3449,3000,10.5,1970,70,American
 6,Galaxie 500,Ford,15,8,429,198,4341,4000,10,1970,70,American
 21,Corona Mark Ii,Toyota,24,4,113,95,2372,2000,15,1970,70,Japanese

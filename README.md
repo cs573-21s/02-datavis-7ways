@@ -1,8 +1,7 @@
 Assignment 2 - Data Visualization, 7 Ways  
 ===
 
-
-# R + ggplot2 + R Markdown
+# Example R + ggplot2 + R Markdown
 
 R is a language primarily focused on statistical computing.
 ggplot2 is a popular library for charting in R.
@@ -12,11 +11,66 @@ To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, wi
 
 While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
 
-![ggplot2](img/ggplot2.png)
+![ggplot2](img/MikeD3.png)
 
-# d3...
+# D3...
 
 (And so on...)
+
+
+![ggplot2](img/MikeFlourish.png)
+
+# Flourish ...
+
+(And so on...)
+
+
+
+![ggplot2](img/MikeGGPlot2.png)
+
+# GGPlot2 ...
+
+(And so on...)
+
+
+
+
+![ggplot2](img/MikeMatlab.png)
+
+# Matlab ...
+
+(And so on...)
+
+
+
+
+![ggplot2](img/MikeMatplotlib.png)
+
+# Matplotlib ...
+
+(And so on...)
+
+
+
+
+![ggplot2](img/MikeVegaLite.png)
+
+# Vegalite ...
+
+(And so on...)
+
+
+
+
+![ggplot2](img/MikePlotly.png)
+
+# Plotly ...
+
+(And so on...)
+
+
+
+
 
 
 ## Technical Achievements

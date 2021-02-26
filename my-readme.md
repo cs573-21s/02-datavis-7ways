@@ -12,7 +12,7 @@
 [Flourish Cars Vis](https://public.flourish.studio/visualisation/5352793/)
 
 ![Flourish Screenshot](7-graphs/flourish1.png)
-![Flourish Screenshot](7-graphs/flourish2.png)
+![Flourish Screenshot 2](7-graphs/flourish2.png)
 
 - wanted to use flourish bc it's really easy to change things -- response time better?
 - then base other graphs off of it
@@ -51,3 +51,16 @@
 4 Python + Plotly
 ===
 
+![Python + Plotly Screenshot](7-graphs/python-plotly1.png)
+![Python + Plotly Screenshot 2](7-graphs/python-plotly2.png)
+
+- interactive: hover to see more information about the car
+- spikelines
+- toggle manufacturers in legend
+- dark theme
+
+
+5 Python + Seaborn
+===
+
+- super super easy

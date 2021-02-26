@@ -20,10 +20,10 @@ let learnability = [
 let fileSize = [
     { vis: 'Excel', value: '7th', color: '#008000', tooltip:'34kb' }, //34kb
     { vis: 'MATLAB', value: '3rd', color: '#d0530f', tooltip:'2kb'}, //2kb
-    { vis: 'R + ggplot2', value: '1st', color: '#2569c0',tooltip:'1kb 19 lines of code' }, //1kb 19 lines
+    { vis: 'R + ggplot2', value: '1st', color: '#2569c0',tooltip:'1kb, 19 lines of code' }, //1kb 19 lines
     { vis: 'Python + Matplotlib', value: '4th', color: '#ffdd54', tooltip:'3kb, 65 lines of code' }, //3kb 65 lines
-    { vis: 'd3', value: '5th', color: '#000000', tooltip:'3kb 119 lines of code'}, //3kb 119 lines
-    { vis: 'Vega-Lite', value: '2nd', color: '#274c71', tooltip:'1kb 28 lines of code' }, //1kb 28 lines
+    { vis: 'd3', value: '5th', color: '#000000', tooltip:'3kb, 119 lines of code'}, //3kb 119 lines
+    { vis: 'Vega-Lite', value: '2nd', color: '#274c71', tooltip:'1kb, 28 lines of code' }, //1kb 28 lines
     { vis: 'Tableau', value: '6th', color: '#1c437e', tooltip:'33kb' }, //33 kb
 ];
 
@@ -148,6 +148,6 @@ optionList.addEventListener("change", function () {
     } else {
         update(appeal)
         graphTitle.innerText = "Visual Appeal";
-        description.innerText = "This very subjective category ranks the tools based on how good I think the resulting graph looks. I did get a second opinion from my girlfriend as well so it's not 100% biased."
+        description.innerText = "This very subjective category ranks the tools based on how good I think the resulting graph looks. I did get a second opinion from my girlfriend so it's not 100% biased."
     }
 });

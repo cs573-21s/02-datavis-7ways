@@ -53,4 +53,4 @@ I found it harder to use than Excel and it doesn't have very sophisticated chart
 
 ### Design Achievements
 - **Color**: I changed the color scheme. I thought primary colors looked good at the 50% opacity with a variation of goldenrod instead of yellow and I also made the background a different gray color to help with mark visibility.
-- **Consistency**:
+- **Consistency**: I put a lot of effort in to getting consistency in the small details wherever possilbe: size, shape, opacity, edges of the marks; font, font size, font color; gridelines, tickmarks, and legends.

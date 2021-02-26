@@ -91,16 +91,17 @@ In addition to that, it has limited grid choices namely white and blue grid.
 Datawrapper has a color-blind checker, which is an excellent feature to have, and the user can either copy a link to a responsive code 
 to a website or export the vis in different formats such as png, pdf, and SVG.
 
-![datawrapper](img/datawrapper-4.png)
+![datawrapper1](img/datawrapper-4.png)
 
-![datawrapper](img/datawrapper-5.png)
+![datawrapper2](img/datawrapper-5.png)
 
+![datawrapper3](img/datawrapper-6.png)
 
 
 ## Technical Achievements
 
-- **Preparing data**: I have read about handling data with missing values. Since the total number of rows with Null values in MPG, Wight, 
-or Manufacturer columns are 2 out of 98, that would not cause losing important information. So, I decided to remove these rows. 
+- **Preparing data**: Since the total number of rows with Null values in MPG, Wight, or Manufacturer columns are 2 out of 98,
+that would not cause losing important information. So, I decided to remove these rows. 
 Although there were null values in other columns in the dataset, I did not remove them because we only care about MPG, Weight, 
 and Manufacturer. So, I did not want to lose values from these columns by removing Null from others.
 Before using any tool, I cleaned the data then exported the file to use in all of the tools. Because some of the tools, e.g., Flourish, 

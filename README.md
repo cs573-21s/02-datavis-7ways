@@ -19,9 +19,12 @@ Once I got up and running I was pretty pleased with my results. It was easy to m
 
 # d3
 
-d3 was by far the most challenging and what I spent the most time on. 
+![ss_d3](img/ss_d3.png)
 
-<a href = "https://www.essycode.com/posts/adding-gridlines-chart-d3/">https://www.essycode.com/posts/adding-gridlines-chart-d3/</a>
+It was challenging to replicate the chart in d3. I used what I learned in class to plot the marks and to style the color and size. The following websites were helpful in helping me format the graph, but I was unsuccessful in attempting to make axis labels and get more of the details that I was able to get in other tools. 
+
+(https://www.essycode.com/posts/adding-gridlines-chart-d3/)
+(https://www.d3-graph-gallery.com/graph/custom_theme.html)
 
 # Flourish
 

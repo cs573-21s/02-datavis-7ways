@@ -55,8 +55,7 @@
 </head>
 
 <body>
-    <div class="div1"><span class="nulldata"></span><span class="noticeBox">There are two null values in the cvs
-            file</span></div>
+    <div class="div1"><span class="nulldata"></span><span class="noticeBox"></span></div>
     <div class="div2"><span>Try to brush in the chart!</span></div>
 
 
@@ -80,6 +79,7 @@
             var nulldata = document.getElementsByClassName('nulldata')[0];
             var noticeBox = document.getElementsByClassName('noticeBox')[0];
             nulldata.innerHTML = countNulldata + ' null';
+            noticeBox.innerHTML = 'There are' + countNulldata + ' null values in the csv file.'
             nulldata.addEventListener('mouseover', function () {
                 noticeBox.style.display = 'block';
             })

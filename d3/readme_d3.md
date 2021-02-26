@@ -16,9 +16,6 @@ They have lots of great documentation which is a huge plus.
 - Type the command >python -m http.server
 - Open localhost:8000 in your favorite web browser to view the visualization
 
-## Rankings/Stats
-This section ranks this tool in several categories compared to the other tools I used for this project:
-
 Sources
 ---
 1. Colored Bubble Plots in d3: https://www.d3-graph-gallery.com/graph/bubble_color.html

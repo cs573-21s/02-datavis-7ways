@@ -12,9 +12,6 @@ It seems like it has been thoroughly thought through and can be used to visualiz
 - Paste the contents of scatterplot.json into the editor window
 - If it does not run automatically, press the run button to view the visualization
 
-## Rankings/Stats
-This section ranks this tool in several categories compared to the other tools I used for this project:
-
 ## Sources
 1. Loading CSV's in Vega-lite: https://vega.github.io/vega-lite/tutorials/explore.html
 2. Changing Size of Graph in Vega-lite: https://vega.github.io/vega-lite/docs/size.html

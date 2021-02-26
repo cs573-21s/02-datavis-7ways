@@ -76,9 +76,9 @@ Different with Flourish, it is as simple as dragging and dropping. In addition, 
 - **Realize brushing interaction With D3.js**: I made use of `d3.brush()` to enable users to select an area in the chart. Coordinate information will be returned after a mouse event invoking. Using returned coordinate information, determined which circles are in the area and displayed their detail.
 
 ## Design Achievements
-- In D3.js, if the data have NA value in "MPG" and "Weight" attribute, the number of data which has NA value will be displayed above the chart to remind users. If user moves mouse on it, it will display `There are 2 null values in the csv file`.
+- In D3.js, if the data have NA value in "MPG" and "Weight" attribute, the number of data which has NA value will be displayed above the chart to remind users. If user moves mouse on it, it will display `"There are 2 null values in the csv file"`.
 - In D3.js, After an area was selected, the circles in this area will have a different appearance. They will change from translucent to solid and their stoke will be green so that they can be distinguished from unselected circles. In addition, the detail information of selected circles will be displayed below the chart in table format.  
-- In order to remind user that they can interact in the scatter plot, I added a line of paragraph, `Try to brush in the chart!`, below the scatter plot. If user brushes an area in scatter, the paragraph disapears, otherwise it appears. 
+- In order to remind user that they can interact in the scatter plot, I added a line of paragraph, `"Try to brush in the chart!"`, below the scatter plot. If user brushes an area in scatter, the paragraph disapears, otherwise it appears. 
 
 ### Tips
 - The inspiration of brushing interation is from https://observablehq.com/@d3/brushable-scatterplot.

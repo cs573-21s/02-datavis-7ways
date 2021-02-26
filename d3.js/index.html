@@ -1,0 +1,259 @@
+<style>
+body{
+    background-color: #e9eaeb;
+}
+
+#scatter{
+    margin-top:20;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+}
+.axis{
+    stroke: rgba(156, 156, 156, 0.671)
+}
+.grid .tick{
+    stroke: lightgrey;
+    opacity: 0.7;
+}
+.grid path{
+    stroke-width: 0;
+}
+div.tooltip{
+    position: absolute;
+    text-align: center;
+    padding: .2rem;
+    background: #313639;
+    color: #f9f9f9;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+    font-size: .7rem;
+}
+.bmw{
+    fill: #ff9100;
+    opacity: 0.5;
+}
+.ford{
+    fill: #5fa328;
+    outline-color: #000000;
+    outline-width: 1;
+    opacity: 0.5;
+}
+.honda{
+    fill: #0f00e2;
+    opacity: 0.5;
+}
+.mercedes{
+    fill: #00f1e5;
+    opacity: 0.5;
+}
+.toyota{
+    fill: #f356eb;
+    opacity: 0.5;
+}
+
+.legend{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.button{
+    margin-left: 4;
+    border: none;
+    color:rgb(0, 0, 0);
+    padding: 10px 15px;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.button:focus { outline:0; }
+.button:active{ transform: translateY(2px); }
+#reset{
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+}
+#bmwB{ background-color:#ff910087;}
+#bmwB:hover { background-color: #eb8705b0; }
+#bmwB:active { background-color: #ff910087; }
+#fordB{ background-color:#5fa32887;}
+#fordB:hover { background-color: #5fa328b0; }
+#fordB:active { background-color: #5fa32887; }
+#hondaB{ background-color:#0f00e2b0;
+    color:white}
+#hondaB:hover { background-color: #2117acd5; }
+#hondaB:active { background-color: #0f00e2b0; }
+#mercedesB{ background-color:#00f1e5b0;}
+#mercedesB:hover { background-color: #10c9bfce; }
+#mercedesB:active { background-color: #00f1e5b0; }
+#toyotaB{ background-color:#f356eb8f; }
+#toyotaB:hover { background-color: #f356ebb0; }
+#toyotaB:active { background-color: #f356eb8f; }
+
+
+
+
+</style>
+<html>
+    <head>
+        <title>Car Sample Scatter Plot</title>  
+    </head>
+    <body>
+        <svg id="scatter"></svg>
+        <br>
+        <div class="legend">
+            <button id="bmwB" class="button" onclick="show(bmw)">bmw</button> 
+            <button id="fordB" class="button" onclick="show(ford)">ford</button> 
+            <button id="hondaB" class="button" onclick="show(honda)">honda</button> 
+            <button id="mercedesB" class="button" onclick="show(mercedes)">mercedes</button> 
+            <button id="toyotaB" class="button" onclick="show(toyota)">toyota</button> 
+        </div>
+        <br>
+        <button id="reset" class="button" onclick="reset()">reset</button> 
+        <script src="https://d3js.org/d3.v6.min.js"></script>
+        <script>
+            var bmw = ".bmw"
+    ford = ".ford"
+    honda = ".honda"
+    mercedes = ".mercedes"
+    toyota = ".toyota"
+    margin = { top: 100, right: 100, bottom: 60, left: 100}
+    width = 800 - margin.left - margin.right;
+    height = 600 - margin.top - margin.bottom;
+
+var div = d3.select("body").append('div')
+    .attr("class", "tooltip")
+    .style("opacity",0)
+
+var svg = d3.select('#scatter')
+    .attr('width', width + margin.left + margin.right)
+    .attr('height', height + margin.top + margin.bottom )
+    .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+
+var cars;
+d3.csv('cars-sample.csv').then(function(data){
+    data.forEach(function(d){
+        d[""] = +d[""],
+        d["Acceleration"] = +d["Acceleration"],
+        d["Car"] = d["Car"],
+        d["Cylinders"] = +d["Cylinders"],
+        d["Displacement"] = +d["Displacement"],
+        d["Horsepower"] = +d["Horsepower"],
+        d["MPG"] = +d["MPG"],
+        d["Manufacturer"] = d["Manufacturer"],
+        d["Model.Year"] = +d["Model.Year"],
+        d["Origin"] = d["Origin"],
+        d["Weight"] = +d["Weight"];
+    })
+    cars = data;
+    buildVis(data);
+});
+
+function buildVis(cars){
+    var xscale = d3.scaleLinear()
+        .domain( d3.extent(cars, function(d){ return d.Weight; }))
+        .range( [0, width]);
+    var yscale = d3.scaleLinear()
+        .domain( d3.extent(cars, function(d){ return d.MPG; }))
+        .range( [height, 0] );
+    
+    var x_axis = d3.axisBottom()
+        .scale(xscale)
+    svg.append("g")
+        .attr("transform", "translate(0," + height + ")")
+        .call(x_axis)
+        .attr("class", "xAxis")
+
+    var y_axis = d3.axisLeft()
+        .scale(yscale)
+    svg.append("g")
+        .call(y_axis)
+        .attr("class", "yAxis")
+        
+    svg.selectAll("g.tick text")
+        .each(function(d,i){
+            if(i%2==1){
+                d3.select(this).remove()
+            }
+        })
+    svg.append("text")
+        .attr("class", "x label")
+        .attr("text-anchor", "middle")
+        .attr("x", width/2)
+        .attr("y", height +40)
+        .text("Weight");
+    svg.append("text")
+        .attr("class", "y label")
+        .attr("text-anchor", "middle")
+        .attr("y", -60)
+        .attr("x", -(height/2))
+        .attr("dy", ".75em")
+        .attr("transform", "rotate(-90)")
+        .text("MPG");
+    
+    var circles = svg.selectAll('circle')
+        .data(cars, function(d){return d.Name; })
+        .enter()
+        .append('circle')
+        .attr("class", function(d){return d.Manufacturer; })
+        .attr('w', function(d){ return d.Weight; })
+        .attr('m', function(d){ return d.MPG; })
+        .attr('cx', function(d){
+            return xscale(d.Weight); })
+        .attr('cy', function(d){
+            return yscale(d.MPG); })
+        .attr('r', function(d){ return d.Weight/500; })
+        .on('mouseover', function (d, i) {
+            console.log(d3.select(this).style("opacity"))
+            if (d3.select(this).style("opacity")== 0.5 ){
+                d3.select(this).transition()
+                .duration('100')
+                .attr('r', function(d){ return d.Weight/500 +3; });
+
+            div.transition()
+                .duration(100)
+                .style("opacity", 1);
+            div.html(
+                "Weight: " + d3.select(this).attr("w") +
+                 ", MPG: "+ d3.select(this).attr("m")
+            )
+                .style("left", (d3.pointer(event)[0]+ margin.left + 10) + "px")
+                .style("top", (d3.pointer(event)[1]+ margin.top -10) + "px");
+            }
+        })
+        .on('mouseout', function (d, i) {
+            d3.select(this).transition()
+                .duration('200')
+                .attr('r', function(d){ return d.Weight/500; });
+
+            div.transition()
+                .duration('200')
+                .style("opacity", 0);
+        });
+}
+
+    function show(d){
+        d3.selectAll("circle")
+        .transition()
+        .duration(400)
+        .style("opacity", 0)
+        d3.selectAll(d)
+        .transition()
+        .style("opacity", 0.5)
+        }
+    function reset(){
+        d3.selectAll("circle")
+        .transition()
+        .duration(400)
+        .style("opacity", 0.5)
+    }
+        </script>
+    
+    </body>
+</html>
+

@@ -29,16 +29,16 @@ Vega-lite is a high-level grammar to create interactive graph. Its specification
 
 To visualize the cars dataset, I set properties for each data to set its coordinates, color and size in Json syntax.
 
-The encoding style of Vega-lite is different with other tools. To create a vis, you don't need to declare a function or many variables. You only need to set attributes for the data according to json syntax.
+The encoding style of Vega-lite is different with other tools. To create a vis, you don't need to declare a function or many variables. You only need to set properties for the data according to json syntax.
 
 ![Vega-Lite](img/Vega.png)
 
 # ggplot2
-R is a language which is always used for statistical computing. Ggplot2 is an important library for charting in R. 
+R is a language which is always used for statistical computing. Ggplot2 is an important library for charting in R. The core idea of ggplot2 is to separate plots from data, and separate plots related to data from plots unrelated to data. Different layers are joined with `+`.
 
 To visualize cars dataset, I set the mapping in the `aes()`. I also made use of ` geom_point()` to create circles. 
 
-I think the core idea of ggplot2 is to separate plots from data, and separate plots related to data from plots unrelated to data. Different layers are joined with `+`.
+Ggplot2 can automatically construct legend in chart, which is very convenient.
 
 ![ggplot2](img/ggplot2.png)
 

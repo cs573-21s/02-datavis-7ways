@@ -13,7 +13,7 @@ For this project I chose the following 7 tools, I will discuss them in more deta
 3. R + ggplot2
 4. Python + Matplotlib
 5. d3
-6. Vega-lite
+6. Vega-Lite
 7. Tableau 
 
 ## Excel
@@ -28,6 +28,8 @@ While it's great for simple visualizations, Excel does not do a great job at mak
 ![Excel hacks for different colors](./img/HackyExcel.PNG)
 
 Another major draw back was there appears to be no built in way to add a weight legend to the Excel graph. Excel does support VBA scripts but I wanted to try to do everything purely with Excel. So for this legend I had to add a textbox and manually draw the weight cirles. It's tedious and not automated, but it doesn't look bad.
+
+The last challenge with Excel, is that I could not get the axis tick mark labels to appear where I wanted, they always had to start from the origin. Additionally, this causes one of the bubbles to get cut off by the bottom X axis.
 
 Excel took me a very long time to complete compared to some of the others. It's very limited in what it allows and doesn't allow much customization beyond their given features. I would not recommend Excel for fancy visualizations, but I would say it's a good choice for very simple, quick graphs like basic bar charts or 2 feature scatter plots.
 
@@ -58,20 +60,20 @@ I had a little trouble getting my custom colors to work in R, but I found a YouT
 
 Overall, I was just very pleasantly surprised about how easy it was to learn and use R for data vis purposes.
 
-## Python + matplotlib
+## Python + Matplotlib
 ![Matplotlib version of the graph](./img/matplotlib.png)
 
-To quote the matplotlib website "Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python" [16]. Everyone that has used Python has probably heard of this tool. When I was an SA for the CS 1004, the undergraduate intro to programming for non majors, I had to teach a lot of people how to use matplotlib. So I thought it would be another good tool for visualizing this scatterplot.
+To quote the Matplotlib website "Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python" [16]. Everyone that has used Python has probably heard of this tool. When I was an SA for the CS 1004, the undergraduate intro to programming for non majors, I had to teach a lot of people how to use Matplotlib. So I thought it would be another good tool for visualizing this scatterplot.
 
-Whenever I have used matplotlib in the past I've found that it accomplishes 90% of my goals very easily and then some small feature is a challenge to implement. That was the case here too. Apparently, I'm not alone on this, on their own website they say the following "Matplotlib makes easy things easy and hard things possible" [16]. I completely agree.
+Whenever I have used Matplotlib in the past I've found that it accomplishes 90% of my goals very easily and then some small feature is a challenge to implement. That was the case here too. Apparently, I'm not alone on this, on their own website they say the following "Matplotlib makes easy things easy and hard things possible" [16]. I completely agree.
 
 The first steps were super easy, I loaded in my csv and I displayed it as a scatter plot with the color and bubble size and all. Displaying the plot once the data is loaded is one line of code:
 ```
 plt.scatter(Weight, MPG, s=BubbleWeight, c=Manufacturer, alpha=0.5)
 ```
-This is simlar to R. R also used only one line to generate the plot. The difference is matplotlib did not automatically generate the legends. Like with MATLAB and Excel, matplotlib likes to autogenerate legends for the series data, not the color or bubble weights, so I had to do some coding maneuvers to manually create the legends [14,15]. They do look nice though.
+This is simlar to R. R also used only one line to generate the plot. The difference is Matplotlib did not automatically generate the legends. Like with MATLAB and Excel, Matplotlib likes to autogenerate legends for the series data, not the color or bubble weights, so I had to do some coding maneuvers to manually create the legends [14,15]. They do look nice though.
 
-Another similarity to MATLAB, although this time a positive one, the matplotlib graphs come prepackaged with save, zoom, and pan features without any additionaly code.
+Another similarity to MATLAB, although this time a positive one, the Matplotlib graphs come prepackaged with save, zoom, and pan features without any additionaly code.
 
 ## d3
 ![Scatterplot in d3](./img/d3.PNG)
@@ -84,8 +86,8 @@ Specifying all the components of the graph can be tedious for a project like thi
 
 Also they have lots of great documentation which is a huge plus.
 
-## vega-lite
-![scatterplot in vega-lite](./img/vegalite.PNG)
+## Vega-Lite
+![scatterplot in Vega-Lite](./img/vegalite.PNG)
 
 Vega provides an abstraction to d3, and Vega-Lite provides another levels of abstraction on that. This high level language is used to construct JSON that can be rendered into data visualizations. I really like this tool. Maybe it's just that I've worked with JSON a lot, but I was able to learn it really quickly and I think the output looks really nice.
 
@@ -100,24 +102,26 @@ Tableau is a data visualization tool created by the similarly named Tableau Soft
 
 My main thought when using this software is that Tableau is incredibly intuitive. It's the only tool that I needed zero documentation to use. It took me longer to get the academic license set up than to actually build the vis. The tool is clearly designed to help users build visualizations. I was able to add all of the required featuers as well as legends without any hacks. I will definitely use this tool again. 
 
-The only downside to Tableau is that it is not a library. The reason I consider it a downside is that if you want to do a visualization that Tableau does not support, you're out of luck. Tableau does seem robust and like it would have everything you could want. But with tools like MATLAB or matplotlib, it made it easy to do some basic things, but then since they were code I could create my own features. Tableau included all of the correct legends, but if it didn't, I would be stuck and couldn't make a hacky work around like with the programming language options.
+The only downside to Tableau is that it is not a library. The reason I consider it a downside is that if you want to do a visualization that Tableau does not support, you're out of luck. Tableau does seem robust and like it would have everything you could want. But with tools like MATLAB or Matplotlib, it made it easy to do some basic things, but then since they were code I could create my own features. Tableau included all of the correct legends, but if it didn't, I would be stuck and couldn't make a hacky work around like with the programming language options.
 
 # Conclusion
+
 
 # Achievements
 
 ## Technical Achievements
-- **Made a website with bar charts comparing the results** Bar charts showing the ranking comparisons of different groups. Rank by learnability/documentation, file size, built in features, customization, hackiness,and visual appeal
+- **Made a website with bar charts comparing the results** https://acnolan.tech/02-datavis-7ways-1/index.html. In my report I wrote my experiences, likes, and dislikes, with each tool. In this website I directly compare 5 usability metrics (learnability, file size, customization, hackiness, and visual appeal) of the different vis tools. I display the rankings in an interactive d3 bar chart that uses animations to transition when the ranking switches. It also supports mouse over to get more information about my rankings. This website is hosted on github pages.
 - **Imputed values for the MPG NA instead of skipping them** I noticed the only two NA values in the MPG column were for 8 cylinder Ford cars. So I wrote a quick Python script, [imputeMPG.py](https://github.com/acnolan/02-datavis-7ways-1/blob/main/imputeMPG.py) in this repo, to calculate the average MPG of 8 cylinder Fords, I then used that imputed value in the place of the 2 NA values in the visualizations. The resulting value was approximately 14.335.
 
 ## Design Achievements
 - **Legend Consistency**: Although it was sometimes through very hacky means, I was able to ensure all of the required components of the graph as well as the optional legends were included in every graph. Some tools did not easily support the weighted graph and it needed to be manually drawn.
-- **Ensured Colorblind Appropriate Colors**: Instead of using the default R categorical colors, I decided to use a predefined color pallette that would display categorical data in a distinct way. I chose the d3 category 10 color pallette, and then used the first 5 colors. Using a colorblinding tool, I tested the results for tritanopia, protanopia, and deuteranopia using the chrome plugin: "Colorblinding" found here: https://chrome.google.com/webstore/detail/colorblinding/dgbgleaofjainknadoffbjkclicbbgaa/related?hl=en. The results showed that the colors were still distinct in all three of those forms of color blindness. The colors used were:
-    - rgb(31, 119, 180) / hex(#2377B4)
-    - rgb(255, 127, 14) / hex(#FF7F0E)
-    - rgb(44, 160, 44) / hex(#2CA02C)
-    - rgb(214, 39, 40) / hex(#D62728)
-    - rgb(148, 103, 189) / hex(#9467BD)
+- **CSS and Color Choice on my Ranking Website**: On the website I made to rank the tools, I added custom css to make it look nice. I also made the bar chart use colors that map to the visualization tools logos.
+- **Ensured Colorblind Appropriate Colors**: Instead of using the default R categorical colors in the graph, I decided to use a predefined color pallette that would display categorical data in a distinct way. I chose the d3 category 10 color pallette, and then used the first 5 colors. I tested the results for three types of colorblindess (tritanopia, protanopia, and deuteranopia) using the chrome plugin: "Colorblinding", found here: https://chrome.google.com/webstore/detail/colorblinding/dgbgleaofjainknadoffbjkclicbbgaa/related?hl=en. The results showed that the colors were still distinct in all three of those forms of color blindness. The colors used were:
+    - <span style="color:#2377B4">rgb(31, 119, 180) / hex(#2377B4) for BMW</span>
+    - <span style="color:#FF7F0E">rgb(255, 127, 14) / hex(#FF7F0E) for Ford</span>
+    - <span style="color:#2CA02C">rgb(44, 160, 44) / hex(#2CA02C) for Honda</span>
+    - <span style="color:#D62728">rgb(214, 39, 40) / hex(#D62728) for Mercedes</span>
+    - <span style="color:#9467BD">rgb(148, 103, 189) / hex(#9467BD) for Toyota</span>
 
 # Sources
 ### Excel
@@ -127,20 +131,20 @@ The only downside to Tableau is that it is not a library. The reason I consider 
 4. Editing Legends: https://support.microsoft.com/en-us/office/modify-chart-legend-entries-d822dd57-af28-4c3e-93d1-d320e6239843
 5. Multiple legends in excel https://stackoverflow.com/questions/33230348/multiple-legends-in-excel-chart
 ### MATLAB
-6. What is MATLAB?: https://www.mathworks.com/discovery/what-is-matlab.html
-7. MATLAB Bubble Chart Documentation: https://www.mathworks.com/help/matlab/ref/bubblechart.html
-8. Color Legend in MATLAB: https://www.mathworks.com/matlabcentral/answers/276978-how-can-i-make-legend-by-colors
+6. What is MATLAB?: https://www.mathworks.com/discovery/what-is-MATLAB.html
+7. MATLAB Bubble Chart Documentation: https://www.mathworks.com/help/MATLAB/ref/bubblechart.html
+8. Color Legend in MATLAB: https://www.mathworks.com/MATLABcentral/answers/276978-how-can-i-make-legend-by-colors
 ### R + ggplot2
 9. About R: https://www.r-project.org/about.html
 10. Bubble plots in R: https://www.r-graph-gallery.com/320-the-basis-of-bubble-plot.html
 11. Importing CSV Data in R: https://datatofish.com/import-csv-r
 12. Guide to ggplot Colors: Working with Manual Color Scales for Categorical Data:
  https://www.youtube.com/watch?v=h8dn6nbCznQ&ab_channel=MichaelToth
-### Python + matplotlib
-13. Mapping colors to bubble plots in matplotlib: https://python-graph-gallery.com/272-map-a-color-to-bubble-plot/
-14. Adding legends to scatter plots in matplotlib: https://stackoverflow.com/questions/26558816/matplotlib-scatter-plot-with-legend
-15. Another article about adding legends to scatter plots in matplotlib: https://matplotlib.org/3.1.1/gallery/lines_bars_and_markers/scatter_with_legend.html
-16. Matplotlib docs: https://matplotlib.org/stable/index.html
+### Python + Matplotlib
+13. Mapping colors to bubble plots in Matplotlib: https://python-graph-gallery.com/272-map-a-color-to-bubble-plot/
+14. Adding legends to scatter plots in Matplotlib: https://stackoverflow.com/questions/26558816/Matplotlib-scatter-plot-with-legend
+15. Another article about adding legends to scatter plots in Matplotlib: https://Matplotlib.org/3.1.1/gallery/lines_bars_and_markers/scatter_with_legend.html
+16. Matplotlib docs: https://Matplotlib.org/stable/index.html
 ### d3
 17. Colored Bubble Plots in d3: https://www.d3-graph-gallery.com/graph/bubble_color.html
 18. d3 Categorical Colors: http://bl.ocks.org/aaizemberg/78bd3dade9593896a59d
@@ -148,13 +152,15 @@ The only downside to Tableau is that it is not a library. The reason I consider 
 20. Building legends in d3.js: https://www.d3-graph-gallery.com/graph/custom_legend.html
 21. February 4th's Lecture - CS 573
 22. d3 docs: https://d3js.org/
-### Vega-lite
-23. Loading CSV's in Vega-lite: https://vega.github.io/vega-lite/tutorials/explore.html
-24. Changing Size of Graph in Vega-lite: https://vega.github.io/vega-lite/docs/size.html
-25. Vega-lite Crash Course: https://www.youtube.com/watch?v=ZV_Yjcs5WtM&ab_channel=Observable
-26. Vega-lite Scatter plot: https://vega.github.io/vega-lite/examples/selection_translate_scatterplot_drag.html
+### Vega-Lite
+23. Loading CSV's in Vega-Lite: https://vega.github.io/Vega-Lite/tutorials/explore.html
+24. Changing Size of Graph in Vega-Lite: https://vega.github.io/Vega-Lite/docs/size.html
+25. Vega-Lite Crash Course: https://www.youtube.com/watch?v=ZV_Yjcs5WtM&ab_channel=Observable
+26. Vega-Lite Scatter plot: https://vega.github.io/Vega-Lite/examples/selection_translate_scatterplot_drag.html
 ### Tableau
 27. Tableau Wikipedia Article: https://en.wikipedia.org/wiki/Tableau_Software
 - Tableau was so easy to learn that I did not use any tutorials
 ### Achievements
 28. Colorblinding: https://chrome.google.com/webstore/detail/colorblinding/dgbgleaofjainknadoffbjkclicbbgaa/related?hl=en
+29. Changing Bar Charts in d3: https://www.d3-graph-gallery.com/graph/barplot_button_data_hard.html
+30. Tooltips on Bar Charts in d3: https://bl.ocks.org/alandunning/274bf248fd0f362d64674920e85c1eb7

@@ -107,7 +107,7 @@ The only downside to Tableau is that it is not a library. The reason I consider 
 # Achievements
 
 ## Technical Achievements
-- **Made a website with bar charts comparing the results** Bar charts showing the ranking comparisons of different groups. Rank by ease of use, quality of documentation, size of file, built in features, dynamicness (how much you can customize), hackiness, vibe
+- **Made a website with bar charts comparing the results** Bar charts showing the ranking comparisons of different groups. Rank by learnability/documentation, file size, built in features, customization, hackiness,and visual appeal
 - **Imputed values for the MPG NA instead of skipping them** I noticed the only two NA values in the MPG column were for 8 cylinder Ford cars. So I wrote a quick Python script, [imputeMPG.py](https://github.com/acnolan/02-datavis-7ways-1/blob/main/imputeMPG.py) in this repo, to calculate the average MPG of 8 cylinder Fords, I then used that imputed value in the place of the 2 NA values in the visualizations. The resulting value was approximately 14.335.
 
 ## Design Achievements

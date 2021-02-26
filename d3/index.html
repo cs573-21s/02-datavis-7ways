@@ -1,0 +1,100 @@
+<script src="https://d3js.org/d3.v6.min.js"></script>
+
+<style>
+</style>
+
+<div id="container" style="width:100%; text-align:center">
+
+
+</div>
+
+<script>
+var margin = { top: 50, left: 50, right: 50, bottom: 50 }
+var width = 600 - margin.left - margin.right;
+var height = 600 - margin.top - margin.bottom;
+
+// css selector to get particular svg
+var svg = d3.select("#container").append("svg")
+  .attr('height', height + margin.top + margin.bottom)
+  .attr('width', width + margin.left + margin.right)
+  .append('g')
+  .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')')
+
+var svg2 = d3.select("#container").append("svg")
+  .attr('height', 400)
+  .attr('width', 400)
+  .append('g')
+
+// append second svg
+
+
+d3.csv("cars-sample.csv").then( function(data) {
+    console.log(data);
+    var cars = [];
+    for (var i = 0; i < data.length; i++) {
+      if (data[i].MPG != "NA") {
+        cars.push(data[i]);
+      }
+    }
+    buildVis(cars)
+});
+
+function buildVis(cars) {
+
+// how to set up margins - https://gist.github.com/jsoma/71bee11bbe6b73887bca4138fd4d2442
+// axis labels - https://bl.ocks.org/d3noob/23e42c8f67210ac6c678db2cd07a747e
+
+  // x scale (weight)
+  var xscale = d3.scaleLinear()
+    .domain( d3.extent(cars, function(d) { return d.Weight; }) )
+    .range( [0, width] );
+  svg.append("g")
+    .attr("transform", "translate(0," + height  + ")")
+    .call(d3.axisBottom(xscale));
+  svg.append("text")
+    .attr("transform",
+          "translate(" + (width/2) + " ," +
+                         (height + margin.top - 10) + ")")
+    .style("text-anchor", "middle")
+    .text("Weight");
+
+  // y scale (mpg)
+  var yscale = d3.scaleLinear()
+    .domain( d3.extent(cars, function(d) { return d.MPG; }) )
+    .range( [height, 0] );
+  svg.append("g")
+    .call(d3.axisLeft(yscale));
+  svg.append("text")
+    .attr("transform", "rotate(-90)")
+    .attr("y", 0 - margin.left)
+    .attr("x", 0 - (height / 2))
+    .attr("dy", "1em")
+    .style("text-anchor", "middle")
+    .text("MPG");
+
+  // circles
+  svg.append("g")
+    .selectAll("dot")
+    .data(cars)
+    .enter()
+    .append("circle")
+      .attr("cx", function (d) { return xscale(d.Weight); } )
+      .attr("cy", function (d) { return yscale(d.MPG); } )
+      .attr("r", function (d) { return d.Weight / 500})
+      .attr("opacity", .5)
+      .style("fill", function (d) {
+        if (d.Manufacturer == "bmw") {
+          return "red"
+        } else if (d.Manufacturer == "ford") {
+          return "green"
+        } else if (d.Manufacturer == "honda") {
+          return "teal"
+        } else if (d.Manufacturer == "mercedes") {
+          return "blue"
+        } else if (d.Manufacturer == "toyota") {
+          return "red"
+        }
+      });
+}
+
+</script>

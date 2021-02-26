@@ -3,14 +3,13 @@
 Assignment 2 - Data Visualization, 7 Ways  
 ===
 
-# R + ggplot2 + R Markdown
+# R + ggplot2
+
+![ss_ggplot](img/ss_ggplot.png)
 
 I used RStudio and a tutorial video to replicate the chart for the assignment and used this as the starting point to consistently replicate in 6 other tools. I made changes to the color of the marks and background. It was pretty straightforward to use this tool following the tutorial 
 
 [Tutorial - Data Visualization in R With ggplot2](https://learning.oreilly.com/videos/data-visualization-in/9781491963661)
-
-
-![ggplot2](img/ggplot2.png)
 
 # d3
 
@@ -20,9 +19,13 @@ d3 was by far the most challenging and what I spent the most time on.
 
 # Excel
 
+![ss_excel](img/ss_excel.png)
+
 Creating the chart in Excel was pretty easy though it did require some manipulation of the data to get the desired color and size of the marks. To meet the requirement for color by manufacturer and size by weight I seperated the data in to series. I split the weight evenly in 500 lb increments so I needed 7 series just for Ford for example. I could not figure out how to get the tick marks to start somewhere other than the start of the range. So on the x-axis they start at 8 instead of 10. Also the format of the tick marks seems connected to the border of the axis so I was not able to match that exactly to ggplot. Excel had limited legend options. I ran out of time to try to fudge something to match the ggplot. 
 
 # Flourish
+
+![ss_flourish](img/ss_flourish.png)
 
 [My Flourish Chart](https://public.flourish.studio/visualisation/5314239/)
 
@@ -30,15 +33,21 @@ Flourish was pretty straightforward to use and was simply a matter of modifying 
 
 # Tableau
 
+![ss_flourish](img/ss_flourish.png)
+
 I found Tableau fairly frustrating to use. I found the GUI to be confusing and unintuitive. Color options were limited. I couldn't find a way to add a border to the marks that matched to border fill color. The options seemed to be to have one border color for all marks or no border. I don't think there was a way to turn on minor gridelines but there was a way for minor tick marks. Seems like it is more geared to analyzing data than to easily creating visualizations. 
 
 # Matplotlib
+
+![ss_matplotlib](img/ss_matplotlib.png)
 
 It was challenging just to get the libraries installed correctly. I am not very proficient in Terminal and things kept going wrong. And I have never worked in Python either. Once I got things working I watched this 10 part series of tutorial videos to learn how to make charts in Matplotlib [Matplotlib Tutorials](https://www.youtube.com/watch?v=UO98lJQ3QGI&list=PL-osiE80TeTvipOqomVEeZ1HRrcEvtZB)
 
 Once I got up and running I was pretty pleased with my results. It was easy to map the data to the size and color of the marks. Having a ggplot style template helped! I used the Matplotlib API to format the grid. This from Stack Overflow helped in figuring out the legends [Adding Second Legend to Scatter Plot](https://stackoverflow.com/questions/43812911/adding-second-legend-to-scatter-plot)
 
 # Numbers
+
+![ss_numbers](img/ss_numbers.png)
 
 I considered learning a fourth library but after the considerable time and effort I put in to Matplotlib and d3 I was short on time and patience. So I decided to see how Numbers compared with Excel since I am a Mac person. It was a fair amount of labor getting all the data styled as 17 seperate series, but at least it was mindless labor. Similar to Excel you can't have tick marks without an axis line. To get the tick marks to land on nice even numbers I had to extend the min/maxes because it sets the ticks at intervals based on the chart area. Opacity didn't quite work how I wanted to. It works between series but not within series.
 

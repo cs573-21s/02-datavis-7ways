@@ -5,9 +5,9 @@ GitHub page:https://zihao777.github.io/02-datavis-7ways/<br>
 
 JavaScript is the most popular programming language of web in the world. D3.js is a JavaScript library for manipulating documents based on data. Using d3.js allows people to design their own vis with a high degree of control.
 
-To visualize the cars dataset,I used `d3.csv()` to load csv file. I made use of API in `d3.scale` to create scales to map the “Weight” and “x”, MPG and “y”, “Weight” and circle size. Then, binded the data to the SVG, added circles to the SVG, and determined the manufacturer type of each data to fill with different colors. I made use of API in `d3-axis` to construct x axis and y axis. I made us of `d3.brush()` to realize the interaction of brush. 
+To visualize the cars dataset,I used `d3.csv()` to load csv file. I made use of API in `d3.scale` to create scales to map the “Weight” and “x”, "MPG" and “y”, “Weight” and circle size. Then, binded the data to the SVG, added circles to the SVG, and determined the manufacturer type of each data to fill with different colors. I made use of API in `d3-axis` to construct x axis and y axis. I made us of `d3.brush()` to realize the interaction of brush. 
 
-In this progress, I encountered a problem when trying to map "MPG" to "y" because two data in the "MPG" attribute have NA values. In order to solve this problem, I declared a function to check the dataset in advance. If the “MPG” value of a certain data in the data set is NA, I deleted it.  In implementing the brush interaction, although I spent some time viewing the document and code, the final effect was very exciting for me. 
+In this progress, I encountered a problem when trying to map "MPG" to "y" because two data in the "MPG" attribute have NA values. In order to solve this problem, I declared a function to check the dataset in advance. If the “MPG” or "Weight" value of a certain data in the data set is NA, I deleted it.  In implementing the brush interaction, although I spent some time viewing the document and code, the final effect was very exciting for me. 
 
 I think D3 is a powerful library for creating vis. Designers can find useful tools to fulfill their specific design requirements.
 
@@ -16,9 +16,9 @@ I think D3 is a powerful library for creating vis. Designers can find useful too
 # P5
 P5.js is another JavaScript library. On its website, P5.js is described to creative coding, with a focus on making coding accessible and inclusive for artists, designers, educators, beginners, and anyone else. 
 
-To visualize the cars dataset, I used `loadTable()` to load csv file, used `map()` to map the “Weight” and “x”, MPG and “y”, “Weight” and circle size. I made use of `Eclipse()` to draw circles then fill each circle by determining the value of “Manufacturer”.
+To visualize the cars dataset, I used `loadTable()` to load csv file, used `map()` to map the “Weight” and “x”, "MPG" and “y”, “Weight” and circle size. I made use of `Eclipse()` to draw circles then fill each circle by determining the value of “Manufacturer”.
 
-In this progress, I couldn’t find API for constructing axis. Thus, I used `line()` to draw axis. In addition, in the beginning, I failed to map "MPG" to "y" because two data in the "MPG" attribute have NA values. To solve this problem, I declared a function to check the dataset in advance. Since the data type returned by `loadTable()` is table object, I spend some time viewing the document and learned to manipulate data table object.
+In this progress, I couldn’t find API for constructing axis. Thus, I used `line()` to draw axis. In addition, in the beginning, I failed to map "MPG" to "y" because two data in the "MPG" attribute have NA values. To solve this problem, I declared a function to check the dataset in advance. If the “MPG” or "Weight" value of a certain data in the data set is NA, I removed this row.  Since the data type returned by `loadTable()` is table object, I spend some time viewing the document and learned to manipulate data table object.
 
 P5.js is an interesting tool for data vis and It is easy to learn. Due to the characteristics of this library, I think it is more suitable to make some interesting animations. For example, I saw a very interesting snowflake animation on the official website(https://p5js.org/examples/simulate-snowflakes.html).
 
@@ -38,14 +38,16 @@ R is a language which is always used for statistical computing. Ggplot2 is an im
 
 To visualize cars dataset, I set the mapping in the `aes()`. I also made use of ` geom_point()` to create circles. 
 
-Ggplot2 can automatically construct legend in chart, which is very convenient.
+The syntax in ggplot2 is concise. Compared with D3, ggplot2 needs less code to create same vis. In addition, ggplot2 can automatically construct legend in chart, which is very convenient.
 
 ![ggplot2](img/ggplot2.png)
 
 # matplotlib
 Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python. 
 
-To visualize cars dataset, I made use of `ax.scatter()` to create scatter plot. Because I didn’t find API which similar with `scaleLinear()` in matplotlib documentation, so I define a function and map the weight to circles size.
+To visualize cars dataset, I made use of `ax.scatter()` to create scatter plot. Because I didn’t find API which similar with `scaleLinear()` in matplotlib documentation, so I defined a function to map the weight to circles size.
+
+Authough it tooks some time to check the documentation, these fuctions are convenient to create scatter plot.
 
 ![matplotlib](img/matplotlib.png)
 
@@ -71,8 +73,8 @@ However, I found it is difficult to set specific values for certain properties i
 
 
 
-## Technical Achievements
-- **Proved P=NP**: Using a combination of...
+## Technical Achievement
+- **Check data whether has NA value in advance**:To vasulize the cars dataset, I met problem when trying to map "MPG" to "y" value becasue two data in "MPG" attribute have NA value. TO solve this problem, I declared a function to check the dataset in advance. If data in "MPG" and "Weight" attribute has NA value, I ignored it. Since the data type returned by `loadTable()` in P5.js is table object, I spend some time viewing the document and learned to manipulate data table object.
 - **Solved AI Forever**: ...
 
 ### Design Achievements

@@ -8,7 +8,7 @@ According to Wikipedia, Microsoft Excel is the industry standard spreatsheet app
 
 While it's great for simple visualizations, Excel does not do a great job at making complex graphs. It is strict in its requirement for the number of series affecting the data points. With a bubble chart it expects three values: x, y, and bubble size. To add a fourth value of color a lot of hacky maneuvers need to be taken [1,2]. For each different color/manufacturer type, I had to create a separate series and put the weight (x values) in that and #N/A values in the column for when it was not of that type. You can see a subset of this change in the data below. When a car was a Ford it's weight would go in the ford column and a #N/A value would go in the others. Then each of these would be plotted on the graph as different colors. The weight column itself stayed because it was used for bubble size. The only nice part of this hack is it allowed the color legend to be auto generated.
 
-![Excel hacks for different colors](./img/HackyExcel.PNG)
+![Excel hacks for different colors](../img/HackyExcel.PNG)
 
 Another major draw back was there appears to be no built in way to add a weight legend to the Excel graph. Excel does support VBA scripts but I wanted to try to do everything purely with Excel. So for this legend I had to add a textbox and manually draw the weight cirles. It's tedious and not automated, but it doesn't look that bad.
 

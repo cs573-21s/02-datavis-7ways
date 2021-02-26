@@ -112,5 +112,13 @@ do not give the user a choice to omit the null values after importing the data.
 - **Highlight action**: is added in all non-library tools.
 
 
-### Design Achievements
+## Design Achievements
+
 - **Color-blind friendly**: Adding additional channel, namely shape, to make the scatter plot color-blind friendly. 
+
+
+## Sources
+
+1. https://github.com/d3/d3-axis/issues/48
+2. http://bl.ocks.org/micahstubbs/b097f9d0999848ee70b74b36ce30cbb8
+

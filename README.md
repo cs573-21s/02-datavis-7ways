@@ -7,22 +7,15 @@ Due 26 Feb 2021
 Imogen Cleaver-Stigum
 
 TODO
-
-- publish shiny app
 - design
-- tech 
-- d3
 - excel
-- axes + ticks
-- r markdown to html/pdf
+- d3 writeup
+- design writeup
+- submit
 
-# 1. d3 (Javascript) TODO
+# 1. d3 (Javascript) 
 
-![caption](img/<imgname>)
-
-- Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
-
-consistent color choice, font choice, element size (e.g. the size of the circles)
+![caption](img/d3.png)
 
 # 2. ggplot2 (R) 
 
@@ -31,6 +24,8 @@ I made a basic ggplot2 scatterplot in R. This included the required features (ca
 ![caption](img/ggplot2.png)
 
 This plot was one of the easiest to make because I am already familiar with R and ggplot2, and they do not require much code to create. 
+
+I used an R markdown file to make this and the other R plot, so the R folder contains the code (.Rmd) as well as the .html and .pdf versions of the markdown file. 
 
 # 3. Matplotlib (Python)
 
@@ -42,24 +37,33 @@ One version of my vis has exis ticks and one has a grid.
 
 ![caption](img/matplotlib.png)
 
-
-# 4. Plotly (Python) TODO
+# 4. Plotly (Python) 
 
 Python's library Plotly creates visualizations with a lot of extra features that come automatically. The basic plot comes with an automatically generated legens for the categorical colors. 
 
 ![caption](img/plotly1.png)
+
+It also has features that are built in such as a lasso tool and a rectangular selection tool to highlight particular points. It also has a hover feature so if you hover over a point, it provides some informatino about that point. 
+
 ![caption](img/plotly2.png)
 ![caption](img/plotly3.png)
 ![caption](img/plotly4.png)
+
+Another feature of Plotly is that you can select a section to zoom in on.
+
 ![caption](img/plotly5.png)
 
+The Plotly menu also has other features such a saving the vis. 
 
-# 5. Plotly (R) TODO
+Plotly was my favorit library for creating this vis because it required very little code but it came with a lot of features and it looks very clean. However, I did have to add some code to add the tick marks. 
 
-There exists a library Plotly in R which is very similar to the Python library Plotly. I used them both to compare. They are distinct because they use different languages, so you have to write different code to make either plot. However, there are a lot of similarities in the resulting plot. 
+# 5. Plotly (R) 
 
-Plotly has several extra features 
-![caption](img/<imgname>)
+There exists a library Plotly in R which is very similar to the Python library Plotly. I used them both to compare. They are distinct because they use different languages, so you have to write different code to make either plot. The code is completely different and the plots also look different. However, there are a lot of similarities in the resulting plot. The R version of Plotly also has the the lasso tool, zooming, saving the picture, etc. Unlike Python plotly, R plotly already had tick marks. However, it did not already have the same information when you hover over a point. 
+
+![caption](img/rplotly.png)
+
+Overall, R's plotly is very good and easy to use.
 
 # 6. Seaborn (Python)
 
@@ -82,6 +86,8 @@ And here is the version with axis ticks:
 
 I chose to use the tableau color scheme, which includes olive, cyan, punk, grey, and brown. This color schme is fairly muted and is color blind friendly. 
 
+Overall, seaborn makes nice looking plots, but the automatic legends are not as good as the other libraries'. 
+
 # 7. Altair (Python)
 
 Altair is yet another Python visualization library. This scatterplot also comes with an automatic legend for the point colors and sizes. 
@@ -92,21 +98,28 @@ It also has a menu with options like saving the vis as an svg or a png.
 
 ![caption](img/altair.png)
 
-Altait scatterplots also have a feature where you can zoom in or out with 2 finger scroll, or move around with click adnd drag. 
+Altair scatterplots also have a feature where you can zoom in or out with 2 finger scroll, or move around with click adnd drag. 
 
 ![caption](img/altair2.png)
 
-
-# 8. Excel TODO
+While these features are good and it was very easy ot use, Altair does not have as many features as Plotly so I prefer plotly. However, it did generate a better legend than plotly did. 
 
 
 # Technical Achievements 
 
-1. R Shiny App
+## 1. R Shiny App
 
-This app is a technical achievement because I published the R scatterplot so it can be accessed from a URL, as well as implementing dropdown menus to change 3 variables to any of the variables in the .csv file: x, y, and marker size.
+This app is a technical achievement because I published the R scatterplot so it can be accessed from a URL, as well as implementing dropdown menus to change 3 variables to any of the variables in the .csv file: x, y, and marker size. It is a plotly scatterplot so it has the same xtra features built in. It is interesting to see the different variables' relationships. 
 
-2. Hover variables in Python Plotly
+![caption](img/shiny1.png)
+![caption](img/shiny2.png)
+![caption](img/shiny3.png)
+
+The shiny app is accessible at: https://mango3.shinyapps.io/Cars/
+
+The shiny app code is in the Cars folder in the R folder. 
+
+## 2. Hover variables in Python Plotly
 
 I also added an extra variable (Horsepower) to the hover function in Python Plotly, so when you hover you can see horsepower in addition to the other relevant variables. 
 
@@ -114,7 +127,9 @@ I also added an extra variable (Horsepower) to the hover function in Python Plot
 
 1. Color schemes
 
+My plots demonstrate several different color schemes. The Altair plot's color scheme is not color blind friendly, but the rest are. 
 
+seaborn
 shiny app make prettier
 interactivity
 color picker???

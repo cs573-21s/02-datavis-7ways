@@ -10,7 +10,7 @@ I decided to make my first visualization with d3, as I figured it would make sen
 // how to set up margins - https://gist.github.com/jsoma/71bee11bbe6b73887bca4138fd4d2442
 // axis labels - https://bl.ocks.org/d3noob/23e42c8f67210ac6c678db2cd07a747e
 
-![d3](img/d3.png)
+![d3](img/d3.PNG)
 
 # Flourish
 
@@ -32,7 +32,7 @@ I had a fairly easy time working with matplotlib, the visualization library deve
 
 I had never used R before, so I expected there to be a lot more for me to learn! As it turned out, all I needed was one line of code to read in the csv, and two lines to create the scatterplot. R even automatically removed the two rows in cars-sample.csv that did not contain values for MPG. I was very surprised to find out how easy R was to work with. Again, it seems like d3 would still be the best option for truly detailed and interactive visualizations, even though R has adjusted scales and labels out of the box.
 
-![r-ggplot](img/r-ggplot.png)
+![r-ggplot](img/r-ggplot.PNG)
 
 // how to make scatterplot in R - https://www.guru99.com/r-scatter-plot-ggplot2.html
 
@@ -40,14 +40,14 @@ I had never used R before, so I expected there to be a lot more for me to learn!
 
 I have used Excel before to create simple graphs and charts, but never tried to change the basic layout / features of what I created. I was hoping for a similar experience to the other visualization tools I used; however, I quickly found that Excel certainly was not designed with visualization in mind. What in Flourish was intuitive and easy to follow, was in Excel confusing and hard to find. Changing the colors of points based on manufacturer required me to separate the dataset into five "series." Changing the size of the point I was incredibly hard, and the final result does not even look as desired. I made a separate column and divided the weights by 1000 in an attempt to make the bubbles smaller, but it did not appear to work. Even changing the opacity of the points proved undoable. While Excel certainly is useful in data manipulation, I would recommend exporting your data as a csv and looking to other data visualization tools.
 
-![excel](img/excel1.png)
-![excel](img/excel2.png)
+![excel](img/excel1.PNG)
+![excel](img/excel2.PNG)
 
 # Tableau
 
 Tableau required registering an account and downloading an application to use, meaning it took longer to get to my visualization than both Flourish and RAWgraphs. Once I uploaded my data source and got to my sheet, I was initially unsure of what to do. The actions I should take to create a visualization were not as immediately clear to me as they were with RAWgraphs. My first attmpet resulted in creating a singular x,y point of the sum of both MPG and Weight. I eventually realized I had to change the column and rows to be "dimensions" as opposed to "measures." I chose to not change the opacity of the points, as Tableau had the brilliant idea to make points empty circles by default, which I would argue is even better for identifying distinct data points than change alpha levels. Overall, I am sure that with necessary practice Tableau would be a very useful vis tool.
 
-![raw](img/tableau.png)
+![raw](img/tableau.PNG)
 
 # RAWgraphs
 

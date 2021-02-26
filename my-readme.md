@@ -64,3 +64,16 @@
 ===
 
 - super super easy
+
+
+6 Python + Bokeh
+===
+- Lots of tools you can add
+- color by category was frustrating - not automatic
+- size by category was also frustrating
+
+
+
+7 d3
+===
+- https://observablehq.com/@d3/scatterplot

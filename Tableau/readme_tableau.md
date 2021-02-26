@@ -12,9 +12,6 @@ The only downside to Tableau is that it is not a library. The reason I consider 
 - Open scatterplot.twb in Tableau
     - If it says it cannot find the data, reconnect the workspace to the sample-cars-imputed.csv file
 
-## Rankings/Stats
-This section ranks this tool in several categories compared to the other tools I used for this project:
-
 ## Sources
 1. Tableau Wikipedia Article: https://en.wikipedia.org/wiki/Tableau_Software
 - Tableau was so easy to learn that I did not use any tutorials

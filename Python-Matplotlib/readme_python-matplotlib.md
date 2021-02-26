@@ -18,9 +18,6 @@ Another similarity to MATLAB, although this time a positive one, the Matplotlib 
 - Make sure you have matplotlib installed
 - Run the scatterplot.py file using the command >python scatterplot.py
 
-## Rankings/Stats
-This section ranks this tool in several categories compared to the other tools I used for this project:
-
 ## Sources
 1. Mapping colors to bubble plots in matplotlib: https://python-graph-gallery.com/272-map-a-color-to-bubble-plot/
 2. Adding legends to scatter plots in matplotlib: https://stackoverflow.com/questions/26558816/matplotlib-scatter-plot-with-legend

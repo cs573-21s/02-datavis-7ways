@@ -40,7 +40,7 @@ To visualize cars dataset, I set the mapping in the `aes()`. I also made use of 
 
 The syntax in ggplot2 is concise. Compared with D3, ggplot2 needs less code to create same vis. In addition, ggplot2 can automatically construct legend in chart, which is very convenient.
 
-![ggplot2](img/ggplot2.png)
+![ggplot2](img/ggplot.png)
 
 # matplotlib
 Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python. 
@@ -80,3 +80,4 @@ However, I found it is difficult to set specific values for certain properties i
 ### Design Achievements
 - In D3.js, if the data have NA value in "MPG" and "Weight" attribute, the number of data which has NA value will be displayed above the chart to remind users. If user moves mouse on it, it will display `There are 2 null values in the csv file`.
 - In D3.js, After an area was selected, the circles in this area will have a different appearance. They will change from translucent to solid and their stoke will be green so that they can be distinguished from unselected circles. In addition, the detail information of selected circles will be displayed below the chart in table format.  
+- In order to remind user that they can interact in the scatter plot, I added a line of paragraph below the scatter plot. If user brushes an area in scatter, the paragraph disapears, otherwise it appears. 

@@ -45,9 +45,9 @@ d3.csv("https://raw.githubusercontent.com/geacquista/02-datavis-7ways/main/cars-
 
   svg.append("text")
     .attr("class", "x label")
-    .attr("text-anchor", "middle")
-    .attr("x", width)
-    .attr("y", height - 10)
+    .attr("text-anchor", "end")
+    .attr("x", width - 270)
+    .attr("y", height + 30)
     .text("Weight");
 
   // Add Y axis
@@ -62,7 +62,8 @@ d3.csv("https://raw.githubusercontent.com/geacquista/02-datavis-7ways/main/cars-
   svg.append("text")
     .attr("class", "y label")
     .attr("text-anchor", "end")
-    .attr("y", 6)
+    .attr("y", -25)
+    .attr("x", -250)
     .attr("dy", ".75em")
     .attr("transform", "rotate(-90)")
     .text("MPG");
@@ -77,11 +78,11 @@ d3.csv("https://raw.githubusercontent.com/geacquista/02-datavis-7ways/main/cars-
   // Color scale: give me a specie name, I return a color
   var color = d3.scaleOrdinal()
     .domain(["bmw", "ford", "honda", "mercedes", "toyota" ])
-    .range([ "#fda100", "#7a9000", "#01fec8","#03d0ff", "#f081ef"]);
+    .range([ "#f6938c", "#b5b639", "#4ebd94","#45bced", "#cb91c0"]);
 
   var colorOutline = d3.scaleOrdinal()
     .domain(["bmw", "ford", "honda", "mercedes", "toyota" ])
-    .range([ "orange", "green", "blue","blue", "red"]);
+    .range([ "#f6938c", "#b5b639", "#4ebd94","#45bced", "#cb91c0"]);
 
 
   // Add dots
@@ -95,8 +96,7 @@ d3.csv("https://raw.githubusercontent.com/geacquista/02-datavis-7ways/main/cars-
       .attr("r", function (d) { return size(d.Weight);})
       .style("fill", function (d) { 
           return color(d.Manufacturer); } )
-      .style("opacity", .50)
-      .attr("stroke", function (d) { return colorOutline(d.Manufacturer)});
+      .style("opacity", .50);
 })
 //site d3 graph gallery as my starter code
 </script>

@@ -19,9 +19,6 @@ All that said, one nice bonus I wanted to point out is that MATLAB graphs have a
 - Open ScatterPlot.m in MATLAB
 - Run the script and a popup window with the graph will appear
 
-## Rankings/Stats
-This section ranks this tool in several categories compared to the other tools I used for this project:
-
 ## Sources
 1. What is MATLAB?: https://www.mathworks.com/discovery/what-is-matlab.html
 2. MATLAB Bubble Chart Documentation: https://www.mathworks.com/help/matlab/ref/bubblechart.html

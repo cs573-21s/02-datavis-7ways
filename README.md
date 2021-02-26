@@ -11,6 +11,13 @@ Imogen Cleaver-Stigum
 Place all code, Excel sheets, etcetera in a named folder. For example, `r-ggplot, matlab, mathematica, excel` and so on.
 
 
+TODO
+
+- publish shiny app
+- design
+- tech 
+- d3
+- bokeh
 
 # 1. d3 (Javascript)
 
@@ -21,8 +28,16 @@ Place all code, Excel sheets, etcetera in a named folder. For example, `r-ggplot
 ## Technical Achievements 
 
 interaction
+log scale
+fill in data gaps
 
 ## Design Achievements 
+shiny app make prettier
+interactivity
+color picker???
+dark mode
+change to not dots
+
 
 consistent color choice, font choice, element size (e.g. the size of the circles)
 
@@ -47,28 +62,21 @@ consistent color choice, font choice, element size (e.g. the size of the circles
 ## Design Achievements 
 
 
-# 5. p5 (Javascript)
+# 5. Plotly (Python)
 ![caption](img/<imgname>)
 ## Technical Achievements 
 
 ## Design Achievements 
 
 
-# 6. Python
+# 6. Seaborn (Python)
 ![caption](img/<imgname>)
 ## Technical Achievements 
 
 ## Design Achievements 
 
 
-# 7. Tableau
-![caption](img/<imgname>)
-## Technical Achievements 
-
-## Design Achievements 
-
-
-# 8. Microsoft BI 
+# 7. Altair (Python)
 ![caption](img/<imgname>)
 ## Technical Achievements 
 

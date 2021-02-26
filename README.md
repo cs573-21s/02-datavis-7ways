@@ -33,7 +33,7 @@ Flourish was pretty straightforward to use and was simply a matter of modifying 
 
 # Tableau
 
-![ss_flourish](img/ss_flourish.png)
+![ss_tableau](img/ss_tableau.png)
 
 I found Tableau fairly frustrating to use. I found the GUI to be confusing and unintuitive. Color options were limited. I couldn't find a way to add a border to the marks that matched to border fill color. The options seemed to be to have one border color for all marks or no border. I did find a workaround by making it a dual-axis scatter plot. I don't think there was a way to turn on minor gridelines but there was a way for minor tick marks. Seems like it is more geared to analyzing data than to easily creating visualizations. 
 

@@ -1,0 +1,158 @@
+<script src="https://d3js.org/d3.v6.min.js"></script>
+
+<style>
+  .axis-grid line {
+    stroke: #FFFFFF;
+  }
+
+  .bmw {
+    fill: black;
+    stroke: black;
+  }
+
+  .ford {
+    fill: blue;
+    stroke: blue;
+  }
+
+  .honda {
+    fill: red;
+    stroke: red;
+  }
+
+  .mercedes {
+    fill: purple;
+    stroke: purple;
+  }
+
+  .toyota {
+    fill: #dc9a09;
+    stroke: #dc9a09;
+  }
+</style>
+
+<svg id="scatter"> </svg>
+
+<script>
+console.log(d3);
+
+const WIDTH        = 590;
+const HEIGHT       = 525;
+const MARGIN       = { top: 10, right: 10, bottom: 20, left: 50 };
+const INNER_WIDTH  = WIDTH - MARGIN.left - MARGIN.right;
+const INNER_HEIGHT = HEIGHT - MARGIN.top - MARGIN.bottom;
+
+const svg = d3.select('#scatter')
+  .attr('width', WIDTH)
+  .attr('height', HEIGHT + 50)
+  .append('g')
+    .attr('transform', 'translate(' + MARGIN.left + ',' + MARGIN.top + ')');
+
+svg
+  .append("rect")
+    .attr("x",0)
+    .attr("y",0)
+    .attr("height", INNER_HEIGHT)
+    .attr("width", INNER_WIDTH)
+    .style('stroke', '#EDEEF0')
+    .style("fill", "#EDEEF0");
+
+var cars;
+
+d3.json("cars.json").then(function(data) {
+  console.log(data); // [{"Hello": "world"}, …]
+  cars = data;
+  buildVis(data);
+});
+
+function buildVis(cars) {
+
+  console.log(cars);
+  
+  var weight_xscale = d3.scaleLinear()
+    .domain([1465, 5139]) 
+    .range( [0, INNER_WIDTH] );
+
+  var mpg_yscale = d3.scaleLinear()
+    .domain([7.2, 46.8])
+    .range( [INNER_HEIGHT, 0] );
+
+  var x_axis = d3.axisBottom()
+    .ticks(4)
+    .scale(weight_xscale)
+    .tickFormat(d3.format(''));
+
+  var y_axis = d3.axisLeft()
+    .ticks(4)
+    .scale(mpg_yscale);
+
+  var xAxisGrid = d3.axisBottom(weight_xscale)
+    .ticks(7)
+    .tickSize(-INNER_HEIGHT)
+    .tickFormat('');
+
+  var yAxisGrid = d3.axisLeft(mpg_yscale)
+    .ticks(8)
+    .tickSize(-INNER_WIDTH)
+    .tickFormat('');
+
+svg.append('g')
+  .attr('class', 'x axis-grid')
+  .attr('transform', 'translate(0,' + INNER_HEIGHT + ')')
+  .call(xAxisGrid);
+
+svg.append('g')
+  .attr('class', 'y axis-grid')
+  .call(yAxisGrid);
+
+// Create axes.
+svg.append('g')
+  .attr('class', 'x axis')
+  .attr('transform', 'translate(0,' + INNER_HEIGHT + ')')
+  .call(x_axis)
+  .call(g=>g.select('.domain').remove())
+//  .append("text")
+//    .attr("y", HEIGHT - 250)
+//    .attr("x", WIDTH - 100)
+//    .attr("text-anchor", "end")
+//    .attr("stroke", "black")
+//    .text("Weight");
+
+svg.append('g')
+  .attr('class', 'y axis')
+  .call(y_axis)
+  .call(g=>g.select('.domain').remove());
+
+// Add X axis label:
+svg.append("text")
+  .attr("text-anchor", "end") 
+  .attr("x", WIDTH/2)
+  .attr("y", HEIGHT)
+  .attr('font-family', 'arial')
+  .text("Weight");
+
+// Y axis label:
+svg.append("text")
+  .attr("text-anchor", "end")
+  .attr("transform", "rotate(-90)")
+  .attr("y", -MARGIN.left+20)
+  .attr("x", -MARGIN.top - HEIGHT/2 +20)
+  .text("MPG")
+  .attr('font-family', 'arial')
+
+  var circles = svg.selectAll('circle')
+    .data(cars, d=> d.Car)
+
+  circles.enter()
+  .append('circle')
+    .attr('cx', d=> weight_xscale(d.Weight))
+    .attr('cy', d=> mpg_yscale(d.MPG))
+    .attr('r', d => d.Weight*.002)
+    .attr('nobre', d=> d.Car)
+    .style('fill-opacity', 0.5)
+    .style('stroke-opacity', 0.6)
+    .attr('class', d=> d.Manufacturer);
+
+}
+
+</script>

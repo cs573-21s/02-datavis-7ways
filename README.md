@@ -21,7 +21,7 @@ Once I got up and running I was pretty pleased with my results. It was easy to m
 
 ![ss_d3](img/ss_d3.png)
 
-It was challenging to replicate the chart in d3. I used what I learned in class to plot the marks and to style the color and size. The following websites were helpful in formatting the graph, but I was unsuccessful in attempting to make axis labels and get more of the details that I was able to get in other tools. 
+It was challenging to replicate the chart in d3. I used what I learned in class to plot the marks and to style the color and size. The following websites were helpful in formatting the graph. 
 
 (https://www.essycode.com/posts/adding-gridlines-chart-d3/)<br>
 (https://www.d3-graph-gallery.com/graph/custom_theme.html)

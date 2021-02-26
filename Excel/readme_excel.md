@@ -19,9 +19,6 @@ Excel took me a very long time to complete compared to all of the others. It's v
 ## How to Run
 Load the .xlsx file in Excel, I created this file in the latest verion of Excel, the Microsoft Office 365 version. Once you load it you will see the graph.
 
-## Rankings/Stats
-This section ranks this tool in several categories compared to the other tools I used for this project:
-
 ## Sources
 1. Conditional Coloring in Excel: http://daydreamingnumbers.com/how-to/conditional-colouring-to-scatterplots-in-excel/
 2. Conditional Coloring in Excel: https://stackoverflow.com/questions/15124103/excel-how-can-i-make-a-scatter-plot-which-colors-by-a-third-column

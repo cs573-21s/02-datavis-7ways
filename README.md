@@ -11,17 +11,19 @@ I used RStudio and a tutorial video to replicate the chart for the assignment an
 
 [Tutorial - Data Visualization in R With ggplot2](https://learning.oreilly.com/videos/data-visualization-in/9781491963661)
 
+# Matplotlib
+
+![ss_matplotlib](img/ss_matplotlib.png)
+
+It was challenging just to get the libraries installed correctly. I am not very proficient in Terminal and things kept going wrong. And I have never worked in Python either. Once I got things working I watched this 10 part series of tutorial videos to learn how to make charts in Matplotlib [Matplotlib Tutorials](https://www.youtube.com/watch?v=UO98lJQ3QGI&list=PL-osiE80TeTvipOqomVEeZ1HRrcEvtZB)
+
+Once I got up and running I was pretty pleased with my results. It was easy to map the data to the size and color of the marks. Having a ggplot style template helped! I used the Matplotlib API to format the grid. This from Stack Overflow helped in figuring out the legends [Adding Second Legend to Scatter Plot](https://stackoverflow.com/questions/43812911/adding-second-legend-to-scatter-plot)
+
 # d3
 
 d3 was by far the most challenging and what I spent the most time on. 
 
 <a href = "https://www.essycode.com/posts/adding-gridlines-chart-d3/">https://www.essycode.com/posts/adding-gridlines-chart-d3/</a>
-
-# Excel
-
-![ss_excel](img/ss_excel.png)
-
-Creating the chart in Excel was pretty easy though it did require some manipulation of the data to get the desired color and size of the marks. To meet the requirement for color by manufacturer and size by weight I seperated the data in to series. I split the weight evenly in 500 lb increments so I needed 7 series just for Ford for example. I could not figure out how to get the tick marks to start somewhere other than the start of the range. So on the x-axis they start at 8 instead of 10. Also the format of the tick marks seems connected to the border of the axis so I was not able to match that exactly to ggplot. Excel had limited legend options. I ran out of time to try to fudge something to match the ggplot. 
 
 # Flourish
 
@@ -37,13 +39,11 @@ Flourish was pretty straightforward to use and was simply a matter of modifying 
 
 I found Tableau fairly frustrating to use. I found the GUI to be confusing and unintuitive. Color options were limited. I couldn't find a way to add a border to the marks that matched to border fill color. The options seemed to be to have one border color for all marks or no border. I don't think there was a way to turn on minor gridelines but there was a way for minor tick marks. Seems like it is more geared to analyzing data than to easily creating visualizations. 
 
-# Matplotlib
+# Excel
 
-![ss_matplotlib](img/ss_matplotlib.png)
+![ss_excel](img/ss_excel.png)
 
-It was challenging just to get the libraries installed correctly. I am not very proficient in Terminal and things kept going wrong. And I have never worked in Python either. Once I got things working I watched this 10 part series of tutorial videos to learn how to make charts in Matplotlib [Matplotlib Tutorials](https://www.youtube.com/watch?v=UO98lJQ3QGI&list=PL-osiE80TeTvipOqomVEeZ1HRrcEvtZB)
-
-Once I got up and running I was pretty pleased with my results. It was easy to map the data to the size and color of the marks. Having a ggplot style template helped! I used the Matplotlib API to format the grid. This from Stack Overflow helped in figuring out the legends [Adding Second Legend to Scatter Plot](https://stackoverflow.com/questions/43812911/adding-second-legend-to-scatter-plot)
+Creating the chart in Excel was pretty easy though it did require some manipulation of the data to get the desired color and size of the marks. To meet the requirement for color by manufacturer and size by weight I seperated the data in to series. I split the weight evenly in 500 lb increments so I needed 7 series just for Ford for example. I could not figure out how to get the tick marks to start somewhere other than the start of the range. So on the x-axis they start at 8 instead of 10. Also the format of the tick marks seems connected to the border of the axis so I was not able to match that exactly to ggplot. Excel had limited legend options. I ran out of time to try to fudge something to match the ggplot. 
 
 # Numbers
 

@@ -67,8 +67,6 @@ Similar with Flourish, every step to create a vis can be done in the GUI, withou
 
 Different with Flourish, it is as simple as dragging and dropping. In addition, you don’t need to choose a template in advance. The software will automatically create the vis in an acceptable way. Thus, users can focus on the data and dig out the information underlie the data. Moreover, Tableau can automatically create legends and some interactions, giving people a better perception. 
 
-However, I found it is difficult to set specific values for certain properties in Tableau. For example, I want to set specific sizes for the smallest circle and the largest circle but it is difficult. I found that Tableau is easy to set the trend of size changes or change the overall size.
-
 ![Tableau](img/Tableau.png)
 
 

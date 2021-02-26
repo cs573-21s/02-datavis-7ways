@@ -77,7 +77,7 @@ pdf, or analyze in excel.
 
 Flourish is an online editor. It provides users with an intuitive and interactive interface.
 Visualizing data in Flourish took a few minutes to get the plot done with interactive features such as tooltip and animation. However, 
-it is not very customizable. It is impossible possible to have more than a legend, and it has a predefined legend position, e.g., above, below, 
+it is not very customizable. It is impossible to have more than a legend, and it has a predefined legend position, e.g., above, below, 
 or horizontal. Flourish allows users to preview the vis in mobile preview or tablet preview too. 
 
 ![flourish](img/flourish-tooltip.png)
@@ -100,8 +100,8 @@ to a website or export the vis in different formats such as png, pdf, and SVG.
 
 ## Technical Achievements
 
-- **Preparing data**: Since the total number of rows with null values in MPG, Wight, or Manufacturer columns are 2 out of 98,
-that would not cause losing important information. So, I decided to remove these rows. 
+- **Preparing data**: Since the total number of rows with null values in MPG, Weight, or Manufacturer columns are 2 out of 98,
+that does not cause losing important information. So, I decided to remove these rows. 
 Although there are null values in other columns in the dataset, I did not remove them because we only care about MPG, Weight, 
 and Manufacturer. So, I did not want to lose values from these columns by removing null from others.
 Before using any tool, I cleaned the data then exported the file to use in all of the tools. Because some of the tools, e.g., Flourish, 

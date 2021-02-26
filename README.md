@@ -74,7 +74,7 @@ However, I found it is difficult to set specific values for certain properties i
 
 
 ## Technical Achievement
-- **Check data whether has NA value in advance**: To visualize the cars dataset, I met problem when trying to map "MPG" to "y" value because two data in "MPG" attribute have NA value. To solve this problem, I declared a function to check the dataset in advance. If data in "MPG" and "Weight" attribute has NA value, I ignored it. Since the data type returned by `loadTable()` in P5.js is table object, I spend some time viewing the document and learned to manipulate data table object.
+- **Check data whether has NA value in advance**: To visualize the cars dataset with `D3.js` and `P5.js`, I met problem when trying to map "MPG" to "y" value because two data in "MPG" attribute have NA value. To solve this problem, I declared a function to check the dataset in advance. If data in "MPG" and "Weight" attribute has NA value, I ignored it. Since the data type returned by `loadTable()` in P5.js is table object, I spend some time viewing the document and learned to manipulate data table object.
 - **Realize brushing interaction With D3.js**: I made use of `d3.brush()` to enable users to select an area in the chart. Coordinate information will be returned after a mouse event invoking. Using returned coordinate information, determined which circles are in the area and displayed their detail.
 
 ### Design Achievements

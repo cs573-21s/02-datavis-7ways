@@ -1,177 +1,56 @@
 <script src="https://d3js.org/d3.v6.min.js"></script>
 
-<style>
-    body {
-        background-color: #ddffdd;
-    }
-
-    h1 {
-        color: #22aa22;
-    }
-
-    p {
-        color: #22aa22;
-    }
-</style>
-
 <h1>Assignment 2 for CS 573: Data Visualization </h1>
 <p>Imogen Cleaver-Stigum </p>
 <p>February 2021 </p>
 
-
 <div id="value"> </div>
-<!-- <svg id="vis"> </svg> -->
-<!-- <div id="my_dataviz"></div> -->
 
-
+<h2 style="text-align:center">Car Weight vs MPG</h2>
 <script>
+    var margin = { top: 20, right: window.innerWidth / 10, bottom: 30, left: window.innerWidth / 10 },
+        width = window.innerWidth - margin.left - margin.right,
+        height = 600 - margin.top - margin.bottom;
 
-
-    // var width = 1200
-    // var height = 800
-
-    // var svg = d3.select('#vis')
-    //     .attr('width', width)
-    //     .attr('height', height);
-
-    // cars = d3.csv('~/cars-sample.csv/')
-
-    // set the dimensions and margins of the graph
-    var margin = { top: 10, right: 30, bottom: 30, left: 60 },
-        width = 460 - margin.left - margin.right,
-        height = 400 - margin.top - margin.bottom;
-
-    // append the svg object to the body of the page
-    var svg = d3.select("#value")
-        .append("svg")
+    var svg = d3.select("body").append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
         .append("g")
         .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
 
-    //Read the data
+    d3.csv("cars-sample.csv").then(function (data) {
 
-    d3.csv("https://raw.githubusercontent.com/cs573-21s/02-datavis-7ways/main/cars-sample.csv", function (cars) {
-
-        // Add X axis
-        var x = d3.scaleLinear()
-            .domain([0, 1000])
-            .range([0, width]);
+        // axes
+        var x = d3.scaleTime()
+            .range([0, width])
+            .domain([1500, 5000]);
+        var y = d3.scaleLinear()
+            .range([height, 0])
+            .domain([5, 50]);
         svg.append("g")
             .attr("transform", "translate(0," + height + ")")
             .call(d3.axisBottom(x));
-
-        // Add Y axis
-        var y = d3.scaleLinear()
-            .domain([0, 1000])
-            .range([height, 0]);
         svg.append("g")
             .call(d3.axisLeft(y));
 
-        // Add dots
-        svg.append('g')
-            .selectAll("dot")
-            .data(cars)
+        // colors categorical
+        var colormapper = d3.scaleOrdinal().domain(data)
+            .range(d3.schemeSet2);
+
+        // points
+        svg.selectAll("dot")
+            .data(data)
             .enter()
             .append("circle")
-            .attr("cx", function (d) { return x(d.X1); })
-            .attr("cy", function (d) { return x(d.); } )
-            .attr("r", 100)
-            .style("fill", "#69b3a2")
-    })
-        // var body = d3.select('body')
-        // var margin = { top: 50, right: 50, bottom: 50, left: 50 }
-        // var h = 500 - margin.top - margin.bottom
-        // var w = 500 - margin.left - margin.right
-        // var formatPercent = d3.format('.2%')
-        // // Scales
-        // var colorScale = d3.scale.category20()
-        // var xScale = d3.scale.linear()
-        //     .domain([
-        //         d3.min([0, d3.min(data, function (d) { return d.asd })]),
-        //         d3.max([0, d3.max(data, function (d) { return d.asd })])
-        //     ])
-        //     .range([0, w])
-        // var yScale = d3.scale.linear()
-        //     .domain([
-        //         d3.min([0, d3.min(data, function (d) { return d.aror })]),
-        //         d3.max([0, d3.max(data, function (d) { return d.aror })])
-        //     ])
-        //     .range([h, 0])
-        // // SVG
-        // var svg = body.append('svg')
-        //     .attr('height', h + margin.top + margin.bottom)
-        //     .attr('width', w + margin.left + margin.right)
-        //     .append('g')
-        //     .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')')
-        // // X-axis
-        // var xAxis = d3.svg.axis()
-        //     .scale(xScale)
-        //     .tickFormat(formatPercent)
-        //     .ticks(5)
-        //     .orient('bottom')
-        // // Y-axis
-        // var yAxis = d3.svg.axis()
-        //     .scale(yScale)
-        //     .tickFormat(formatPercent)
-        //     .ticks(5)
-        //     .orient('left')
-        // // Circles
-        // var circles = svg.selectAll('circle')
-        //     .data(data)
-        //     .enter()
-        //     .append('circle')
-        //     .attr('cx', function (d) { return xScale(d.Weight) })
-        //     .attr('cy', function (d) { return yScale(d.Weight) })
-        //     .attr('r', '10')
-        //     .attr('stroke', 'black')
-        //     .attr('stroke-width', 1)
-        //     .attr('fill', function (d, i) { return colorScale(i) })
-        //     .on('mouseover', function () {
-        //         d3.select(this)
-        //             .transition()
-        //             .duration(500)
-        //             .attr('r', 20)
-        //             .attr('stroke-width', 3)
-        //     })
-        //     .on('mouseout', function () {
-        //         d3.select(this)
-        //             .transition()
-        //             .duration(500)
-        //             .attr('r', 10)
-        //             .attr('stroke-width', 1)
-        //     })
-        //     .append('title') // Tooltip
-        //     .text(function (d) {
-        //         return d.variable +
-        //             '\nReturn: ' + formatPercent(d.aror) +
-        //             '\nStd. Dev.: ' + formatPercent(d.asd)
-        //     })
-        // // X-axis
-        // svg.append('g')
-        //     .attr('class', 'axis')
-        //     .attr('transform', 'translate(0,' + h + ')')
-        //     .call(xAxis)
-        //     .append('text') // X-axis Label
-        //     .attr('class', 'label')
-        //     .attr('y', -10)
-        //     .attr('x', w)
-        //     .attr('dy', '.71em')
-        //     .style('text-anchor', 'end')
-        //     .text('Annualized Standard Deviation')
-        // // Y-axis
-        // svg.append('g')
-        //     .attr('class', 'axis')
-        //     .call(yAxis)
-        //     .append('text') // y-axis Label
-        //     .attr('class', 'label')
-        //     .attr('transform', 'rotate(-90)')
-        //     .attr('x', 0)
-        //     .attr('y', 5)
-        //     .attr('dy', '.71em')
-        //     .style('text-anchor', 'end')
-        //     .text('Annualized Return')
-    // })
+            .attr("r", function (d) { return (d.Weight) / 300; })
+            .attr("cx", function (d) { return x(d.Weight); })
+            .attr("cy", function (d) { return y(d.MPG); })
+            .attr('fill', function (d) { return colormapper(d.Manufacturer); })
+
+    });
 
 </script>
+<p style="text-align:center">Weight (lbs)</p>
+
+<p style='position:absolute;top:400;left:50'>MPG</p>

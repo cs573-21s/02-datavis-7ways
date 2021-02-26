@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="p5.min.js"></script>
+</head>
+
+<body>
+    <script>
+        console.log(p5);
+        var cas;
+        var Weight = [];
+        var MPG;
+
+        function preload() {
+            cars = loadTable('cars-sample.csv', 'csv', 'header');
+        }
+
+        function setup() {
+            //declared a function to check the dataset in advance.
+            function dataCheck(data) {
+                for (let i = 0; i < data.getRowCount(); i++) {
+                    if ((isNaN(Number(data.get(i, 'MPG')))) || (isNaN(Number(data.get(i, 'Weight'))))) {
+                        data.removeRow(i);
+                        i = i - 1;
+                    }
+                }
+                console.log('check done');
+                console.log(data)
+                return data;
+            }
+            cars = dataCheck(cars);
+            Weight = cars.getColumn('Weight');
+            console.log(Weight);
+            MPG = cars.getColumn('MPG');
+            console.log(MPG);
+            var tableObject = cars.getObject();
+            var max_Weight = max(Weight);
+            var min_Weight = min(Weight);
+            var min_MPG = min(MPG);
+            var max_MPG = max(MPG);
+            console.log(min_MPG, max_MPG)
+
+            //画图
+            createCanvas(600, 600);
+            background(78);
+
+            console.log(Weight.length);
+            for (i = 0; i < Weight.length; i++) {
+                var x = map(tableObject[i].Weight, min_Weight, max_Weight, 85, width - 85);
+                var y = map(tableObject[i].MPG, min_MPG, max_MPG, 85, height - 85);
+                var r = map(tableObject[i].Weight, min_Weight, max_Weight, 13, 20)
+                //console.log(x);
+                noStroke();
+                if (tableObject[i].Manufacturer == 'ford') {
+                    fill(202, 203, 138, 128);
+                } else if (tableObject[i].Manufacturer == 'bmw') {
+                    fill(243, 184, 180, 128);
+                } else if (tableObject[i].Manufacturer == 'mercedes') {
+                    fill(152, 216, 249, 128);
+                } else if (tableObject[i].Manufacturer == 'toyota') {
+                    fill(237, 176, 242, 128);
+                } else if (tableObject[i].Manufacturer == 'honda') {
+                    fill(130, 213, 177, 128);
+                }
+                ellipse(x, height - y, r, r);
+            }
+            //draw the axis
+            stroke(255);
+            line(55, height - 55, width - 55, height - 55);
+            line(55, 55, 55, height - 55);
+            for (i = 2000; i < 6000; i = i + 1000) {
+                line(map(i, min_Weight, max_Weight, 85, width - 85), height - 55, map(i, min_Weight, max_Weight, 85, width - 85), height - 65);
+                text(i, map(i, min_Weight, max_Weight, 85, width - 85) - 15, height - 35);
+            }
+            for (i = 10; i < 50; i = i + 10) {
+                line(55, map(i, min_MPG, max_MPG, height - 85, 85), 65, map(i, min_MPG, max_MPG, height - 85, 85));
+                text(i, 35, map(i, min_MPG, max_MPG, height - 85, 85) + 5)
+            }
+            textSize(20);
+            text('Weight', width / 2 - 30, height - 10);
+            rotate(-PI / 2);
+            text('MPG', -height / 2 - 30, 25);
+
+        }
+
+        function draw() {
+
+        }
+    </script>
+</body>
+
+</html>

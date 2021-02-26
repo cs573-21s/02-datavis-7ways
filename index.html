@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- load d3 -->
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <!-- Make the bar charts -->
+    <script defer src="./barcharts.js"></script>
+    <!-- Load the css -->
+    <link rel="stylesheet" href="barcharts.css">
+    <title>Visualization Tool Comparisons</title>
+</head>
+
+
+
+<body>
+    <div class="content">
+        <h1>Comparison of Visualization Tools</h1>
+        <p>In the readme report I summarized my experiences, likes, and dislikes for each visualization tool. However, I
+            wanted to provide some direct comparisons in more direct ways. Therefore, I ranked all of the tools
+            in 5 distinct categories: learnability, file size, customization, hackiness, and visual appeal. Although
+            this is mostly subjective, it's based on my experience making these
+            scatter plots and helps to compare the different tools.</p>
+        <h2 id="graphTitle">Learnability</h2>
+        <p id="description">This shows the ranking of the tools based on a combination of how easy they were to learn
+            and the quality of their documentation. This is the most important metric in my opinion.</p>
+        <div id="svgzone"></div>
+        <span>Rank the Visualization Tools by: </span>
+        <select id="optionList">
+            <option value="learnability">Learnability</option>
+            <option value="fileSize">Smallest File Size</option>
+            <option value="customization">Customization</option>
+            <option value="hackiness">Least Hacky Code</option>
+            <option value="appeal">Visual Appeal</option>
+        </select>
+        <br>
+        <h4>Tabular View of Results</h4>
+        <p>I created a simple score system to quantify these rankings. It uses the following format:</p>
+        <ul>
+            <li>1st place: 7 points</li>
+            <li>2nd place: 6 points</li>
+            <li>3rd place: 5 points</li>
+            <li>4th place: 4 points</li>
+            <li>5th place: 3 points</li>
+            <li>6th place: 2 points</li>
+            <li>7th place: 1 point</li>
+        </ul>
+        <table>
+            <tr>
+                <td>Tool</td>
+                <td>Learnability</td>
+                <td>Smallest File Size</td>
+                <td>Customization</td>
+                <td>Least Hacky Code</td>
+                <td>Visual Appeal</td>
+                <td>Total Score</td>
+            </tr>
+            <tr>
+                <td>Excel</td>
+                <td>7th</td>
+                <td>7th</td>
+                <td>7th</td>
+                <td>7th</td>
+                <td>7th</td>
+                <td>7 points</td>
+            </tr>
+            <tr>
+                <td>MATLAB</td>
+                <td>5th</td>
+                <td>3rd</td>
+                <td>3rd</td>
+                <td>6th</td>
+                <td>6th</td>
+                <td>17 points</td>
+            </tr>
+            <tr>
+                <td>R + ggplot2</td>
+                <td>2nd</td>
+                <td>1st</td>
+                <td>4th</td>
+                <td>1st</td>
+                <td>3rd</td>
+                <td>29 points</td>
+            </tr>
+            <tr>
+                <td>Python + maplotlib</td>
+                <td>4th</td>
+                <td>4th</td>
+                <td>2nd</td>
+                <td>5th</td>
+                <td>2nd</td>
+                <td>23 points</td>
+            </tr>
+            <tr>
+                <td>d3</td>
+                <td>6th</td>
+                <td>5th</td>
+                <td>1st</td>
+                <td>4th</td>
+                <td>5th</td>
+                <td>19 points</td>
+            </tr>
+            <tr>
+                <td>Vega-Lite</td>
+                <td>3rd</td>
+                <td>2nd</td>
+                <td>5th</td>
+                <td>1st</td>
+                <td>1st</td>
+                <td>28 points</td>
+            </tr>
+            <tr>
+                <td>Tableau</td>
+                <td>1st</td>
+                <td>6th</td>
+                <td>6th</td>
+                <td>1st</td>
+                <td>4th</td>
+                <td>22 points</td>
+            </tr>
+        </table>
+        <h4>Summary</h4>
+        <p>Based on these results I would say R + ggplot2 is the best visualization tool for creating a bubble chart.
+            With Vega-Lite as a close second place. This suprises me a little because R was the tool I was most afraid
+            to use going in. But considering the graph we are trying to model was also build in R, maybe this makes
+            sense. I definitely enjoyed learning R and found it very easy to use.</p>
+        <p>There is some bias in this ranking. All of the file sizes are small and that may not be a big factor,
+            although
+            writing all of the R code in a few lines is cool. Additionally, learnability, in my opinion, is the most
+            valuable the metrics I measured. Tableau was incredibly easy to learn, so despite these
+            results, I may advise people inexperienced with coding to use Tableau in the future. It's just very user
+            friendly.</p>
+    </div>
+
+    <br><br><br><br>
+    <br><br><br><br>
+    <br><br><br><br>
+</body>

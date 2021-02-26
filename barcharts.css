@@ -1,0 +1,82 @@
+/* General Styles */
+body {
+    background-color: lightgrey;
+    font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-size: 1.2em;
+    font-weight: 300;
+    letter-spacing: .01em;
+    line-height: 1.6;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+select{
+    font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-size: 1.0em;
+    font-weight: 300;
+    letter-spacing: .01em;
+    background-color: lightblue;
+}
+
+.content{
+    margin: 0 auto;
+    max-width: 62.5rem;
+    padding: 0 2.0rem;
+    position: relative;
+    justify-content: center;
+}
+
+#description, #graphTitle{
+    opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* Table */
+table{
+    border-collapse: collapse;
+    text-align: center;
+    background-color: whitesmoke;
+    margin: auto;
+    font-size: initial;
+    font-weight: initial;
+    letter-spacing: initial;
+    line-height: initial;
+}
+
+td{
+    font-size: 1.2em;
+    border: solid black 1px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Tool tips for the bars */
+.toolTip {
+    position: absolute;
+    display: none;
+    min-width: 80px;
+    height: auto;
+    background: none repeat scroll 0 0 #ffffff;
+    border: 1px solid #6F257F;
+    border-radius: 25px;
+    padding: 14px;
+    text-align: center;
+    font-size: initial;
+    font-weight: initial;
+    letter-spacing: initial;
+    line-height: initial;
+}

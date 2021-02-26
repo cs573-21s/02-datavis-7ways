@@ -74,8 +74,9 @@ However, I found it is difficult to set specific values for certain properties i
 
 
 ## Technical Achievement
-- **Check data whether has NA value in advance**:To vasulize the cars dataset, I met problem when trying to map "MPG" to "y" value becasue two data in "MPG" attribute have NA value. TO solve this problem, I declared a function to check the dataset in advance. If data in "MPG" and "Weight" attribute has NA value, I ignored it. Since the data type returned by `loadTable()` in P5.js is table object, I spend some time viewing the document and learned to manipulate data table object.
-- **Solved AI Forever**: ...
+- **Check data whether has NA value in advance**: To visualize the cars dataset, I met problem when trying to map "MPG" to "y" value because two data in "MPG" attribute have NA value. To solve this problem, I declared a function to check the dataset in advance. If data in "MPG" and "Weight" attribute has NA value, I ignored it. Since the data type returned by `loadTable()` in P5.js is table object, I spend some time viewing the document and learned to manipulate data table object.
+- **Realize brushing interaction With D3.js**: I made use of `d3.brush()` to enable users to select an area in the chart. Coordinate information will be returned after a mouse event invoking. Using returned coordinate information, determined which circles are in the area and displayed their detail.
 
 ### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+- In D3.js, if the data have NA value in "MPG" and "Weight" attribute, the number of data which has NA value will be displayed above the chart to remind users. If user moves mouse on it, it will display `There are 2 null values in the csv file`.
+- In D3.js, After an area was selected, the circles in this area will have a different appearance. They will change from translucent to solid and their stoke will be green so that they can be distinguished from unselected circles. In addition, the detail information of selected circles will be displayed below the chart in table format.  

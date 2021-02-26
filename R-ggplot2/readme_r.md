@@ -15,9 +15,6 @@ Overall, I was just very pleasantly surprised about how easy it was to learn and
 - Modify line 11 of the file to have the correct file path to the .csv file
 - Run the script to view the visualization
 
-## Rankings/Stats
-This section ranks this tool in several categories compared to the other tools I used for this project:
-
 ## Sources
 1. About R: https://www.r-project.org/about.html
 2. Bubble plots in R: https://www.r-graph-gallery.com/320-the-basis-of-bubble-plot.html

@@ -38,6 +38,8 @@ with open("../cars-sample-imputed.csv") as csv_file:
 # It's nice and easy to make the bubble chart
 fig, ax = plt.subplots()
 scatter = ax.scatter(Weight, MPG, s=BubbleWeight, c=Manufacturer, alpha=0.5)
+ax.set_ylabel('MPG')
+ax.set_xlabel('Weight')
 
 # Add the legends
 # It's very annoying to make bubble or color legends. I had to do some weird stuff
@@ -45,7 +47,7 @@ import matplotlib.patches as mpatches
 
 # Make the color legend
 classes = ['bmw','ford','honda','mercedes','toyota']
-class_colours = ['#2377B4','#FF7F0E','#2CA02C','#D62728','#9467BD']
+class_colours = ['#2377B480','#FF7F0E80','#2CA02C80','#D6272880','#9467BD80']
 recs = []
 for i in range(0,len(class_colours)):
     recs.append(mpatches.Rectangle((0,0),1,1,fc=class_colours[i]))

@@ -13,7 +13,7 @@ let svg = d3.select("#svgzone")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 // read the data 
-d3.csv("./cars-sample.csv").then(function (data) {
+d3.csv("./cars-sample-imputed.csv").then(function (data) {
     buildVis(data);
 });
 

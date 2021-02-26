@@ -1,5 +1,5 @@
 % Load the data
-Data = readtable('../cars-sample.csv');
+Data = readtable('../cars-sample-imputed.csv');
 
 % convert manufacturer to colors
 % matlab uses a silly 0 to 1 RGB scale instead of 0 to 255

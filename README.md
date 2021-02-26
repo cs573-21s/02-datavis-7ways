@@ -1,15 +1,15 @@
-# 02-DataVis-7ways
+# 02-DataVis-7ways Gabrielle Acquista
 
 Assignment 2 - Data Visualization, 7 Ways  
 ===
 
 
-Your goal is to use 7 different tools to make the following chart:
+My goal is to use 7 different tools to make the following chart:
 
 ![ggplot2](img/ORIGINAL.png)
 
 
-# R + ggplot2 + R Markdown
+# R + ggplot
 
 R is a language primarily focused on statistical computing.
 ggplot2 is a popular library for charting in R.
@@ -19,10 +19,39 @@ To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, wi
 
 While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
 
-![ggplot2](img/ggplot2.png)
+![R](R/ggplot2Recreation.png)
 
-# d3...
+# d3
 
+![d3](d3/d3Plot.PNG)
+
+# python
+
+![python](python/pythonMatplotLib.png)
+
+# Tableau
+
+![tableau](tableau/tableauPlot.PNG)
+
+# Excel
+
+![excel](excel/excelPlot.PNG)
+
+# Flourish
+
+![flourish](flourish/flourishRecreation.png)
+
+# Matlab
+
+![matlab](matlab/matlabShot.PNG)
+
+# SPSS
+
+![spss](spss/spss.PNG)
+
+# vega-lite
+
+![vegalite](vegaLite/vegalite.png)
 
 
 ## Technical Achievements

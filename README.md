@@ -1,142 +1,123 @@
-# 02-DataVis-7ways
-
 Assignment 2 - Data Visualization, 7 Ways  
 ===
 
-Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 7 times. 
 
-The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
+# R + ggplot2
 
-I have provided a small dataset about cars, `cars-sample.csv`.
-Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
+R is a language primarily focused on statistical computing. ggplot2 is a popular library for charting in R. To visualize the cars dataset, 
+I made use of ggplot2's geom_point() layer, with aesthetics functions for the color, size, and opacity. While it takes time to find the right 
+resources, these functions made the effort creating this chart minimal with all required features preserved. Also, specifying one value in 
+aesthetics function, namely shape, made the scatter plot color-blind friendly by using another channel in addition to colors.	
 
-Your goal is to use 7 different tools to make the following chart:
+![ggplot2](img/r-ggplot2.png)
 
-![ggplot2](img/ggplot2.png)
-
-These features should be preserved as much as possible in your replication:
-
-- Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
-- Scales: Note the scales do not start at 0.
-- Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
-- Color mapping to Manufacturer.
-- Size mapping to Weight.
-- Opacity of circles set to 0.5 or 50%.
-
-Other features are not required. This includes:
-
-- The background grid.
-- The legends.
-
-Note that some software packages will make it **impossible** to perfectly preserve the above requirements. 
-Be sure to note where these deviate.
-
-Improvements are also welcome as part of Technical and Design achievements.
-
-Libraries, Tools, Languages
----
-
-You are required to use 7 different tools or libraries.
-Of the 7 tools, you must use at least 3 libraries (libraries require code of some kind).
-This could be `Python, R, Javascript`, or `Java, Javascript, Matlab` or any other combination.
-Dedicated tools (i.e. Excel) do not count towards the language requirement.
-
-Otherwise, you should seek tools and libraries to fill out your 7.
-
-Below are a few ideas. Do not limit yourself to this list!
-Some may be difficult choices, like Matlab or SPSS, which require large installations, licenses, and occasionally difficult UIs.
-
-I have marked a few that are strongly suggested.
-
-- R + ggplot2 `<- definitely worth trying`
-- Excel
-- d3 `<- since the rest of the class uses this, we're requiring it`
-- Matplotlib
-- three.js `<- well, it's a 3d library. not really recommended, but could be "interesting"`
-- p5js `<- good for playing around. not really a chart lib`
-- Tableau
-- Java 2d
-- GNUplot
-- Vega-lite <- `<- recently much better. look for the high level js implementations`
-- Flourish <- `<- popular last year`
-- PowerBI
-- SPSS
-
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found, please identify the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing. 
-
-Tips
----
-
-- If you're using d3, key to this assignment is knowing how to load data.
-You will likely use the [`d3.json` or `d3.csv` functions](https://github.com/mbostock/d3/wiki/Requests) to load the data you found.
-Beware that these functions are *asynchronous*, meaning it's possible to "build" an empty visualization before the data actually loads.
-
-- *For web languages like d3* Don't forget to run a local webserver when you're debugging.
-See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server) if you're stuck.
+![ggplot2-color-blind](img/r-color-blind.png)
 
 
-Readme Requirements
----
+# D3.js	
 
-A good readme with screenshots and structured documentation is required for this project. 
-It should be possible to scroll through your readme to get an overview of all the tools and visualizations you produced.
+D3.js is a javascript library that helps visualize data using HTML, SVG, CSS elements.
+Visualizing the dataset in d3 was not very challenging, but it was not easy at the same time. In the beginning, some stuff was confusing,
+such as the grid. It took me so much time to do it, and in the end, the result was not the same as what we asked to replicate. So, finally, 
+I decided to create the background but without the grid lines. However, the other parts of the vis were relatively easy. I think they were easy
+to execute because the dataset is not complicated. But as the dataset gets complex, I think it will be overwhelming to get some stuff done by
+novice users.
+The good thing about d3 is that it gives the user control over it and not the other way around, unlike other tools used in this project.
 
-- Each visualization should start with a top-level heading (e.g. `# d3`)
-- Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
-- Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
+![d3](img/d3.png)
 
-Other Requirements
----
 
-0. Your code should be forked from the GitHub repo.
-1. Place all code, Excel sheets, etcetera in a named folder. For example, `r-ggplot, matlab, mathematica, excel` and so on.
-2. Your writeup (readme.md in the repo) should also contain the following:
+# Python + matplotlib + Jupyter notebook
 
-- Description of the Technical achievements you attempted with this visualization.
-  - Some ideas include interaction, such as mousing over to see more detail about the point selected.
-- Description of the Design achievements you attempted with this visualization.
-  - Some ideas include consistent color choice, font choice, element size (e.g. the size of the circles).
+Matplotlib is a python library provides the methods needed for creating data visualizations.
+I used Jupyter notebook to create the plot due to its ease in inspecting the data and checking the result immediately.
+Visualizing data in Python and using Matplotlib was easy compared with D3. Although it took a little bit of time to figure out
+the library, it took a few minutes to get the plot done.		
+One of the good things about this library is ggplot themes. It helped me to create the grid with one line. However, customizing the legend
+was not very easy, and I could only get the legend inside the plot area, not on the right side of the right axes.
 
-GitHub Details
----
+![matplotlib](img/python-matplotlib.png)
 
-- Fork the GitHub Repository. You now have a copy associated with your username.
-- Make changes to fulfill the project requirements. 
-- To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
 
-Grading
----
+# Tableau
 
-Grades on a 120 point scale. 
-24 points will be based on your Technical and Design achievements, as explained in your readme. 
+Tableau is a software allows users to visualize data with not only drag/drop but also with scripts to customize some aspects.
+Visualizing data in Tableau was very easy. It did not need previous knowledge to have things done; however, it required some hacks to customize
+some aspects, such as the legend. To get the Manufacturer's legend correctly, I created the scatter plot and the Weight's legend in a sheet.
+Then, I created the Manufacturer's legend separately in another sheet and did some customization to change the default squares color to circles.
+After that, I dragged the scatter plot along with the two legends and dropped them in the dashboard. However, I found it difficult to change
+the Weight legend's sizes, so I included 5000. I also added a highlight action to the Manufacturer's legend, so when the user clicks on 
+a Manufacture from the legend, the plot highlights the corresponding circles. Finally, I created a tooltip that has the car details.				
+I also created another scatter plot where I made it color-blind friendly by using another channel, namely shape, in addition to colors.
 
-Make sure you include the files necessary to reproduce your plots.
-You should structure these in folders if helpful.
-We will choose some at random to run and test.
+![tableau-tooltip](img/Tableua-tooltip.png)
 
-**NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
+![tableau-highlit](img/Tableua-highlight-action.png)
 
-# R + ggplot2 + R Markdown
+![tableau-color-blind](img/Tableau-color-blind-friendly.png)
 
-R is a language primarily focused on statistical computing.
-ggplot2 is a popular library for charting in R.
-R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
 
-To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
 
-While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
+# PowerBI
 
-![ggplot2](img/ggplot2.png)
+PowerBI is a Microsoft service. It provides users with an intuitive and interactive interface.
+Visualizing data with PowerBI took a few minutes to get the plot done with interactive features such as tooltip and highlight action.
+It is not very customizable. I could not have more than one legend and could not change the legend's position.
+Also, changing the opacity of the circle is not an option.				
+PowerBI has some other useful features such as sharing the report as a QR code, embedding it on a web page, adding comments to start 
+a conversation around the report, or chatting about it in Teams service. The vis can also be exported in different formats such as PowerPoint,
+pdf, or analyze in excel.
 
-# d3...
+![powerBI](img/powerBI-tooltip.png)
 
-(And so on...)
+![powerBI-higlit](img/powerBI-hilight-action.png)
+
+
+# Flourish
+
+Flourish is an online editor. It provides users with an intuitive and interactive interface.
+Visualizing data in Flourish took a few minutes to get the plot done with interactive features such as tooltip and animation. However, 
+it is not very customizable. It is impossible to have more than a legend, and it has a predefined legend position, e.g., above, below, 
+or horizontal. Flourish allows users to preview the vis in mobile preview or tablet preview too. 
+
+![flourish](img/flourish-tooltip.png)
+
+
+# Datawrapper
+
+Datawrapper is an online editor that provides users with a more intuitive interface than Flourish. It walks the user through 
+steps to get the vis done. It is not very customizable, though. It has almost the same features and constraints as Flourish. 
+In addition to that, it has limited grid choices namely white and blue grids.
+Datawrapper has a color-blind checker, which is an excellent feature to have, and the user can either copy a link to a responsive code 
+to a website or export the vis in different formats such as png, pdf, and SVG.
+
+![datawrapper1](img/datawrapper-4.png)
+
+![datawrapper2](img/datawrapper-5.png)
+
+![datawrapper3](img/datawrapper-6.png)
 
 
 ## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
 
-### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+- **Preparing data**: Since the total number of rows with null values in MPG, Weight, or Manufacturer columns are 2 out of 98,
+that does not cause losing important information. So, I decided to remove these rows. 
+Although there are null values in other columns in the dataset, I did not remove them because we only care about MPG, Weight, 
+and Manufacturer. So, I did not want to lose values from these columns by removing null from others.
+Before using any tool, I cleaned the data then exported the file to use in all of the tools. Because some of the tools, e.g., Flourish, 
+do not give the user a choice to omit the null values after importing the data.
+- **Grid**: is created in all tools except d3.
+- **Legend**: is created in all of the tools except python.	
+- **Tooltip**: is created in all non-library tools.
+- **Highlight action**: is added in all non-library tools.
+
+
+## Design Achievements
+
+- **Color-blind friendly**: Adding additional channel, namely shape, to make the scatter plot color-blind friendly. 
+
+
+## Sources
+
+1. https://github.com/d3/d3-axis/issues/48
+2. http://bl.ocks.org/micahstubbs/b097f9d0999848ee70b74b36ce30cbb8

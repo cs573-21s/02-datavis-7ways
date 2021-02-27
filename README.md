@@ -70,7 +70,9 @@ The Visslo viz was generated using the visslo online editor.
 
 ## Technical Achievements
 The technical achievements associated with this project revolved around the missing na values in the data for MPG. The weight, displacement and horsepower all were correlated more strongly than the traditional measure that people are more interested when talking about engines 'The number of Cylinders'. However the sparsity of the data made the data particularly hard to cluster into groups. I ended up binning the data into 5 bins(pentiles). The mean of the bins were then used to generate the missing data in the MPG.
+
 The heat map of the correlation matrix can be seen below:
+
 ![Heatmap for correlation](img/correlation.png)
 
 

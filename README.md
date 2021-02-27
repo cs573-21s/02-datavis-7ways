@@ -1,5 +1,3 @@
-# 02-DataVis-7ways
-
 Assignment 2 - Data Visualization, 7 Ways  
 ===
 

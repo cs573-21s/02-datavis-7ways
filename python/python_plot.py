@@ -4,7 +4,6 @@ import pandas as pd
 #import numpy as np
 from matplotlib.ticker import (MultipleLocator, AutoMinorLocator)
 
-#https://towardsdatascience.com/one-bubble-chart-comparing-9-data-visualization-tools-7308b893950a
 data = pd.read_csv('cars-sample.csv')
 
 plt.figure(figsize=(10,8))

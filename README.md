@@ -38,11 +38,11 @@ Tableau is a software program that is used for business intelligence and data vi
 
 
 ## Technical Achievements
-![Tooltip](img/a2-d3-tooltip.gif)
+![Tooltip](img/a2-tooltip.gif)
 
 - **Hover for ToolTip**: Using D3.js, I implemented a tooltip to show the exact weight and MPG of each point. This was mainly so the points with "NA" as an MPG could be indicated.
 
-![Buttons](img/a2-d3-button.gif)
+![Buttons](img/a2-buttons.gif)
 
 - **Interactive Legend**: By clicking on the different buttons on the legend, it only shows the corresponding data points and can be reset with the "reset" button. 
 

@@ -135,7 +135,7 @@ The mouseover events in the d3 plot (making the point opaque and giving it a bla
 
 There is an empty rectangle behind the plot covering the whole svg so that the crosshairs are still detected when the mouse is over an empty space in the plot, not only when it is directly over a point. 
 
-## 4. Scaling to window
+## 4. Scaling to window in d3
 
 I also made the whole svg and the plot scale to the width of the window at the time the page is loaded. 
 

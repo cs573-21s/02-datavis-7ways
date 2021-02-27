@@ -7,7 +7,7 @@ library(RColorBrewer)
 library(wesanderson)
 
 # Get the data
-data2 <- read_csv("/Users/Jyalu/Documents/Ramen/3/C/Data-Vis/02-datavis-7ways/cars_cleaned.csv")
+data2 <- read_csv("/Users/Jyalu/Documents/Ramen/3/C/Data-Vis/02-datavis-7ways/data/cars_cleaned.csv")
 
 pal <- wes_palette('Darjeeling1', 5)
 pal_r <- rev(unique(pal))

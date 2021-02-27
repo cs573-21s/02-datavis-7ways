@@ -234,7 +234,7 @@ Page link: https://junying-li.github.io/02-datavis-7ways/Mpld3/index.html
 
 - **Filtered Data**: 
 
-In d3, matplotlib, and mpld3, I made use of different ways to filter data and remove clumns with NaN value.
+In d3, matplotlib, and mpld3, I made use of different ways to filter data and remove columns with NaN value.
 
 ## Design Achievements
 - **Color map**: 

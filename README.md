@@ -17,8 +17,6 @@ I used the following set of libraries, tools, and languages to recreate the same
 6. Excel
 7. Matplotlib
 
-Some more words about the process and how I did it.
-
 Libraries, Tools, Languages
 ===
 

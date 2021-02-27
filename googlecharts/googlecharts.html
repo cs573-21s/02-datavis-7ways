@@ -1,0 +1,226 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawSeriesChart);
+
+    function drawSeriesChart() {
+
+      var data = google.visualization.arrayToDataTable([
+        ["Manufacturer", "Weight", "MPG", "lgd", "Size"],
+        ["ford", 3449, 17, "ford", 3449],
+        ["ford", 4341, 15, "ford", 4341],
+        ["ford", 4034, 14.3736842105263, "ford", 4034],
+        ["ford", 3353, 20.2611111111111, "ford", 3353],
+        ["toyota", 2372, 24, "toyota", 2372],
+        ["ford", 2587, 21, "ford", 2587],
+        ["bmw", 2234, 26, "bmw", 2234],
+        ["ford", 4615, 10, "ford", 4615],
+        ["toyota", 2228, 25, "toyota", 2228],
+        ["ford", 2046, 25, "ford", 2046],
+        ["ford", 3302, 19, "ford", 3302],
+        ["ford", 4154, 14, "ford", 4154],
+        ["ford", 4746, 13, "ford", 4746],
+        ["ford", 3139, 18, "ford", 3139],
+        ["toyota", 1773, 31, "toyota", 1773],
+        ["toyota", 2278, 24, "toyota", 2278],
+        ["ford", 2226, 21, "ford", 2226],
+        ["ford", 4129, 14, "ford", 4129],
+        ["ford", 4294, 13, "ford", 4294],
+        ["ford", 2395, 22, "ford", 2395],
+        ["toyota", 2506, 23, "toyota", 2506],
+        ["toyota", 2100, 27, "toyota", 2100],
+        ["ford", 4042, 14, "ford", 4042],
+        ["ford", 4363, 13, "ford", 4363],
+        ["ford", 3021, 18, "ford", 3021],
+        ["ford", 4906, 12, "ford", 4906],
+        ["toyota", 2279, 20, "toyota", 2279],
+        ["ford", 2310, 19, "ford", 2310],
+        ["toyota", 2807, 20, "toyota", 2807],
+        ["ford", 2875, 21, "ford", 2875],
+        ["ford", 2451, 26, "ford", 2451],
+        ["toyota", 1836, 32, "toyota", 1836],
+        ["ford", 4141, 16, "ford", 4141],
+        ["ford", 4638, 14, "ford", 4638],
+        ["toyota", 1649, 31, "toyota", 1649],
+        ["honda", 2489, 24, "honda", 2489],
+        ["ford", 3158, 15, "ford", 3158],
+        ["ford", 4657, 14, "ford", 4657],
+        ["ford", 3169, 13, "ford", 3169],
+        ["toyota", 2171, 29, "toyota", 2171],
+        ["ford", 2639, 23, "ford", 2639],
+        ["toyota", 2702, 24, "toyota", 2702],
+        ["ford", 2984, 18, "ford", 2984],
+        ["honda", 1795, 33, "honda", 1795],
+        ["ford", 4215, 14.5, "ford", 4215],
+        ["ford", 3012, 24, "ford", 3012],
+        ["honda", 1795, 33, "honda", 1795],
+        ["ford", 3574, 18, "ford", 3574],
+        ["toyota", 2155, 28, "toyota", 2155],
+        ["ford", 2565, 26.5, "ford", 2565],
+        ["toyota", 2930, 19, "toyota", 2930],
+        ["mercedes", 3820, 16.5, "mercedes", 3820],
+        ["ford", 3870, 13, "ford", 3870],
+        ["honda", 2045, 31.5, "honda", 2045],
+        ["ford", 3525, 18.5, "ford", 3525],
+        ["ford", 4335, 16, "ford", 4335],
+        ["toyota", 2265, 26, "toyota", 2265],
+        ["ford", 2755, 25.5, "ford", 2755],
+        ["bmw", 2600, 21.5, "bmw", 2600],
+        ["ford", 1800, 36.1, "ford", 1800],
+        ["honda", 1800, 36.1, "honda", 1800],
+        ["ford", 2965, 20.2, "ford", 2965],
+        ["ford", 2720, 25.1, "ford", 2720],
+        ["ford", 3205, 18.1, "ford", 3205],
+        ["toyota", 2560, 27.5, "toyota", 2560],
+        ["toyota", 2515, 21.1, "toyota", 2515],
+        ["honda", 2135, 29.5, "honda", 2135],
+        ["ford", 2890, 22.3, "ford", 2890],
+        ["ford", 3725, 17.6, "ford", 3725],
+        ["ford", 4054, 15.5, "ford", 4054],
+        ["mercedes", 3530, 25.4, "mercedes", 3530],
+        ["toyota", 1968, 38.1, "toyota", 1968],
+        ["ford", 2870, 26.4, "ford", 2870],
+        ["toyota", 2711, 29.8, "toyota", 2711],
+        ["toyota", 2265, 32.2, "toyota", 2265],
+        ["mercedes", 3250, 30, "mercedes", 3250],
+        ["honda", 1850, 44.6, "honda", 1850],
+        ["ford", 2905, 23.6, "ford", 2905],
+        ["honda", 2290, 32.4, "honda", 2290],
+        ["toyota", 1755, 39.1, "toyota", 1755],
+        ["honda", 1760, 35.1, "honda", 1760],
+        ["toyota", 2050, 37.7, "toyota", 2050],
+        ["ford", 2045, 34.4, "ford", 2045],
+        ["ford", 2380, 29.9, "ford", 2380],
+        ["honda", 2210, 33.7, "honda", 2210],
+        ["toyota", 2350, 32.4, "toyota", 2350],
+        ["toyota", 2900, 25.4, "toyota", 2900],
+        ["ford", 3060, 20.2, "ford", 3060],
+        ["ford", 2865, 24, "ford", 2865],
+        ["honda", 2205, 36, "honda", 2205],
+        ["toyota", 2245, 34, "toyota", 2245],
+        ["honda", 1965, 38, "honda", 1965],
+        ["honda", 1965, 32, "honda", 1965],
+        ["ford", 2835, 22, "ford", 2835],
+        ["toyota", 2665, 32, "toyota", 2665],
+        ["ford", 2790, 27, "ford", 2790],
+        ["ford", 2625, 28, "ford", 2625],
+      ]);
+
+      var options = {
+        hAxis: {title: 'Weight', ticks: [1500, 2000,3000,4000,5000], minValue: 1500},
+        vAxis: {title: 'MPG', minValue: 10},
+        bubble: {textStyle: {fontSize: 11}}
+      };
+
+      var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
+      chart.draw(data, options);
+    }
+    </script>
+  </head>
+  <body>
+    <div id="series_chart_div" style="width: 1900px; height: 1000px;"></div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

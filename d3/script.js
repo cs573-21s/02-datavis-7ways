@@ -11,13 +11,13 @@ let margin = {
   left: 30
 }
 
-const COLORS = {
-  "bmw": "red",
-  "ford": "yellowgreen",
-  "honda": "bluegreen",
-  "mercedes": "blue",
-  "toyota": "pink"
-};
+COLORS = {
+  'bmw': '#E360EB88',
+  'ford': '#EBCD6C88',
+  'honda': '#9155EB88',
+  'mercedes': '#86EB3D88',
+  'toyota': '#495FEB88'
+}
 
 let svg = d3.select('#car-chart')
   .attr('width', width)
@@ -28,14 +28,12 @@ const LOAD_DATA = new Promise((resolve, reject) => {
     d3.csv("../cars-sample.csv"),
   ]).then(values => {
     console.log('All data loaded!');
-    debugger;
     buildVis(values[0])
     resolve(values);
   }).catch(err => {
     console.error(`Error loading the csv data: ${err}`);
     reject(err);
   })
-  debugger;
 });
 
 function buildVis(dataArray){
@@ -79,7 +77,37 @@ function buildVis(dataArray){
   svg.append("g")
     .call(xAxis);
 
+  // // Add the text label for the x axis
+  // svg.append("text")
+  // .attr("transform", "translate(" + (width / 2) + " ," + (height + margin.bottom) + ")")
+  // .style("text-anchor", "middle")
+  // .text("Weight");
+
   svg.append("g")
     .call(yAxis);
+
+  // // Add the text label for the Y axis
+  // svg.append("text")
+  //   .attr("transform", "rotate(-90)")
+  //   .attr("y", 0 - margin.left)
+  //   .attr("x",0 - (height / 2))
+  //   .attr("dy", "1em")
+  //   .style("text-anchor", "middle")
+  //   .text("MPG");
+
+  svg.append("text")
+    .attr("class", "x label")
+    .attr("text-anchor", "end")
+    .attr("x", width)
+    .attr("y", height - 6)
+    .text("Weight");
+
+  svg.append("text")
+    .attr("class", "y label")
+    .attr("text-anchor", "end")
+    .attr("y", 6)
+    .attr("dy", ".75em")
+    .attr("transform", "rotate(-90)")
+    .text("MPG");
 
 }

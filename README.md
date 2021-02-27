@@ -1,142 +1,129 @@
-# 02-DataVis-7ways
+# 02-DataVis-7ways Gabrielle Acquista
 
 Assignment 2 - Data Visualization, 7 Ways  
 ===
 
-Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 7 times. 
 
-The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
+My goal is to use 7 different tools to make the following chart:
 
-I have provided a small dataset about cars, `cars-sample.csv`.
-Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
-
-Your goal is to use 7 different tools to make the following chart:
-
-![ggplot2](img/ggplot2.png)
-
-These features should be preserved as much as possible in your replication:
-
-- Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
-- Scales: Note the scales do not start at 0.
-- Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
-- Color mapping to Manufacturer.
-- Size mapping to Weight.
-- Opacity of circles set to 0.5 or 50%.
-
-Other features are not required. This includes:
-
-- The background grid.
-- The legends.
-
-Note that some software packages will make it **impossible** to perfectly preserve the above requirements. 
-Be sure to note where these deviate.
-
-Improvements are also welcome as part of Technical and Design achievements.
-
-Libraries, Tools, Languages
----
-
-You are required to use 7 different tools or libraries.
-Of the 7 tools, you must use at least 3 libraries (libraries require code of some kind).
-This could be `Python, R, Javascript`, or `Java, Javascript, Matlab` or any other combination.
-Dedicated tools (i.e. Excel) do not count towards the language requirement.
-
-Otherwise, you should seek tools and libraries to fill out your 7.
-
-Below are a few ideas. Do not limit yourself to this list!
-Some may be difficult choices, like Matlab or SPSS, which require large installations, licenses, and occasionally difficult UIs.
-
-I have marked a few that are strongly suggested.
-
-- R + ggplot2 `<- definitely worth trying`
-- Excel
-- d3 `<- since the rest of the class uses this, we're requiring it`
-- Matplotlib
-- three.js `<- well, it's a 3d library. not really recommended, but could be "interesting"`
-- p5js `<- good for playing around. not really a chart lib`
-- Tableau
-- Java 2d
-- GNUplot
-- Vega-lite <- `<- recently much better. look for the high level js implementations`
-- Flourish <- `<- popular last year`
-- PowerBI
-- SPSS
-
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found, please identify the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing. 
-
-Tips
----
-
-- If you're using d3, key to this assignment is knowing how to load data.
-You will likely use the [`d3.json` or `d3.csv` functions](https://github.com/mbostock/d3/wiki/Requests) to load the data you found.
-Beware that these functions are *asynchronous*, meaning it's possible to "build" an empty visualization before the data actually loads.
-
-- *For web languages like d3* Don't forget to run a local webserver when you're debugging.
-See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server) if you're stuck.
+![ggplot2](img/ORIGINAL.png)
 
 
-Readme Requirements
----
+# R + ggplot
 
-A good readme with screenshots and structured documentation is required for this project. 
-It should be possible to scroll through your readme to get an overview of all the tools and visualizations you produced.
+R is a language primarily focused on statistical computing and graphics.
+For this recreation I used ggplot2 which is a popular library for charting  in R. 
+This tool was incredibly simple to use and my result was essentially a replica of the original.
+All I had to do was open the ggplot2 library, read the data, and plot it! 
+I used geom_point to change the opacity of the points but R makes that so easy there wasn't even the need for an extra line of code.
 
-- Each visualization should start with a top-level heading (e.g. `# d3`)
-- Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
-- Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
+I can see R being useful in situations where you want to make a nice plot from data but don't necessarily want to put in extra time to customize it. 
+It's also a good learning tool if you want to begin programming with data, but don't have a lot of experience with code. 
 
-Other Requirements
----
+All features were preserved.
 
-0. Your code should be forked from the GitHub repo.
-1. Place all code, Excel sheets, etcetera in a named folder. For example, `r-ggplot, matlab, mathematica, excel` and so on.
-2. Your writeup (readme.md in the repo) should also contain the following:
+The final product:
+![R](R/ggplot2Recreation.png)
 
-- Description of the Technical achievements you attempted with this visualization.
-  - Some ideas include interaction, such as mousing over to see more detail about the point selected.
-- Description of the Design achievements you attempted with this visualization.
-  - Some ideas include consistent color choice, font choice, element size (e.g. the size of the circles).
+# d3
 
-GitHub Details
----
+D3 is a JavaScript library used for making interactive data visualizations, which is exactly what I did.
+This was the first tool I decided to use for the assignment and it did not go well. I spent about 4 days trying to load the data and have anything show up on 
+my local browser. Fortunately I discovered that I needed to load the raw data rather than my local file and things started coming together. 
+This tool is very useful for in-depth customization and there was a lot more opportunity for interaction with the plot.
+Overall I really like how it turned out and with this one I added a little bit of my own twist to the code (see Technical Acheivement).
 
-- Fork the GitHub Repository. You now have a copy associated with your username.
-- Make changes to fulfill the project requirements. 
-- To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
+I used the D3 graph gallery for starter code and all (required) features were preserved. 
+I attempted the white major gridlines with a grey background, but the minor gridlines were  a little too complicated.
 
-Grading
----
+The final product:
+![d3](d3/d3Plot.PNG)
 
-Grades on a 120 point scale. 
-24 points will be based on your Technical and Design achievements, as explained in your readme. 
+# python + Matplotlib 
 
-Make sure you include the files necessary to reproduce your plots.
-You should structure these in folders if helpful.
-We will choose some at random to run and test.
+As a CS major who has never used Python, this plot was tricky, especially just getting started with downloading packages. 
+The hardest part was downloading the correct versions and setting the axis values, but upon discovery of plt.MultipleLocator I was able to do what I wanted with the graph.
+To be honest I don't think I would ever choose to use python again. 
+It might be useful for a beginner programmer, but ultimately this library and entire process just made me upset.
+It seemed just as tedious to do things that were required for the replication as it was to incorporate extra designs with other libraries and tools.
 
-**NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
+I found starter code at https://towardsdatascience.com/one-bubble-chart-comparing-9-data-visualization-tools-7308b893950a .
+All (required) features were preserved. 
 
-# R + ggplot2 + R Markdown
+The final product!
+![python](python/pythonMatplotLib.png)
 
-R is a language primarily focused on statistical computing.
-ggplot2 is a popular library for charting in R.
-R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
+# Tableau
 
-To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
+Tableau was so fun! I really enjoyed the set up of the software, it was very easy to essentially "click and drag" exactly what I wanted and where.
+Because of how the data sample was given to us, Tableau made it very difficult to separate each car.
+To get around this issue I added a column to the data that assigned each car a unique number 1-95. 
+This made it possible to map each car individually and preserve all required features!
+I see tableau being useful if your data set is very structured, or if you want to present the same data in multiple ways. 
+It was nice because the program could plot the SUM, AVERAGE, COUNT, among many more options. I would love to use this tool again.
 
-While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
+The final product!
+![tableau](tableau/tableauPlot.PNG)
 
-![ggplot2](img/ggplot2.png)
+# Excel
 
-# d3...
+Excel was much harder than I anticipated. Excel is great for a lot of things regarding statistics and making simple charts, but I wouldn't use this again for something fun and exciting in data vis. 
+It's a great tool for spreadsheets and organizing data, but I don't foresee it being especially useful for complex vis designs.
+I tried separating the data within the plot itself but eventually found it was much easier to separate the data by manufacturer and plot the different categories on the same graph. 
+Along with that data hack I also had to create another "fake" data column that was a single point with a really really large bubble size that had no fill. 
+This helped me shrink all of the other data points so the car dots were clear.
+Once I did that I was able to customize color and map size to weight. While I was able to replicate most aspects, I was not able to  get rid of the minimum values on the axis.
+I have the origin point not starting at 0, however the minimum 1000 for x-axis and 0 for y-axis are still shown on the plot. 
 
-(And so on...)
+The final product!
+![excel](excel/excelPlot.PNG)
+
+# Flourish
+
+Flourish was fun and simple! I loved how easy it was to drag and drop your data, and then just fill in which row/column you wanted and where. 
+It was also very easy to customize and the layout really helpful.
+I was able to recreate everything necessary except the scales. I was able to avoid starting the axis at 0, but I deviated in showing the correct tick marks.
+Although there were lots of options and areas for customization, the charts was limited to just that, whatever the options were. 
+It's a good tool for making a quick, nice-looking vis, but it's not ideal when it comes to the potential of immense customization.
+
+The final product!
+![flourish](flourish/flourishRecreate.png)
+
+# Matlab
+
+I had a very difficult time with Matlab, from syntax to weird data loading. 
+My main focus with Matlab was trying to use "gramm" as a path, which is a plotting tool made for Matlab, inspired by ggplot2 in R, located here: https://github.com/piermorel/gramm . 
+This did not work for me. I really tried, because I thought it would be a fun technical acheivement to use an extention of Matlab, but it was more trouble than it was worse because I was using the online version of Matlab. 
+Once I figured out the logistics and realized I needed the same manipulated data as I did for excel, I still had problems. My csv file got corrupted among other fun obstacles. 
+Thankfully, https://www.mathworks.com/help/examples.html helped me with learning how to program in Matlab, so I was able to recreate all required features.
+I'm sure Matlab is very useful with a lot of development and analysis (especially with bio-vis) but I felt like it was a bit complicated if you wanted to create an interactive scatterplot.
+
+The final product!
+![matlab](matlab/matlabShot.PNG)
+
+# SPSS
+
+I can honestly say I never want to see SPSS again. I'm using this chart more for a design achievement because I wanted to try it and compare to excel. 
+It was horrible. I know it has a lot more useful tool than excel, but it gave me multiple unnecessary problems, like not saving and being incredibly difficult to follow.
+This tool is definitely useful for professionals and complex data analysis, but for somebody who just wanted to make a bubble chart, it was not ideal. 
+I'm still stunned that I could customize every color, but I couldn't change the transparency.
+
+The final product!
+![spss](spss/spss.PNG)
+
+# vega-lite
+
+(See Technical achievements).
+The final product!
+![vegalite](vegaLite/vegalite.png)
 
 
 ## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
+- **Vega-Lite** This was a fun technical experience! I really loved learning vega-lite and seeing the usability of this tool. I even dove into the compiler code to see what was under the surface of my code and try and change the bubbles to different colors, but fell short.
+- **Matlab Attempts** As I previously mentioned, I looked into the extension gramm but ultimately found that Matlab could do everything I needed it to with it's own library.
+- **D3 Mouseover** With two "technical fails" I decided to go back into my d3 code and add some fun interactivity to the bubbles on mouseover. I wanted the bubbles to "pop and disappear" so once all the cars have been hovered over, the plot was empty. If I had more time I would have added a label to mouseover.
 
 ### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+- **RGB Colors**: As demonstrated in my colorscheme I used the original image to calculate RGB values, and make all of my plots the exact correct color (where this customization was possible).
+- **SPSS**: I tackled an extra visualization because I wanted to explore the differences between excel and SPSS.
+

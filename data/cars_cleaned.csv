@@ -1,0 +1,93 @@
+,Car,Manufacturer,MPG,Cylinders,Displacement,Horsepower,Weight,WeightCategory,Acceleration,ModelYear,ModelYearAbbr,Origin
+5,Torino,Ford,17,8,302,140,3449,3000,10.5,1970,70,American
+6,Galaxie 500,Ford,15,8,429,198,4341,4000,10,1970,70,American
+21,Corona Mark Ii,Toyota,24,4,113,95,2372,2000,15,1970,70,Japanese
+24,Maverick,Ford,21,6,200,85,2587,2000,16,1970,70,American
+30,2002,BMW,26,4,121,113,2234,2000,12.5,1970,70,European
+32,F250,Ford,10,8,360,215,4615,4000,14,1970,70,American
+38,Corona,Toyota,25,4,113,95,2228,2000,14,1971,71,Japanese
+44,Torino 500,Ford,19,6,250,88,3302,3000,15.5,1971,71,American
+48,Galaxie 500,Ford,14,8,351,153,4154,4000,13.5,1971,71,American
+51,Country Squire (Sw),Ford,13,8,400,170,4746,4000,12,1971,71,American
+56,Mustang,Ford,18,6,250,88,3139,3000,14.5,1971,71,American
+61,Corolla 1200,Toyota,31,4,71,65,1773,1000,19,1971,71,Japanese
+65,Corona Hardtop,Toyota,24,4,113,95,2278,2000,15.5,1972,72,Japanese
+69,Pinto Runabout,Ford,21,4,122,86,2226,2000,16.5,1972,72,American
+73,Galaxie 500,Ford,14,8,351,153,4129,4000,13,1972,72,American
+82,Gran Torino (Sw),Ford,13,8,302,140,4294,4000,16,1972,72,American
+88,Pinto (Sw),Ford,22,4,122,86,2395,2000,16,1972,72,American
+90,Corona Mark Ii (Sw),Toyota,23,4,120,97,2506,2000,14.5,1972,72,Japanese
+92,Corolla 1600 (Sw),Toyota,27,4,97,88,2100,2000,16.5,1972,72,Japanese
+96,Gran Torino,Ford,14,8,302,137,4042,4000,14.5,1973,73,American
+100,Ltd,Ford,13,8,351,158,4363,4000,13,1973,73,American
+108,Maverick,Ford,18,6,250,88,3021,3000,16.5,1973,73,American
+112,Country,Ford,12,8,400,167,4906,4000,12.5,1973,73,American
+116,Carina,Toyota,20,4,97,88,2279,2000,19,1973,73,Japanese
+120,Pinto,Ford,19,4,122,85,2310,2000,18.5,1973,73,American
+131,Mark Ii,Toyota,20,6,156,122,2807,2000,13.5,1973,73,Japanese
+138,Pinto,Ford,26,4,122,80,2451,2000,16.5,1974,74,American
+139,Corolla 1200,Toyota,32,4,71,65,1836,1000,21,1974,74,Japanese
+144,Gran Torino,Ford,16,8,302,140,4141,4000,14,1974,74,American
+147,Gran Torino (Sw),Ford,14,8,302,140,4638,4000,16,1974,74,American
+152,Corona,Toyota,31,4,76,52,1649,1000,16.5,1974,74,Japanese
+157,Civic,Honda,24,4,120,97,2489,2000,15,1974,74,Japanese
+163,Maverick,Ford,15,6,250,72,3158,3000,19.5,1975,75,American
+167,Ltd,Ford,14,8,351,148,4657,4000,13.5,1975,75,American
+174,Mustang Ii,Ford,13,8,302,129,3169,3000,12,1975,75,American
+175,Corolla,Toyota,29,4,97,75,2171,2000,16,1975,75,Japanese
+176,Pinto,Ford,23,4,140,83,2639,2000,17,1975,75,American
+179,Corona,Toyota,24,4,134,96,2702,2000,13.5,1975,75,Japanese
+182,Pinto,Ford,18,6,171,97,2984,2000,14.5,1975,75,American
+189,Civic Cvcc,Honda,33,4,91,53,1795,1000,17.5,1975,75,Japanese
+198,Gran Torino,Ford,14.5,8,351,152,4215,4000,12.8,1976,76,American
+201,Maverick,Ford,24,6,200,81,3012,3000,17.6,1976,76,American
+206,Civic,Honda,33,4,91,53,1795,1000,17.4,1976,76,Japanese
+208,Granada Ghia,Ford,18,6,250,78,3574,3000,21,1976,76,American
+213,Corolla,Toyota,28,4,97,75,2155,2000,16.4,1976,76,Japanese
+214,Pinto,Ford,26.5,4,140,72,2565,2000,13.6,1976,76,American
+218,Mark Ii,Toyota,19,6,156,108,2930,2000,15.5,1976,76,Japanese
+219,280S,Mercedes,16.5,6,168,120,3820,3000,16.7,1976,76,European
+222,F108,Ford,13,8,302,130,3870,3000,15,1976,76,American
+224,Accord Cvcc,Honda,31.5,4,98,68,2045,2000,18.5,1977,77,Japanese
+236,Granada,Ford,18.5,6,250,98,3525,3000,19,1977,77,American
+240,Thunderbird,Ford,16,8,351,149,4335,4000,14.5,1977,77,American
+243,Corolla Liftback,Toyota,26,4,97,75,2265,2000,18.2,1977,77,Japanese
+244,Mustang Ii 2+2,Ford,25.5,4,140,89,2755,2000,15.8,1977,77,American
+250,320I,BMW,21.5,4,121,110,2600,2000,12.8,1977,77,European
+253,Fiesta,Ford,36.1,4,98,66,1800,1000,14.4,1978,78,American
+256,Civic Cvcc,Honda,36.1,4,91,60,1800,1000,16.4,1978,78,Japanese
+262,Fairmont (Auto),Ford,20.2,6,200,85,2965,2000,15.8,1978,78,American
+263,Fairmont (Man),Ford,25.1,4,140,88,2720,2000,15.4,1978,78,American
+272,Futura,Ford,18.1,8,302,139,3205,3000,11.2,1978,78,American
+275,Corona,Toyota,27.5,4,134,95,2560,2000,14.2,1978,78,Japanese
+278,Celica Gt Liftback,Toyota,21.1,4,134,95,2515,2000,14.8,1978,78,Japanese
+287,Accord Lx,Honda,29.5,4,98,68,2135,2000,16.6,1978,78,Japanese
+290,Fairmont 4,Ford,22.3,4,140,88,2890,2000,17.3,1979,79,American
+294,Ltd Landau,Ford,17.6,8,302,129,3725,3000,13.4,1979,79,American
+298,Country Squire (Sw),Ford,15.5,8,351,142,4054,4000,14.3,1979,79,American
+305,300D,Mercedes,25.4,5,183,77,3530,3000,20.1,1979,79,European
+318,Corolla Tercel,Toyota,38.1,4,89,60,1968,1000,18.8,1980,80,Japanese
+322,Fairmont,Ford,26.4,4,140,88,2870,2000,18.1,1980,80,American
+326,Corona Liftback,Toyota,29.8,4,134,90,2711,2000,15.5,1980,80,Japanese
+329,Corolla,Toyota,32.2,4,108,75,2265,2000,15.2,1980,80,Japanese
+336,240D,Mercedes,30,4,146,67,3250,3000,21.8,1980,80,European
+337,Civic 1500 Gl,Honda,44.6,4,91,67,1850,1000,13.8,1980,80,Japanese
+345,Accord,Honda,32.4,4,107,72,2290,2000,17,1980,80,Japanese
+351,Starlet,Toyota,39.1,4,79,58,1755,1000,16.9,1981,81,Japanese
+353,Civic 1300,Honda,35.1,4,81,60,1760,1000,16.1,1981,81,Japanese
+356,Tercel,Toyota,37.7,4,89,62,2050,2000,17.3,1981,81,Japanese
+359,Escort 4W,Ford,34.4,4,98,65,2045,2000,16.2,1981,81,American
+360,Escort 2H,Ford,29.9,4,98,65,2380,2000,20.7,1981,81,American
+363,Prelude,Honda,33.7,4,107,75,2210,2000,14.4,1981,81,Japanese
+364,Corolla,Toyota,32.4,4,108,75,2350,2000,16.8,1981,81,Japanese
+370,Cressida,Toyota,25.4,6,168,116,2900,2000,12.6,1981,81,Japanese
+374,Granada Gl,Ford,20.2,6,200,88,3060,3000,17.1,1981,81,American
+382,Fairmont Futura,Ford,24,4,140,92,2865,2000,16.4,1982,82,American
+390,Accord,Honda,36,4,107,75,2205,2000,14.5,1982,82,Japanese
+391,Corolla,Toyota,34,4,108,70,2245,2000,16.9,1982,82,Japanese
+392,Civic,Honda,38,4,91,67,1965,1000,15,1982,82,Japanese
+393,Civic (Auto),Honda,32,4,91,67,1965,1000,15.7,1982,82,Japanese
+398,Granada L,Ford,22,6,232,112,2835,2000,14.7,1982,82,American
+399,Celica Gt,Toyota,32,4,144,96,2665,2000,13.9,1982,82,Japanese
+402,Mustang Gl,Ford,27,4,140,86,2790,2000,15.6,1982,82,American
+405,Ranger,Ford,28,4,120,79,2625,2000,18.6,1982,82,American

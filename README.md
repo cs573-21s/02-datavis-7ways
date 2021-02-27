@@ -1,142 +1,53 @@
-# 02-DataVis-7ways
-
 Assignment 2 - Data Visualization, 7 Ways  
 ===
 
-Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 7 times. 
+# Javascript + d3.js
+![d3.js](img/a2-d3.png)
 
-The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
+Javascript is a programming language used to make web pages interactive. D3.js is a JavaScript library used for creating dynamic and interactive data visualizations. This approach is more work because you have to create all the elements. d3.js binds data to create each of the individual shapes and data points for the visual. It is a harder method to go about data visualization but it allows for a lot of possibilities in terms of customization compared to other methods. I enjoyed using it, but mostly because we've been learning it and it is really customizable.
 
-I have provided a small dataset about cars, `cars-sample.csv`.
-Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
+# Excel
+![Excel](img/a2-excel.png)
 
-Your goal is to use 7 different tools to make the following chart:
+Microsoft Excel is a software program that uses spreadsheets to perform functions and formulas for data analysis. To create the visual, the values of the scatter plot are assigned to specific cells of the spreadsheet. I had originally started with a scatter plot and had a hard time trying to figure out how to change the size of the points until I realized there was a bubble chart. Overall, if I had known about the bubble chart from the beginning, I wouldn't say it was super hard. I did have to create new columns to differentiate the categories, which in other programs, could be done automatically. Another concern I had was the sizing of the cirlces is hard to differentiate. It is very limited in terms of interaction and customization, but I would recommend this to someone who is more focuses on manipulating the data and only needs a basic visualization.
 
-![ggplot2](img/ggplot2.png)
+# Flourish
+![Flourish](img/a2-flourish.png)
 
-These features should be preserved as much as possible in your replication:
+Flourish is an online application used for data visualization. To create the visual, I simply indicated which column corresponded with a specific piece of data (x values, y values, etc). This was the first visual I started with and I found the platform surprisingly simple and easy to use. This would be great to use if I needed a quick visual that looks good. It also allows you to click on the legend to only show the corresponding points and hover over points for more details. Also, because it's online, it is very convenient not having to download any extra software. My only concern with this Flourish visual is the sizing of the points is hard to distinguish.
 
-- Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
-- Scales: Note the scales do not start at 0.
-- Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
-- Color mapping to Manufacturer.
-- Size mapping to Weight.
-- Opacity of circles set to 0.5 or 50%.
+# Python + matplotlib + pandas
+![Python, matplotlib, pandas](img/a2-matplotlib.png)
 
-Other features are not required. This includes:
+Python is a popular high-level programming language. matplotlib is a Python library for creazting visualizations, and pandas is also a Python library but for data manipulation and analysis. To create the visual, pandas is used to read in the csv and after assigning different variables to different values of the csv, matplotlib takes in that data and creates the visual. I was trying to create major and minor ticks to match the orginal picture, but only the x-axis seemed to work. I'm not exactly sure why, but that was the most frustrating part. For sizing the different points, that was a bit complicated as well because I was unsure what formula I should use. Even though it is a bit more customizable than other applications, the output is not the prettiest. I did like how the figure let you zoom in on data and move around the graph. I feel like there are better softwares and languages to use rather than Python that are either easier to use and/or produce a more visually-appealing output.
 
-- The background grid.
-- The legends.
+# Power Bi
+![Power Bi](img/a2-powerbi.png)
 
-Note that some software packages will make it **impossible** to perfectly preserve the above requirements. 
-Be sure to note where these deviate.
+Power Bi is a software program by Microsoft used for business intelligence and data visualization. It has a drag-and-drop interface to assign the data to teh different aspects of the graph. It wasn't too bad to figure out because I had used Tableau before this. The only trouble I had was the MPG column. Because it had "NA"s, the column was saved as text rather than a decimal. The interface was a bit difficult for me to navigate through but eventually I converted the format. In addition, I could not size the points to the weight. There is the option, however when I assigned weight to the size, it wouldn't give each point it's individual values. The data represented a summarization such as the median or count. There is usually an option to not summarize the data, however, the right dropdown table didn't have that option in that specific case. I was able to not summarize all the other data, but I'm not entirely sure why that did not work. I don't particularly like this application as much as others, but I could see people using it. Generally speaking, I don't think I would recommend this first for data visualization.
 
-Improvements are also welcome as part of Technical and Design achievements.
+# R + ggplot2 + tidyverse
+![R, ggplot2](img/a2-ggplot2.png)
 
-Libraries, Tools, Languages
----
+R is a programming language for statistcal computing and graphics. ggplot2 is a data visualization pagacke for R. tidyverse is a collection of R packages designed for data science. Once the csv is loaded, the data is loaded using ggplot(), and geom_point() is used to customize the data points. I've done a little bit of R, but because I'm not super experienced with it, I thought it would be more complicated. However, I was wrong and this method was super simple. I would definetly recommend this to people with some code experience and needs a visualization or general data analysis. 
 
-You are required to use 7 different tools or libraries.
-Of the 7 tools, you must use at least 3 libraries (libraries require code of some kind).
-This could be `Python, R, Javascript`, or `Java, Javascript, Matlab` or any other combination.
-Dedicated tools (i.e. Excel) do not count towards the language requirement.
+# Tableau
+![Tableau](img/a2-tableau.png)
 
-Otherwise, you should seek tools and libraries to fill out your 7.
-
-Below are a few ideas. Do not limit yourself to this list!
-Some may be difficult choices, like Matlab or SPSS, which require large installations, licenses, and occasionally difficult UIs.
-
-I have marked a few that are strongly suggested.
-
-- R + ggplot2 `<- definitely worth trying`
-- Excel
-- d3 `<- since the rest of the class uses this, we're requiring it`
-- Matplotlib
-- three.js `<- well, it's a 3d library. not really recommended, but could be "interesting"`
-- p5js `<- good for playing around. not really a chart lib`
-- Tableau
-- Java 2d
-- GNUplot
-- Vega-lite <- `<- recently much better. look for the high level js implementations`
-- Flourish <- `<- popular last year`
-- PowerBI
-- SPSS
-
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found, please identify the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing. 
-
-Tips
----
-
-- If you're using d3, key to this assignment is knowing how to load data.
-You will likely use the [`d3.json` or `d3.csv` functions](https://github.com/mbostock/d3/wiki/Requests) to load the data you found.
-Beware that these functions are *asynchronous*, meaning it's possible to "build" an empty visualization before the data actually loads.
-
-- *For web languages like d3* Don't forget to run a local webserver when you're debugging.
-See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server) if you're stuck.
-
-
-Readme Requirements
----
-
-A good readme with screenshots and structured documentation is required for this project. 
-It should be possible to scroll through your readme to get an overview of all the tools and visualizations you produced.
-
-- Each visualization should start with a top-level heading (e.g. `# d3`)
-- Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
-- Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
-
-Other Requirements
----
-
-0. Your code should be forked from the GitHub repo.
-1. Place all code, Excel sheets, etcetera in a named folder. For example, `r-ggplot, matlab, mathematica, excel` and so on.
-2. Your writeup (readme.md in the repo) should also contain the following:
-
-- Description of the Technical achievements you attempted with this visualization.
-  - Some ideas include interaction, such as mousing over to see more detail about the point selected.
-- Description of the Design achievements you attempted with this visualization.
-  - Some ideas include consistent color choice, font choice, element size (e.g. the size of the circles).
-
-GitHub Details
----
-
-- Fork the GitHub Repository. You now have a copy associated with your username.
-- Make changes to fulfill the project requirements. 
-- To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
-
-Grading
----
-
-Grades on a 120 point scale. 
-24 points will be based on your Technical and Design achievements, as explained in your readme. 
-
-Make sure you include the files necessary to reproduce your plots.
-You should structure these in folders if helpful.
-We will choose some at random to run and test.
-
-**NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
-
-# R + ggplot2 + R Markdown
-
-R is a language primarily focused on statistical computing.
-ggplot2 is a popular library for charting in R.
-R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
-
-To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
-
-While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
-
-![ggplot2](img/ggplot2.png)
-
-# d3...
-
-(And so on...)
+Tableau is a software program that is used for business intelligence and data visualization. I have never used a software like this before, so it was a bit confusing at first. It uses a drag-and-drop interface to asign the data. Once I realized that, it was relatively simple. It is very similar to Power Bi, however I liked this way more. I've seen other visualizations made with Tableau that are really interesting, and shows how customizable it is. I would definetly recommend this anyone looking to make something pretty and interactive, without the need to code. 
 
 
 ## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
+![Tooltip](img/a2-tooltip.gif)
 
-### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+- **Hover for ToolTip**: Using D3.js, I implemented a tooltip to show the exact weight and MPG of each point. This was mainly so the points with "NA" as an MPG could be indicated.
+
+![Buttons](img/a2-buttons.gif)
+
+- **Interactive Legend**: By clicking on the different buttons on the legend, it only shows the corresponding data points and can be reset with the "reset" button. 
+
+## Design Achievements
+- **Consistent Colors Throughout**: Throughout all the different visualizations, I kept the same color pallete for each.
+- **Corresponding Colors in Legend**: In my D3 visual, I colored the buttons to act both a legend and still maintain their functionality.
+- **Button Animations and Color Changes**: The buttons in the D3 visual change to a darker color when hovered over and also moves slightly when activated to indicate to the user what they're doing.
+- **Enlarging Points**: When hovering over a point in the D3 visual, the point will slightly enlarge itself to show that it is being selected.

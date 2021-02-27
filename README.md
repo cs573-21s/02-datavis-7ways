@@ -1,81 +1,88 @@
-# 02-DataVis-7ways
+0 Excel
+===
+> File: `data/cars-excel.xlsx`
 
-Assignment 2 - Data Visualization, 7 Ways  
+Before getting started on the visualizations, I first cleaned the data. I first put all the car names and manufacturer names in title case (except for BMW, which I put in all capital letters), and deleted the rows that had N/A values. I considered filling in the data by googling the missing statistics, but found it too time-consuming and decided to delete the rows entirely instead. I also added a column titled "WeightCategory" which put each car in one of four categories: 1000, 2000, 3000, or 4000. Since small differences in the radii of different circles are extremely hard to see, using categories made the visualizations more easily to grasp. In addition, I changed the years to the format 'yyyy' instead of just 'yy'.
+
+
+1 Flourish
+===
+>[Link to the Flourish Viz](https://public.flourish.studio/visualisation/5352793/)
+
+![Flourish Screenshot](screenshots/flourish1.png)
+![Flourish Screenshot 2](screenshots/flourish2.png)
+
+I wanted to use Flourish before using programming languages to hard-code the graphs because on Flourish, it's really easy to change things and experiment. I wanted to see what I liked in the graph in a couple minutes rather than spending hours experimenting with code, and then try to base the other graphs off of this one. The Flourish graph is interactive - you can use filters to isolate cars from different manufacturers by clicking on the name of the manufacturer in the legend. When you hover over each point, you can see all of the other specs for that car. Even though this graph was really easy to make, one downside of using Flourish instead of Python or R or any other programming language is that unless you pay for it, your vizzes aren't going to private so you can't use Flourish with any sensitive or business data.
+
+
+2 R + ggplot2
 ===
 
->Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make an *actual visualization*... 7 times. 
+![R + ggplot2 Screenshot](screenshots/r-ggplot2.png)
 
->The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
-
->I have provided a small dataset about cars, `cars-sample.csv`.
->Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
-
->Your goal is to use 7 different tools to make the following chart:
-
-![ggplot2](img/ggplot2.png)
-
-These features should be preserved as much as possible in your replication:
-
-- Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
-- Scales: Note the scales do not start at 0.
-- Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
-- Color mapping to Manufacturer.
-- Size mapping to Weight.
-- Opacity of circles set to 0.5 or 50%.
-
-Other features are not required. This includes:
-
-- The background grid.
-- The legends.
-
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found, please identify the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing. 
+This is an almost exact replica of Prof Harrison's plot. I'm not very experienced in R, so the process wasn't as smooth or quick as it could've been and that deterred me from experimenting with colors and different features. The code and structure are pretty simple but you can accomplish a lot with ggplot2. Some cons of R and ggplot2 are that it works really well with a smaller dataset, but would be weak against big data unless something like Hadoop is used with it. The learning curve is also kind of steep since it has such specific syntax and functions. Personally, I would much rather use Python instead.
 
 
+3 Julia + Vega Lite
+===
 
-Readme Requirements
----
+![Julia + Vega Lite Screenshot](screenshots/julia-vega-lite1.png)
+![Julia + Vega Lite Screenshot 2](screenshots/julia-vega-lite2.png)
 
-A good readme with screenshots and structured documentation is required for this project. 
-It should be possible to scroll through your readme to get an overview of all the tools and visualizations you produced.
+I had never worked in Julia before so like the last graph, I had to learn quite a bit in order to complete this visualization. However, the documentation for VegaLite.jl was very easy to find and also very organized and helpful. I also followed [this tutorial](https://www.queryverse.org/VegaLite.jl/stable/gettingstarted/tutorial/) for making a scatterplot using VegaLite.jl, and altered it so that the markers were sized and colored, and so that they displayed tooltips. Thus, making the graph didn't require a lot of time. However, installing and including the packages *did* take a lot of time.
 
-- Each visualization should start with a top-level heading (e.g. `# d3`)
-- Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
-- Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
-
-Other Requirements
----
-
-0. Your code should be forked from the GitHub repo.
-1. Place all code, Excel sheets, etcetera in a named folder. For example, `r-ggplot, matlab, mathematica, excel` and so on.
-2. Your writeup (readme.md in the repo) should also contain the following:
-
-- Description of the Technical achievements you attempted with this visualization.
-  - Some ideas include interaction, such as mousing over to see more detail about the point selected.
-- Description of the Design achievements you attempted with this visualization.
-  - Some ideas include consistent color choice, font choice, element size (e.g. the size of the circles).
-
-GitHub Details
----
-
-- Fork the GitHub Repository. You now have a copy associated with your username.
-- Make changes to fulfill the project requirements. 
-- To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
-
-Grading
----
-
-Grades on a 120 point scale. 
-24 points will be based on your Technical and Design achievements, as explained in your readme. 
-
-Make sure you include the files necessary to reproduce your plots.
-You should structure these in folders if helpful.
-We will choose some at random to run and test.
+### Technical Achievements:
+- You can zoom in and out of the graph when you scroll
+- When you hover over each point, a tooltip pops up with more information about the car
 
 
-## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
+4 Python + Plotly
+===
+
+![Python + Plotly Screenshot](screenshots/python-plotly1.png)
+![Python + Plotly Screenshot 2](screenshots/python-plotly2.png)
+
+Making this graph was very fun, I love working in Python. Since plotly was so popular, it wasn't hard to find help for something I was stuck on because there are so many forums and documentation out there. I used [this article](https://dylancastillo.co/4-ways-to-improve-your-plotly-graphs/) to help me implement the spikelines.
+
+### Technical Achievements:
+- The visualization is interactive, and you can hover over each point to see more information about the car (tooltips)
+- I included spikelines, which helps you see where you are on the graph, and lets you see which for which point the current tooltip is for
+- In the legend, you can toggle cars from different manufacturers
 
 ### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+- The dark theme makes all of the colors stand out more, and is less harsh on the eye than the default white or gray themes for most languages and libraries
+- The tooltip and crosshairs are the same color as the marker that you are hovering over
+- The crosshairs disappear when you move away from the marker you were just hovering over so you can see the other markers more clearly
+
+
+5 Python + Seaborn
+===
+
+![Python + Seaborn Screenshot](screenshots/python-seaborn.png)
+
+Making this graph was super easy, and it only took about a dozen lines of code. For the same bubble chart, using seaborn instead of plotly does reduce the amount of lines of code you need, but plotly makes it very easy for the visualizations to be interactive.
+
+### Design Achievements
+- Added a gray background and changed the color of the markers to be more easily differentiable by switching to another theme
+
+
+6 Python + Bokeh
+===
+
+![Python + Bokeh Screenshot](screenshots/python-bokeh1.png)
+![Python + Bokeh Screenshot 2](screenshots/python-bokeh2.png)
+
+Since I had never used bokeh before, I followed [this series of tutorials](https://docs.bokeh.org/en/latest/docs/first_steps/first_steps_4.html) that the bokeh website provides in order to first install it, then create a graph. The tutorials also included how to customize your graph so that it included tooltips, crosshairs, and a floating menu, so I added those to my graph as well. However, the tutorials didn't include anything on coloring or sizing markers by a certain category because it focused on simple scatterplots.
+
+### Technical Achievements
+- You can hover each point to see more information about the car (tooltips)
+- Crosshairs will follow your mouse across the graph
+- You can select a region of dots using the lasso tool, and it will gray out the dots you didn't select
+
+
+7 d3.js
+===
+
+![D3 Screenshot](screenshots/d3.png)
+
+For this graph, I used [this tutorial](https://observablehq.com/@d3/scatterplot) on the d3 website to make a simple scatterplot, then changed it so that it became a bubble plot. The tutorial also used version 4 of d3 so I had to alter some of the code to fit version 6. Though d3 offers much greater flexibility and customization than other languages like Python, R, and Julia, it takes much more effort to create a simple chart and it can get pretty confusing because there are so many components and elements you need to keep track of.

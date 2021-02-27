@@ -6,12 +6,9 @@ Due 26 Feb 2021
 
 Imogen Cleaver-Stigum
 
-TODO
-- excel
-- design writeup
-- submit
-
 # 1. d3 (Javascript) 
+
+The d3 page is available here: https://imogencs.github.io/02-datavis-7ways/d3/index.html
 
 Using d3 was trickier than the other libraries at first because you have to create all the graph elements individually rather than having the graph created by the library (appending axes, points, etc). It took more code than the other libraries ot get the basic scatterplot, but it was also more personalizable. 
 

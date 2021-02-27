@@ -7,15 +7,20 @@ Due 26 Feb 2021
 Imogen Cleaver-Stigum
 
 TODO
-- design
 - excel
-- d3 writeup
 - design writeup
 - submit
 
 # 1. d3 (Javascript) 
 
-![caption](img/d3.png)
+Using d3 was trickier than the other libraries at first because you have to create all the graph elements individually rather than having the graph created by the library (appending axes, points, etc). It took more code than the other libraries ot get the basic scatterplot, but it was also more personalizable. 
+
+I used the color scheme from d3: schemeSet2.
+
+Beyond creating the basic scatterplot required, I also made the points become opaque and get a black outline on mouseover so they stand out. The points also come to the front on mouseover, so there are not points drawn later that are still blocking them. I also added crosshairs so you can see exactly where on the axes your mouse is. 
+
+![caption](img/d31.png)
+![caption](img/d32.png)
 
 # 2. ggplot2 (R) 
 
@@ -30,6 +35,8 @@ I used an R markdown file to make this and the other R plot, so the R folder con
 # 3. Matplotlib (Python)
 
 Python's library Matplotlib makes basic plots. It is easy to use but it does not automatically provide any extra features. 
+
+For this plot I used the tableua color scheme of olive, pink, cyan, brown, and grey. 
 
 One version of my vis has exis ticks and one has a grid. 
 
@@ -76,6 +83,8 @@ Seaborn has several built in styles, including:
 - darkgrid
 - ticks
 
+For this plot I used the tableua color scheme of olive, pink, cyan, brown, and grey. 
+
 Here is the verstion fo the scatterplot in the whitegrid style:
 
 ![caption](img/seaborn.png)
@@ -109,13 +118,13 @@ While these features are good and it was very easy ot use, Altair does not have 
 
 ## 1. R Shiny App
 
+The shiny app is accessible at: https://mango3.shinyapps.io/Cars/
+
 This app is a technical achievement because I published the R scatterplot so it can be accessed from a URL, as well as implementing dropdown menus to change 3 variables to any of the variables in the .csv file: x, y, and marker size. It is a plotly scatterplot so it has the same xtra features built in. It is interesting to see the different variables' relationships. 
 
 ![caption](img/shiny1.png)
 ![caption](img/shiny2.png)
 ![caption](img/shiny3.png)
-
-The shiny app is accessible at: https://mango3.shinyapps.io/Cars/
 
 The shiny app code is in the Cars folder in the R folder. 
 
@@ -123,16 +132,26 @@ The shiny app code is in the Cars folder in the R folder.
 
 I also added an extra variable (Horsepower) to the hover function in Python Plotly, so when you hover you can see horsepower in addition to the other relevant variables. 
 
+## 3. Mouseover events in d3
+
+The mouseover events in the d3 plot (making the point opaque and giving it a black outline, bringing the point to the front, and having crosshairs follow the mouse around on the plot) are technical achievements as well as design achievements because I had to figure out how to have both the crosshairs and the point-mouse-events happen at the same time. At first, the crosshairs got in the way because they were on top of the points so you could never mouse over a point. I solved this by making them out of 4 lines instead of 2 intersecting lines. So there is a 2-pixel-wide gap where the mouse is pointing between the upper and lower halves of the verticla line, as well as between the left and right halves of the horizontal line. This allows to user to mouse over the points without the crosshairs getting in the way. 
+
+There is an empty rectangle behind the plot covering the whole svg so that the crosshairs are still detected when the mouse is over an empty space in the plot, not only when it is directly over a point. 
+
+## 4. Scaling to window
+
+I also made the whole svg and the plot scale to the width of the window at the time the page is loaded. 
+
 # Design Achievements 
 
-1. Color schemes
+## 1. Mouseover events for points in d3
 
-My plots demonstrate several different color schemes. The Altair plot's color scheme is not color blind friendly, but the rest are. 
+Increasing the opacity of the point to 1 and making the black outline around the point when you mouse over it makes it stand out more, so someone could point out a particular circle on the plot. Bringing the point to the front when it is moused over is also important so you can see the whole circle, not interfered with by any other circles nearby. 
 
-seaborn
-shiny app make prettier
-interactivity
-color picker???
-dark mode
-change to not dots
+## 2. Crosshairs in d3
 
+The crosshairs in the d3 plot make it easier to tell where a given point in the plot lies on the x and y axes. 
+
+## 3. Color schemes
+
+My plots demonstrate several different color schemes. The Altair plot's color scheme is not color blind friendly, but the rest are. I used d3's

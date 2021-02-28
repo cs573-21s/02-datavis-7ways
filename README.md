@@ -29,7 +29,7 @@ When making the following chart, the seven tools I used were d3, Matplotlib, Sea
 
 # Flourish
 
-![Flourish](img/Flourish_vis.png)
+![Flourish](img/flourish_vis.png)
 
 # Tableau
 

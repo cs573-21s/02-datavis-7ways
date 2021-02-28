@@ -15,17 +15,17 @@ Assignment 2 - Data Visualization, 7 Ways
 
 # Screenshots
 Seaborn:
-
+![seaborn.png](https://github.com/wtt102/02-datavis-7ways/blob/main/seaborn.png)
 Matplotlib:
-
+![matplotlib.png](https://github.com/wtt102/02-datavis-7ways/blob/main/matplotlib.png)
 R:
-
+![R.png](https://github.com/wtt102/02-datavis-7ways/blob/main/R.png)
 D3:
-
+![d3.png](https://github.com/wtt102/02-datavis-7ways/blob/main/d3.png)
 Vega-lite:
-
+![vega-lite.png](https://github.com/wtt102/02-datavis-7ways/blob/main/vega-lite.png)
 Tableau:
-
+![tableau.png](https://github.com/wtt102/02-datavis-7ways/blob/main/tableau.png)
 Excel:
 
 # Sources

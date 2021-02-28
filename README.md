@@ -9,17 +9,31 @@ When making the following chart, the seven tools I used were d3, Matplotlib, Sea
 
 # d3
 
+![d3](img/d3_vis.png)
+
 # Matplotlib
+
+![Matplotlib](img/matplotlib_vis.png)
 
 # Seaborn
 
+![Seaborn](img/seaborn_vis.png)
+
 # Vega-Lite
+
+![Vega-Lite](img/vega-lite_vis.png)
 
 # Excel
 
+![Excel](img/excel_vis.png)
+
 # Flourish
 
+![Flourish](img/Flourish_vis.png)
+
 # Tableau
+
+![Tableau](img/tableau_vis.png)
 
 **NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
 

@@ -1,0 +1,19 @@
+{
+  "width": 400,
+  "height": 400,
+  "data": {"url": "https://raw.githubusercontent.com/slwoodland/02-datavis-7ways/main/cars-sample.csv"},
+  "mark": {"type": "point", "filled": true, "opacity": 0.5 },
+  "encoding": {
+    "x": {"field": "Weight", 
+          "type": "quantitative", 
+          "scale": {"domain": [1500,5250]}},
+    "y": {"field": "MPG", 
+          "type": "quantitative",
+          "scale": {"domain": [8,48]}},
+    "size": {"field": "Weight",
+             "type": "quantitative",
+             "scale": {"range": [10, 400]}},
+    "color": {"field": "Manufacturer", "type": "nominal", 
+              "scale": {"range": ["#f2b0ab", "#c8c983", "#8fd5b7", "#8ecff0", "#eaaeef"]}}
+  }
+}

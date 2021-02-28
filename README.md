@@ -3,140 +3,52 @@
 Assignment 2 - Data Visualization, 7 Ways  
 ===
 
-Now that you have successfully made a "visualization" of shapes and lines using d3, your next assignment is to successfully make a *actual visualization*... 7 times. 
-
-The goal of this project is to gain experience with as many data visualization libraries, languages, and tools as possible.
-
-I have provided a small dataset about cars, `cars-sample.csv`.
-Each row contains a car and several variables about it, including miles-per-gallon, manufacturer, and more.
-
-Your goal is to use 7 different tools to make the following chart:
-
-![ggplot2](img/ggplot2.png)
-
-These features should be preserved as much as possible in your replication:
-
-- Data positioning: it should be a downward-trending scatterplot as shown.  Weight should be on the x-axis and MPG on the y-axis.
-- Scales: Note the scales do not start at 0.
-- Axis ticks and labels: both axes are labeled and there are tick marks at 10, 20, 30, etcetera.
-- Color mapping to Manufacturer.
-- Size mapping to Weight.
-- Opacity of circles set to 0.5 or 50%.
-
-Other features are not required. This includes:
-
-- The background grid.
-- The legends.
-
-Note that some software packages will make it **impossible** to perfectly preserve the above requirements. 
-Be sure to note where these deviate.
-
-Improvements are also welcome as part of Technical and Design achievements.
-
-Libraries, Tools, Languages
----
-
-You are required to use 7 different tools or libraries.
-Of the 7 tools, you must use at least 3 libraries (libraries require code of some kind).
-This could be `Python, R, Javascript`, or `Java, Javascript, Matlab` or any other combination.
-Dedicated tools (i.e. Excel) do not count towards the language requirement.
-
-Otherwise, you should seek tools and libraries to fill out your 7.
-
-Below are a few ideas. Do not limit yourself to this list!
-Some may be difficult choices, like Matlab or SPSS, which require large installations, licenses, and occasionally difficult UIs.
-
-I have marked a few that are strongly suggested.
-
-- R + ggplot2 `<- definitely worth trying`
-- Excel
-- d3 `<- since the rest of the class uses this, we're requiring it`
+## Libraries Used:
+- Seaborn
 - Matplotlib
-- three.js `<- well, it's a 3d library. not really recommended, but could be "interesting"`
-- p5js `<- good for playing around. not really a chart lib`
+- R
+- D3
+- Vega-lite
 - Tableau
-- Java 2d
-- GNUplot
-- Vega-lite <- `<- recently much better. look for the high level js implementations`
-- Flourish <- `<- popular last year`
-- PowerBI
-- SPSS
+- Excel
 
-You may write everything from scratch, or start with demo programs from books or the web. 
-If you do start with code that you found, please identify the source of the code in your README and, most importantly, make non-trivial changes to the code to make it your own so you really learn what you're doing. 
+(Languages used: Python, html/javascript, R)
 
-Tips
----
-
-- If you're using d3, key to this assignment is knowing how to load data.
-You will likely use the [`d3.json` or `d3.csv` functions](https://github.com/mbostock/d3/wiki/Requests) to load the data you found.
-Beware that these functions are *asynchronous*, meaning it's possible to "build" an empty visualization before the data actually loads.
-
-- *For web languages like d3* Don't forget to run a local webserver when you're debugging.
-See this [ebook](http://chimera.labs.oreilly.com/books/1230000000345/ch04.html#_setting_up_a_web_server) if you're stuck.
-
-
-Readme Requirements
----
-
-A good readme with screenshots and structured documentation is required for this project. 
-It should be possible to scroll through your readme to get an overview of all the tools and visualizations you produced.
-
-- Each visualization should start with a top-level heading (e.g. `# d3`)
-- Each visualization should include a screenshot. Put these in an `img` folder and link through the readme (markdown command: `![caption](img/<imgname>)`.
-- Write a paragraph for each visualization tool you use. What was easy? Difficult? Where could you see the tool being useful in the future? Did you have to use any hacks or data manipulation to get the right chart?
-
-Other Requirements
----
-
-0. Your code should be forked from the GitHub repo.
-1. Place all code, Excel sheets, etcetera in a named folder. For example, `r-ggplot, matlab, mathematica, excel` and so on.
-2. Your writeup (readme.md in the repo) should also contain the following:
-
-- Description of the Technical achievements you attempted with this visualization.
-  - Some ideas include interaction, such as mousing over to see more detail about the point selected.
-- Description of the Design achievements you attempted with this visualization.
-  - Some ideas include consistent color choice, font choice, element size (e.g. the size of the circles).
-
-GitHub Details
----
-
-- Fork the GitHub Repository. You now have a copy associated with your username.
-- Make changes to fulfill the project requirements. 
-- To submit, make a [Pull Request](https://help.github.com/articles/using-pull-requests/) on the original repository.
-
-Grading
----
-
-Grades on a 120 point scale. 
-24 points will be based on your Technical and Design achievements, as explained in your readme. 
-
-Make sure you include the files necessary to reproduce your plots.
-You should structure these in folders if helpful.
-We will choose some at random to run and test.
-
-**NOTE: THE BELOW IS A SAMPLE ENTRY TO GET YOU STARTED ON YOUR README. YOU MAY DELETE THE ABOVE.**
-
-# R + ggplot2 + R Markdown
-
-R is a language primarily focused on statistical computing.
-ggplot2 is a popular library for charting in R.
-R Markdown is a document format that compiles to HTML or PDF and allows you to include the output of R code directly in the document.
-
-To visualized the cars dataset, I made use of ggplot2's `geom_point()` layer, with aesthetics functions for the color and size.
-
-While it takes time to find the correct documentation, these functions made the effort creating this chart minimal.
-
-![ggplot2](img/ggplot2.png)
-
-# d3...
-
-(And so on...)
-
+# Seaborn (Python)
+- ![seaborn.png](https://github.com/wtt102/02-datavis-7ways/blob/main/img/seaborn.png)
+- https://seaborn.pydata.org/generated/seaborn.scatterplot.html﻿
+  - Seaborn is a bit more consise to use than Matplotlib. Scaling for the sizes and colors are handled automatically. The legends are generated automatically as well. A lot of this library's utility is based in parameter inputs in the main function call. Seaborn allows you to input dataframes or import data from their database. The handling of preprocessing automatically is quite helpful. I don't think this library is as robust as ggplot2. I would probably use this library for making a sketch of a visualization that I would further develop in another library (even matplotlib).
+# Matplotlib (Python)
+- ![matplotlib.png](https://github.com/wtt102/02-datavis-7ways/blob/main/img/matplotlib.png)
+- https://matplotlib.org/stable/index.html
+  - It's implementation is very similar to Seaborn with more customization necessary to achieve the same thing. Axis labels were necessary to create manually. Grid lines as well. Preprocessing had to be completed before the graphic could generate. The color bar requires extra steps to setup and implement. The only thing matplotlib provides by default is the tick labels. The legends had to be created manually as well. While the code could be written consisely using list comprehensions, there weren't any quick utilities I could find that could do this that already came with Matplotlib. I would probably use Matplotlib for a lot of visualizations that require a lot of customizability that other libraries don't include in their presets.
+# ggplot2 (R)
+- ![R.png](https://github.com/wtt102/02-datavis-7ways/blob/main/img/R.png)
+- https://r-coder.com/scatter-plot-r/﻿
+  - R is a language that is primarily used for statistical analysis. As such, many of its functions are already designed specifically for creating pltos representitive of the data's properties very efficiently. It only took 3 lines to code, and two of these were for housekeeping. Finding the proper functions took some time to setup, as I wasn't familiar with running R scripts before. I think this language offered the best output for the least amount of input. The sizes were scaled such that there was a big enough variation between data points with small "weight" attributes and those with big ones. I would say that if you have a clear sense of the kind of visualization you want to create ahead of time, this is definitely the best for prototyping.
+# D3 (html/javascript)
+- ![d3.png](https://github.com/wtt102/02-datavis-7ways/blob/main/img/d3.png)
+- https://www.d3-graph-gallery.com/graph/scatter_basic.html
+- https://stackoverflow.com/questions/11189284/d3-axis-labeling﻿
+  - I hadn't used D3 for data representation before in Assignment 1, but some of the knowledge transfered over into this assignment. I found D3 to be by far the most customizable out of all the different scatterplot makers. Things like adding an on-click event is very easy whereas this functionality is not easily accessible with prepackaged libraries such as Seaborn and matplotlib. The data importing took some time to figure out because of javascript privacy configuration to not allow local files to be retrieved. I do find Python to be the better language than javascript for manipulating the data in csv files. A lot of the data management happens behind the scenes. Nevertheless, it was still very easy to figure out how to retreive the data parameters. Labels were not given automatically, but they were pretty easy to add with a text object. I think I would want to use this library to develop visualization tools, but I don't think it's efficient as other languages for making a quick visualization.
+# Vega-lite (html/json)
+- ![vega-lite.png](https://github.com/wtt102/02-datavis-7ways/blob/main/img/vega-lite.png)
+- https://vega.github.io/vega-lite/tutorials/getting_started.html
+- https://vega.github.io/vega/examples/scatter-plot/﻿
+  - This was a very quick implementation and user friendly. The json structure was very navigable. Things like positioning were very intuitive to figure out. Labels were given automatically. The colors were easy to setup. While I found the visual aspect to be very customizable, beyond this, I didn't find much flexibility in writing functions and stuff like that. I don't know if vega-lite offers much that other programs already do. For instance, R can get you the same results but much faster. I would probably use this as a replacement for matplotlib in situations where I don't need any more customizability.
+# Tableau
+- ![tableau.png](https://github.com/wtt102/02-datavis-7ways/blob/main/img/tableau.png)
+  - This software was confusing at first because the aggregate setting was switch on initially. This meant 5 data points showed up, each one summing the total of each car manufacturer. After finally realizing this setting was the cause, the software was very easy to adapt to. It was easy to select the size based upon the weight attribute, and color based upon manufacturer. Transparency was easy to change as well. Legends were created automatically. They also provide popups that include information about each data point. I implemented this D3 as well. I don't think I would use Tableau for anything except relatively simple data representations such as scatterplots and trendlines. I didn't find the software to be a robust at handling changes that weren't preset, although I may have gotten the wrong impression from my experience using this tool.
+# Excel
+- ![excel.png](https://github.com/wtt102/02-datavis-7ways/blob/main/img/excel.png)
+  - I was surprised to find that this was by far the most time consuming data vis creation method for me. This software was also a bit tricky at first. I settled on sorting the columns by manufacturer type, then manually adding 5 different series. There are also some issues with the order in which you do things. For instance, changing the relative size of the points in the graph after creating the data points ungroups some of the data points. This means if you later want to change the colors of the circles, you have to do this individually. I don't think I would use this tool again for the same task. I think one of the hallmarks of a good software is if once you figure out how to do something with it, it's relatively easy to implement again in the future, regardless of how long it took to figure out. I think excel is particularly inefficient at these kinds of graphics projects. The data storate library Pandas can handle csv manipulation somewhat easier and in a more controlled way in my experience. Combined with a library like matplotlib or R scripting, I don't think Excel is as worth for creating visualizations.
 
 ## Technical Achievements
-- **Proved P=NP**: Using a combination of...
-- **Solved AI Forever**: ...
+- Added hover menu that shows information about data points in D3 implementation.
+- Custom legends in matplotlib
 
-### Design Achievements
-- **Re-vamped Apple's Design Philosophy**: As demonstrated in my colorscheme...
+## Design Achievements
+- Used color blind friendly color schemes and colors schemes generated by AI. Respective links provided as follows:
+  - https://davidmathlogic.com/colorblind
+  - http://colormind.io/
+- Created custom dark mode in Excel with glow.

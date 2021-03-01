@@ -1,0 +1,47 @@
+<!-- Reference: (https://vega.github.io/vega-lite/)-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vega-Lite</title>
+    <meta charset="utf-8" />
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
+    <style media="screen">
+      /* Add space between Vega-Embed links  */
+      .vega-actions a {
+        margin-right: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>A2 Vega-Lite</h1>
+    <!-- Container for the visualization -->
+    <div id="vis"></div>
+
+    <script>
+      // Assign the specification to a local variable vlSpec.
+      var vlSpec = {
+        $schema: 'https://vega.github.io/schema/vega-lite/v4.json',
+        width: 600,
+        height: 500,
+        data: {
+          url: 'https://raw.githubusercontent.com/Junying-Li/02-datavis-7ways/main/cars-sample.csv'
+        },
+        mark: 'circle',
+        encoding: {
+          y: {field: 'MPG', type: 'quantitative', scale: {zero: false}},
+          x: {field: 'Weight', type: 'quantitative', scale: {zero: false}},
+          color: { field: 'Manufacturer', type: 'nominal', scale: {range: ['#f8766d', '#a3a500', '#00bf7d', '#00b0f6', '#e76bf3']}},
+          size: {field: 'Weight', type: 'quantitative', scale: {zero: false}},
+          opacity: {value: 0.5}
+        }
+      };
+
+      // Embed the visualization in the container with id `vis`
+      vegaEmbed('#vis', vlSpec);
+    </script>
+  </body>
+</html>

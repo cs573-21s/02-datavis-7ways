@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="https://d3js.org/d3.v6.min.js"></script>
+</head>
+<body>
+  <div class='tooltip'></div>
+</div>
+<svg width="700" height="700"></svg>
+<script src="script.js"></script>
+<script>
+
+const svgWidth=700;
+const svgHeight=700;
+var sizeValue = d => d["Weight"];
+const margin={
+  top:100,
+  left:100,
+  bottom:50,
+  right:50
+}
+
+const width=svgWidth-(margin.left+margin.right);
+const height=svgHeight-(margin.top+margin.bottom);
+
+console.log("Data:",data);
+const xDomain=d3.extent(data.map(d=>d.Weight));
+const xRange=[0,width];
+const xScale=d3.scaleLinear()
+.domain(xDomain)
+.range(xRange);
+
+var sizeScale = d3.scaleLinear()
+        .domain(d3.extent(data, sizeValue))
+        .range([3, 10]);
+
+const yDomain=d3.extent(data.map(d=>d.MPG));
+const yRange=[height,0];
+const yScale=d3.scaleLinear()
+.domain(yDomain)
+.range(yRange);
+
+
+const xAxis=d3.axisBottom(xScale);
+const yAxis=d3.axisLeft(yScale);
+
+d3.select("svg")
+.append("g")
+.attr("class","xAxis")
+.attr("transform",`translate(${margin.left},${svgHeight-margin.bottom})`);
+
+d3.select(".xAxis")
+.append("g")
+.call(xAxis.ticks(5).tickFormat(d=>d))
+.selectAll("text")
+.style("font-size","14px");
+
+
+d3.select("svg")
+.append("g")
+.attr("class","yAxis")
+.attr("transform",`translate(${margin.left},${margin.top})`);
+
+d3.select(".yAxis")
+.append("g")
+.call(yAxis.ticks(5).tickFormat(d=>d))
+ .selectAll("text")
+.style("font-size","14px");
+
+d3.select(".xAxis")
+.append("text")
+.text("Weight")
+.attr("x",width/2)
+.attr("y",margin.bottom * 0.7)
+.style("font-size","18px")
+.style("font-weight","bold");
+
+
+d3.select(".yAxis")
+.append("text")
+.text("MPG")
+.style("transform","rotate(270deg)")
+.attr("x",height/2 * -1)
+.attr("y",margin.left * 0.6 * -1)
+.style("font-size","18px")
+.style("font-weight","bold");
+
+
+d3.select("svg")
+.append("g")
+.attr("class","circle-g")
+.attr("transform",`translate(${margin.left},${margin.top})`);
+
+const color={
+  "toyota":"purple",
+  "honda":"green",
+  "bmw":"hotpink",
+  "mercedes":"blue",
+  "ford":"gray"
+}
+
+const div=d3.select(".tooltip");
+
+d3.select(".circle-g")
+.selectAll(".circle")
+.data(data)
+.enter()
+.append("circle")
+.attr("class","circle")
+.attr("cx",d=>xScale(d.Weight))
+.attr("cy",d=>yScale(d.MPG))
+.attr("r", d => sizeScale(sizeValue(d)))
+.style("fill",d=>color[d.Manufacturer])
+.style("opacity",0.5)
+
+.on("mouseover",function(d){
+  div.transition()
+  .duration(200)
+  .style("opacity",0.5);
+  
+  div.html(""+d3.timeFormat("%Y")(new Date(d.date))+"<br/>"+
+  "Product:"+d.product+"<br/>"+
+  "Sales: $ "+d.sales+"<br/>"+
+  "Revenue: $ "+d.revenue+"<br/>");
+  
+  div.style("left",(d3.event.pageX+10) +"px")
+  .style("top",(d3.event.pageY-30) +"px")
+  
+})
+.on("mouseout",function(d){
+  div.transition()
+  .duration(500)
+  .style("opacity",0);
+   });
+    </script>
+</body>
+</html>
